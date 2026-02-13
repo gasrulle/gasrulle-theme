@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "npm: validate themes",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "Theme validation complete"
+            ],
+            "detail": "Placeholder validation — no build step needed for a declarative theme extension",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "vsce: package",
+            "type": "shell",
+            "command": "vsce",
+            "args": [
+                "package"
+            ],
+            "detail": "Package the extension into a .vsix file",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Package Gasrulle Theme vsix",
+            "type": "shell",
+            "command": "npx",
+            "args": [
+                "-y",
+                "@vscode/vsce",
+                "package"
+            ],
+            "detail": "Packages a production .vsix named {name}-{version}.vsix from package.json — no global installs needed",
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}

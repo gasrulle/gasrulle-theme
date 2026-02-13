@@ -1,0 +1,83 @@
+{
+    "name": "gasrulle-theme",
+    "displayName": "Gasrulle Theme",
+    "description": "A curated theme pack for VS Code — ported IDE themes (JetBrains Rider, Visual Studio, and more) plus original creations by Gasrulle.",
+    "version": "0.4.0",
+    "publisher": "Gasrulle",
+    "license": "Apache-2.0",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "rider",
+        "jetbrains",
+        "darcula",
+        "visual studio",
+        "dark",
+        "light",
+        "theme",
+        "theme pack",
+        "intellij",
+        "gasrulle"
+    ],
+    "icon": "resources/icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gasrulle/gasrulle-theme"
+    },
+    "homepage": "https://github.com/gasrulle/gasrulle-theme#readme",
+    "bugs": {
+        "url": "https://github.com/gasrulle/gasrulle-theme/issues"
+    },
+    "galleryBanner": {
+        "color": "#1E1F22",
+        "theme": "dark"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Gasrulle - Rider Dark (New UI)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/rider-dark-new-ui-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Rider Dark (Darcula)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/rider-dark-darcula-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Visual Studio Dark",
+                "uiTheme": "vs-dark",
+                "path": "./themes/vs-dark-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Apex Ember++",
+                "uiTheme": "vs-dark",
+                "path": "./themes/apex-ember-pp-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Apex Frost++",
+                "uiTheme": "vs-dark",
+                "path": "./themes/apex-frost-pp-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Apex Steel++",
+                "uiTheme": "vs-dark",
+                "path": "./themes/apex-steel-pp-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Apex Neon++",
+                "uiTheme": "vs-dark",
+                "path": "./themes/apex-neon-pp-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Apex Carbon++",
+                "uiTheme": "vs-dark",
+                "path": "./themes/apex-carbon-pp-color-theme.json"
+            }
+        ]
+    }
+}
