@@ -346,7 +346,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#6b7280",
+                "foreground": "#667268",
                 "fontStyle": "italic"
             }
         },
@@ -359,7 +359,7 @@
                 "storage.type.class.jsdoc"
             ],
             "settings": {
-                "foreground": "#7a818e"
+                "foreground": "#768278"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -1044,9 +1044,9 @@
         },
         // ── Parameters — golden yellow, distinct from variables ──
         "parameter": "#e5c07b",
-        // ── Enum Members — soft coral italic ──
+        // ── Enum Members — number color italic (constant-like) ──
         "enumMember": {
-            "foreground": "#e5a6a6",
+            "foreground": "#d19a66",
             "fontStyle": "italic"
         },
         // ── Events — cyan-teal, distinct from properties ──
@@ -1068,10 +1068,26 @@
         // ── Other ──
         "regexp": "#e06c75",
         "decorator": "#e5c07b",
-        "comment": "#5c6370",
         "customLiteral": "#d19a66",
         "macro": "#e5c07b",
         "label": "#828997",
+        // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
+        "xmlDocCommentText": {
+            "foreground": "#667268",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentDelimiter": "#667268",
+        "xmlDocCommentName": "#768278",
+        "xmlDocCommentAttributeName": "#768278",
+        "xmlDocCommentAttributeQuotes": "#667268",
+        "xmlDocCommentAttributeValue": "#768278",
+        "xmlDocCommentCDataSection": {
+            "foreground": "#667268",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentEntityReference": "#768278",
+        "xmlDocCommentProcessingInstruction": "#768278",
+        "xmlDocCommentComment": "#5c6370",
         // ── Static modifiers — italic signals static ──
         "function.static": {
             "foreground": "#61afef",

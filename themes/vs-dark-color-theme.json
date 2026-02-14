@@ -41,7 +41,7 @@
         "editorGutter.deletedBackground": "#94151B",
         "editorCodeLens.foreground": "#999999",
         // ── Editor Groups / Tabs ────────────────────────────────
-        "editorGroup.border": "#444444",
+        "editorGroup.border": "#404040",
         "editorGroup.dropBackground": "#53595D80",
         "editorGroupHeader.tabsBackground": "#252526",
         "editorGroupHeader.tabsBorder": "#252526",
@@ -49,13 +49,13 @@
         "tab.activeBackground": "#1E1E1E",
         "tab.activeForeground": "#FFFFFF",
         "tab.activeBorderTop": "#0078D4",
-        "tab.inactiveBackground": "#2D2D2D",
+        "tab.inactiveBackground": "#2B2B2B",
         "tab.inactiveForeground": "#FFFFFF80",
         "tab.border": "#252526",
-        "tab.hoverBackground": "#2D2D2D",
+        "tab.hoverBackground": "#2B2B2B",
         "tab.unfocusedActiveBackground": "#1E1E1E",
         "tab.unfocusedActiveForeground": "#FFFFFF80",
-        "tab.unfocusedInactiveBackground": "#2D2D2D",
+        "tab.unfocusedInactiveBackground": "#2B2B2B",
         "tab.unfocusedInactiveForeground": "#FFFFFF40",
         "tab.lastPinnedBorder": "#CCC3",
         "tab.selectedBackground": "#222222",
@@ -68,19 +68,19 @@
         "sideBarSectionHeader.background": "#0000",
         "sideBarSectionHeader.foreground": "#CCCCCC",
         "sideBarSectionHeader.border": "#CCC3",
-        "activityBar.background": "#333333",
+        "activityBar.background": "#313131",
         "activityBar.foreground": "#FFFFFF",
-        "activityBar.border": "#333333",
+        "activityBar.border": "#313131",
         "activityBar.activeBorder": "#0078D4",
         "activityBar.inactiveForeground": "#FFFFFF66",
         "activityBarBadge.background": "#007ACC",
         "activityBarBadge.foreground": "#FFFFFF",
         // ── Title Bar ───────────────────────────────────────────
-        "titleBar.activeBackground": "#3C3C3C",
+        "titleBar.activeBackground": "#383838",
         "titleBar.activeForeground": "#CCCCCC",
-        "titleBar.inactiveBackground": "#3C3C3C",
+        "titleBar.inactiveBackground": "#383838",
         "titleBar.inactiveForeground": "#CCCCCC99",
-        "titleBar.border": "#3C3C3C",
+        "titleBar.border": "#383838",
         // ── Status Bar ──────────────────────────────────────────
         "statusBar.background": "#007ACC",
         "statusBar.foreground": "#FFFFFF",
@@ -117,9 +117,9 @@
         "list.dropBackground": "#383B3D",
         "tree.indentGuidesStroke": "#585858",
         // ── Inputs ──────────────────────────────────────────────
-        "input.background": "#3C3C3C",
+        "input.background": "#383838",
         "input.foreground": "#CCCCCC",
-        "input.border": "#3C3C3C",
+        "input.border": "#383838",
         "input.placeholderForeground": "#A6A6A6",
         "inputOption.activeBorder": "#007ACC",
         "inputOption.activeBackground": "#007ACC44",
@@ -130,9 +130,9 @@
         "inputValidation.infoBackground": "#063B49",
         "inputValidation.infoBorder": "#007ACC",
         // ── Dropdown ────────────────────────────────────────────
-        "dropdown.background": "#3C3C3C",
+        "dropdown.background": "#383838",
         "dropdown.foreground": "#CCCCCC",
-        "dropdown.border": "#3C3C3C",
+        "dropdown.border": "#383838",
         "dropdown.listBackground": "#252526",
         // ── Buttons ─────────────────────────────────────────────
         "button.background": "#0E639C",
@@ -192,11 +192,11 @@
         "breadcrumb.activeSelectionForeground": "#E0E0E0",
         "breadcrumbPicker.background": "#252526",
         // ── Notifications ───────────────────────────────────────
-        "notificationCenter.border": "#303031",
-        "notificationCenterHeader.background": "#303031",
+        "notificationCenter.border": "#2D2D2E",
+        "notificationCenterHeader.background": "#2D2D2E",
         "notificationCenterHeader.foreground": "#CCCCCC",
         "notifications.background": "#252526",
-        "notifications.border": "#303031",
+        "notifications.border": "#2D2D2E",
         "notifications.foreground": "#CCCCCC",
         "notificationLink.foreground": "#3794FF",
         "notificationsErrorIcon.foreground": "#F14C4C",
@@ -210,19 +210,19 @@
         "quickInputTitle.background": "#252526",
         // ── Widgets (Find, Suggestions, Hover) ──────────────────
         "editorWidget.background": "#252526",
-        "editorWidget.border": "#303031",
+        "editorWidget.border": "#2D2D2E",
         "editorWidget.foreground": "#CCCCCC",
         "editorSuggestWidget.background": "#252526",
-        "editorSuggestWidget.border": "#454545",
+        "editorSuggestWidget.border": "#414141",
         "editorSuggestWidget.foreground": "#D4D4D4",
         "editorSuggestWidget.highlightForeground": "#0097FB",
         "editorSuggestWidget.selectedBackground": "#04395E",
         "editorHoverWidget.background": "#252526",
-        "editorHoverWidget.border": "#454545",
+        "editorHoverWidget.border": "#414141",
         "editorHoverWidget.foreground": "#CCCCCC",
         // ── Debug ───────────────────────────────────────────────
-        "debugToolBar.background": "#333333",
-        "debugExceptionWidget.background": "#333333",
+        "debugToolBar.background": "#313131",
+        "debugExceptionWidget.background": "#313131",
         "debugExceptionWidget.border": "#BE1100",
         "debugConsole.infoForeground": "#3794FF",
         "debugConsole.warningForeground": "#CCA700",
@@ -271,7 +271,7 @@
         "descriptionForeground": "#9DA0A8",
         "errorForeground": "#F14C4C",
         "widget.shadow": "#000000",
-        "widget.border": "#303031",
+        "widget.border": "#2D2D2E",
         "selection.background": "#264F78",
         "icon.foreground": "#C5C5C5",
         "textLink.foreground": "#3794FF",
@@ -301,8 +301,8 @@
         // ── Menu ────────────────────────────────────────────────
         "menu.background": "#252526",
         "menu.foreground": "#CCCCCC",
-        "menu.separatorBackground": "#454545",
-        "menu.border": "#454545",
+        "menu.separatorBackground": "#414141",
+        "menu.border": "#414141",
         "menu.selectionBackground": "#04395E",
         // ── Action Bar ──────────────────────────────────────────
         "actionBar.toggledBackground": "#383A49",
@@ -335,13 +335,14 @@
             }
         },
         // ── XML Doc Comments ────────────────────────────────────
+        // Grayscale — muted to fade into background, not compete with code
         {
             "scope": [
                 "comment.block.documentation",
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#5F826B",
+                "foreground": "#656A6E",
                 "fontStyle": "italic"
             }
         },
@@ -354,7 +355,7 @@
                 "entity.name.type.instance.jsdoc"
             ],
             "settings": {
-                "foreground": "#67A37C"
+                "foreground": "#747980"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -1084,10 +1085,27 @@
         // ── Other ──
         "regexp": "#D16969",
         "decorator": "#4EC9B0",
-        "comment": "#7A7E85",
         "customLiteral": "#DCDCAA",
         "macro": "#569CD6",
         "label": "#C8C8C8",
+        // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
+        // Grayscale — muted to fade into background, not compete with code
+        "xmlDocCommentText": {
+            "foreground": "#656A6E",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentDelimiter": "#656A6E",
+        "xmlDocCommentName": "#747980",
+        "xmlDocCommentAttributeName": "#747980",
+        "xmlDocCommentAttributeQuotes": "#656A6E",
+        "xmlDocCommentAttributeValue": "#747980",
+        "xmlDocCommentCDataSection": {
+            "foreground": "#656A6E",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentEntityReference": "#747980",
+        "xmlDocCommentProcessingInstruction": "#747980",
+        "xmlDocCommentComment": "#7A7E85",
         // ── Static modifiers ──
         "function.static": {
             "foreground": "#DCDCAA",

@@ -913,11 +913,27 @@
         "regexp": "#6AAB73",
         "operator": "#BCBEC4",
         "decorator": "#B3AE60",
-        "comment": "#7A7E85",
         "macro": "#B3AE60",
         "label": "#BCBEC4",
         "function.declaration": "#56A8F5",
         "method.declaration": "#56A8F5",
+        // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
+        "xmlDocCommentText": {
+            "foreground": "#5F826B",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentDelimiter": "#5F826B",
+        "xmlDocCommentName": "#67A37C",
+        "xmlDocCommentAttributeName": "#67A37C",
+        "xmlDocCommentAttributeQuotes": "#5F826B",
+        "xmlDocCommentAttributeValue": "#67A37C",
+        "xmlDocCommentCDataSection": {
+            "foreground": "#5F826B",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentEntityReference": "#67A37C",
+        "xmlDocCommentProcessingInstruction": "#67A37C",
+        "xmlDocCommentComment": "#7A7E85",
         "function.static": {
             "foreground": "#57AAF7",
             "fontStyle": "italic"

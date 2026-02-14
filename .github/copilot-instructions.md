@@ -80,12 +80,14 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Comments    | `#7A7E85` | DEFAULT_BLOCK_COMMENT    |
 | Annotations | `#B3AE60` | DEFAULT_METADATA         |
 | Accent      | `#3574F0` | Blue6                    |
+| Doc Comments| `#5F826B` | Muted green, italic      |
+| Doc Keywords| `#67A37C` | Brighter doc green       |
 
 ### Classic Darcula
 | Role        | Hex       |
 |-------------|-----------|
-| Editor BG   | `#2B2B2B` |
-| Sidebar BG  | `#3C3F41` |
+| Editor BG   | `#242424` |
+| Sidebar BG  | `#2D2F31` |
 | Foreground  | `#A9B7C6` |
 | Keywords    | `#CC7832` |
 | Strings     | `#6A8759` |
@@ -93,6 +95,8 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Numbers     | `#6897BB` |
 | Properties  | `#9876AA` |
 | Comments    | `#808080` |
+| Doc Comments| `#629755` |
+| Doc Keywords| `#629755` (bold italic) |
 | Annotations | `#BBB529` |
 | Accent      | `#4A88C7` |
 
@@ -118,6 +122,8 @@ Synthesized from Night Owl (accessibility), Catppuccin (warmth), Tokyo Night (se
 | Enums           | `#EEBEBE` | Flamingo/coral (++ only)             |
 | Comments        | `#6C7086` | Warm muted gray                      |
 | Accent          | `#8CAAEE` | Warm blue                            |
+| Doc Comments    | `#6B7D6E` | Muted warm sage, italic              |
+| Doc Keywords    | `#7B8D7E` | Brighter sage                        |
 
 ### Apex Frost++ (Original — Cool & Modern)
 Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
@@ -141,6 +147,8 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 | Enums           | `#F7768E` | Rose-pink (++ only)                  |
 | Comments        | `#565F89` | Cool blue-gray                       |
 | Accent          | `#7AA2F7` | Azure blue                           |
+| Doc Comments    | `#5E7270` | Cool teal-gray, italic               |
+| Doc Keywords    | `#6E8280` | Brighter cool teal                   |
 
 ### Apex Steel++ (Original — Balanced Neutral)
 Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
@@ -164,6 +172,8 @@ Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
 | Enums           | `#E5A6A6` | Soft coral (++ only)                 |
 | Comments        | `#5C6370` | Neutral gray                         |
 | Accent          | `#61AFEF` | Clear blue                           |
+| Doc Comments    | `#667268` | Neutral sage, italic                 |
+| Doc Keywords    | `#768278` | Brighter neutral sage                |
 
 ### Apex Neon++ (Original — Vibrant & Bold)
 Inspired by Dracula. Maximum visual energy, vivid saturated colors.
@@ -187,29 +197,33 @@ Inspired by Dracula. Maximum visual energy, vivid saturated colors.
 | Enums           | `#FF6E6E` | Neon coral (++ only)                 |
 | Comments        | `#6272A4` | Dracula blue-gray                    |
 | Accent          | `#BD93F9` | Vivid purple                         |
+| Doc Comments    | `#6E8074` | Muted sage, italic                   |
+| Doc Keywords    | `#7E9084` | Brighter sage                        |
 
 ### Apex Carbon++ (Original — Achromatic Dark)
-Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation (25–54%) syntax with evenly distributed hues.
+Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation syntax with evenly distributed hues. De-yellowed: warm tokens redistributed across hue wheel to eliminate amber cast.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#1C1C1C` | Pure gray (R=G=B=28)                 |
-| Sidebar BG      | `#242424` | Pure gray, raised surface            |
-| Foreground      | `#B8B8B8` | Pure silver                          |
-| Keywords        | `#D4879C` | Dusty rose (S:43%)                   |
-| Control Flow    | `#E098AF` | Brighter rose, italic                |
-| Strings         | `#8BB87E` | Sage green (S:28%)                   |
-| Functions       | `#6CAED4` | Steel blue (S:53%)                   |
-| Numbers         | `#C9A06A` | Topaz amber (S:45%)                  |
-| Properties      | `#D4956C` | Copper (S:54%)                       |
-| Variables       | `#B8B8B8` | Pure silver (achromatic)             |
-| Parameters      | `#BBA870` | Citrine gold (S:35%)                 |
-| Classes         | `#6AADAE` | Muted turquoise (S:30%)              |
-| Structs         | `#7DB898` | Malachite green (S:28%)              |
-| Interfaces      | `#A990C0` | Soft amethyst (S:28%)                |
-| Enums           | `#C09090` | Garnet (S:25%)                       |
-| Comments        | `#6A6A6A` | Pure gray (achromatic)               |
-| Accent          | `#6CAED4` | Steel blue                           |
+| Editor BG       | `#202020` | Pure gray (R=G=B=32)                 |
+| Sidebar BG      | `#282828` | Pure gray, raised surface            |
+| Foreground      | `#D8D8D8` | Pure silver                          |
+| Keywords        | `#D8809A` | Dusty rose, brighter                 |
+| Control Flow    | `#E090AA` | Brighter rose, italic                |
+| Strings         | `#8CC47C` | Sage green, brighter                 |
+| Functions       | `#68B8E4` | Steel blue, brighter                 |
+| Numbers         | `#C8A078` | Desaturated sand (S:28%, cooled)     |
+| Properties      | `#C88878` | Muted terracotta (hue 12°, cooled)   |
+| Variables       | `#D4D4D4` | Pure silver (achromatic)             |
+| Parameters      | `#98B880` | Eucalyptus sage (hue ~100°, cooled)  |
+| Classes         | `#58B8B8` | Muted turquoise, brighter            |
+| Structs         | `#68C490` | Malachite green, brighter            |
+| Interfaces      | `#A888C8` | Soft amethyst, brighter              |
+| Enums           | `#C48088` | Garnet, brighter                     |
+| Comments        | `#7A7A7A` | Pure gray (achromatic)               |
+| Accent          | `#68B8E4` | Steel blue                           |
+| Doc Comments    | `#788078` | Muted achromatic sage, italic        |
+| Doc Keywords    | `#889088` | Brighter achromatic sage             |
 
 ### Apex Theme Family Naming
 - **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic)
@@ -259,6 +273,7 @@ Assign colors to these roles, ensuring they are visually distinct from each othe
 | **Interfaces** | Lavender/purple family to contrast with teal classes. Only distinct in ++ tier. |
 | **Enums** | Coral/pink/rose to contrast with other type colors. Only distinct in ++ tier. |
 | **Comments** | Muted gray matching the background temperature. Should be clearly de-emphasized. |
+| **Doc Comments** | Slightly brighter/tinted version of comments. Muted sage/teal works for Apex; green for Rider; grayscale for VS Dark. Must be distinct from regular comments but not compete with syntax. |
 | **Accent** | Usually matches function or keyword color. Used for links, focus borders, buttons. |
 
 ### Step 4: Saturation & Contrast Checks
@@ -301,7 +316,7 @@ The Apex family supports three depth tiers controlling how many distinct semanti
 | Type colors | 1 color for all types | class ≠ interface | class ≠ struct ≠ interface ≠ enum ≠ typeParameter (5 distinct) |
 | Property vs variable | Same color (foreground) | Properties get a unique color | Properties get a unique color |
 | Parameter vs variable | Same color (foreground) | Same color (foreground) | Parameters get a unique color |
-| Enum members | Same as constants | Same as enum type | Enum type color + italic |
+| Enum members | Same as constants | Same as enum type | Number color + italic |
 | Control flow keywords | Same as keywords | Brighter shade + italic | Brighter shade + italic |
 | Static modifiers | No italic | Italic on properties and methods | Italic on all: property, variable, function, method |
 | Variable.readonly | No italic | No italic | Italic |
@@ -454,8 +469,8 @@ The ++ tier is what all current Apex themes implement. The full `semanticTokenCo
     "variable.static": { "foreground": "{FOREGROUND}", "fontStyle": "italic" },
     // Parameters — distinct from variables
     "parameter": "{PARAMETER_COLOR}",   // unique
-    // Enum Members — italic distinguishes from enum type
-    "enumMember": { "foreground": "{ENUM_COLOR}", "fontStyle": "italic" },
+    // Enum Members — number color + italic for constant-like feel
+    "enumMember": { "foreground": "{NUMBER_COLOR}", "fontStyle": "italic" },
     // Events — explicit type entry
     "event": "{CLASS_COLOR}",
     // Keywords with control flow distinction
@@ -478,7 +493,18 @@ The ++ tier is what all current Apex themes implement. The full `semanticTokenCo
     "label": "{OPERATOR_COLOR}",
     // Static modifiers — italic across all categories
     "function.static": { "foreground": "{FUNCTION_COLOR}", "fontStyle": "italic" },
-    "method.static": { "foreground": "{FUNCTION_COLOR}", "fontStyle": "italic" }
+    "method.static": { "foreground": "{FUNCTION_COLOR}", "fontStyle": "italic" },
+    // C# XML Doc Comments (Roslyn custom tokens)
+    "xmlDocCommentText": { "foreground": "{DOC_COMMENT_COLOR}", "fontStyle": "italic" },
+    "xmlDocCommentDelimiter": "{DOC_COMMENT_COLOR}",
+    "xmlDocCommentName": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentAttributeName": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentAttributeQuotes": "{DOC_COMMENT_COLOR}",
+    "xmlDocCommentAttributeValue": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentCDataSection": { "foreground": "{DOC_COMMENT_COLOR}", "fontStyle": "italic" },
+    "xmlDocCommentEntityReference": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentProcessingInstruction": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentComment": "{COMMENT_COLOR}"
 }
 ```
 
@@ -492,7 +518,7 @@ The ++ tier is what all current Apex themes implement. The full `semanticTokenCo
 | `typeParameter` | = class | = class | **unique color** |
 | `property` | = foreground | **unique color** | **unique color** |
 | `parameter` | = foreground | = foreground | **unique color** |
-| `enumMember` | = number | = class | **enum color + italic** |
+| `enumMember` | = number | = class | **number color + italic** |
 | `keyword.controlFlow` | = keyword | **brighter + italic** | **brighter + italic** |
 | `variable.readonly` | normal | normal | **italic** |
 | `variable.static` | normal | normal | **italic** |
@@ -536,6 +562,39 @@ Each theme file uses this structure (with JSONC — comments are allowed):
 2. When updating a theme family (e.g., Rider), add the rule to **all** variants with the appropriate color for each palette
 3. Use semantic token colors where VS Code supports them for more precise highlighting
 4. Keep scope arrays sorted alphabetically within each rule
+5. **Never** add a flat `"comment"` entry to `semanticTokenColors` — it overrides all comment sub-types (including doc comments) with a single color. Instead, rely on TextMate `tokenColors` for comment styling.
+
+### C# XML Doc Comment Semantic Tokens
+C# Roslyn emits custom semantic token types for XML doc comments that are **not** part of the standard VS Code semantic token set. All themes must include explicit entries in `semanticTokenColors` to prevent these from falling back to default comment gray:
+
+```jsonc
+"semanticTokenColors": {
+    // ... other tokens ...
+    // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
+    "xmlDocCommentText": { "foreground": "{DOC_COMMENT_COLOR}", "fontStyle": "italic" },
+    "xmlDocCommentDelimiter": "{DOC_COMMENT_COLOR}",
+    "xmlDocCommentName": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentAttributeName": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentAttributeQuotes": "{DOC_COMMENT_COLOR}",
+    "xmlDocCommentAttributeValue": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentCDataSection": { "foreground": "{DOC_COMMENT_COLOR}", "fontStyle": "italic" },
+    "xmlDocCommentEntityReference": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentProcessingInstruction": "{DOC_KEYWORD_COLOR}",
+    "xmlDocCommentComment": "{REGULAR_COMMENT_COLOR}"
+}
+```
+
+**Current doc comment colors per theme:**
+| Theme | Doc Body | Doc Keywords | Style |
+|-------|---------|-------------|-------|
+| Rider New UI | `#5F826B` | `#67A37C` | Green (matches Rider) |
+| Rider Darcula | `#629755` | `#629755` (bold italic) | Green (official) |
+| Visual Studio Dark | `#656A6E` | `#747980` | Grayscale (muted) |
+| Apex Ember++ | `#6B7D6E` | `#7B8D7E` | Warm sage |
+| Apex Frost++ | `#5E7270` | `#6E8280` | Cool teal |
+| Apex Steel++ | `#667268` | `#768278` | Neutral sage |
+| Apex Neon++ | `#6E8074` | `#7E9084` | Muted sage |
+| Apex Carbon++ | `#788078` | `#889088` | Achromatic sage |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)

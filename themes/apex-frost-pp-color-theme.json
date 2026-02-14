@@ -346,7 +346,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#626a90",
+                "foreground": "#5E7270",
                 "fontStyle": "italic"
             }
         },
@@ -359,7 +359,7 @@
                 "storage.type.class.jsdoc"
             ],
             "settings": {
-                "foreground": "#737aa2"
+                "foreground": "#6E8280"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -1044,9 +1044,9 @@
         },
         // ── Parameters — warm amber, distinct from variables ──
         "parameter": "#e0af68",
-        // ── Enum Members — rose italic ──
+        // ── Enum Members — number color italic (constant-like) ──
         "enumMember": {
-            "foreground": "#f7768e",
+            "foreground": "#ff9e64",
             "fontStyle": "italic"
         },
         // ── Events — aqua, distinct from properties ──
@@ -1068,10 +1068,26 @@
         // ── Other ──
         "regexp": "#f7768e",
         "decorator": "#e0af68",
-        "comment": "#565f89",
         "customLiteral": "#ff9e64",
         "macro": "#e0af68",
         "label": "#7982a9",
+        // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
+        "xmlDocCommentText": {
+            "foreground": "#5E7270",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentDelimiter": "#5E7270",
+        "xmlDocCommentName": "#6E8280",
+        "xmlDocCommentAttributeName": "#6E8280",
+        "xmlDocCommentAttributeQuotes": "#5E7270",
+        "xmlDocCommentAttributeValue": "#6E8280",
+        "xmlDocCommentCDataSection": {
+            "foreground": "#5E7270",
+            "fontStyle": "italic"
+        },
+        "xmlDocCommentEntityReference": "#6E8280",
+        "xmlDocCommentProcessingInstruction": "#6E8280",
+        "xmlDocCommentComment": "#565f89",
         // ── Static modifiers — italic signals static ──
         "function.static": {
             "foreground": "#7dcfff",
