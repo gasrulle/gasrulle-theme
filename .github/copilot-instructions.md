@@ -95,8 +95,8 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Numbers     | `#6897BB` |
 | Properties  | `#9876AA` |
 | Comments    | `#808080` |
-| Doc Comments| `#629755` |
-| Doc Keywords| `#629755` (bold italic) |
+| Doc Comments| `#6E7074` | Dimmed gray, italic      |
+| Doc Keywords| `#A89888` | Warm sand                |
 | Annotations | `#BBB529` |
 | Accent      | `#4A88C7` |
 
@@ -122,8 +122,8 @@ Synthesized from Night Owl (accessibility), Catppuccin (warmth), Tokyo Night (se
 | Enums           | `#EEBEBE` | Flamingo/coral (++ only)             |
 | Comments        | `#6C7086` | Warm muted gray                      |
 | Accent          | `#8CAAEE` | Warm blue                            |
-| Doc Comments    | `#6B7D6E` | Muted warm sage, italic              |
-| Doc Keywords    | `#7B8D7E` | Brighter sage                        |
+| Doc Comments    | `#5E6270` | Dimmed purple-gray, italic             |
+| Doc Keywords    | `#A8907E` | Warm amber-sand                        |
 
 ### Apex Frost++ (Original — Cool & Modern)
 Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
@@ -147,8 +147,8 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 | Enums           | `#F7768E` | Rose-pink (++ only)                  |
 | Comments        | `#565F89` | Cool blue-gray                       |
 | Accent          | `#7AA2F7` | Azure blue                           |
-| Doc Comments    | `#5E7270` | Cool teal-gray, italic               |
-| Doc Keywords    | `#6E8280` | Brighter cool teal                   |
+| Doc Comments    | `#4C5576` | Dimmed blue-gray, italic               |
+| Doc Keywords    | `#7E90A8` | Cool steel-blue                        |
 
 ### Apex Steel++ (Original — Balanced Neutral)
 Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
@@ -172,8 +172,8 @@ Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
 | Enums           | `#E5A6A6` | Soft coral (++ only)                 |
 | Comments        | `#5C6370` | Neutral gray                         |
 | Accent          | `#61AFEF` | Clear blue                           |
-| Doc Comments    | `#667268` | Neutral sage, italic                 |
-| Doc Keywords    | `#768278` | Brighter neutral sage                |
+| Doc Comments    | `#515660` | Dimmed neutral gray, italic            |
+| Doc Keywords    | `#A89888` | Warm sand                              |
 
 ### Apex Neon++ (Original — Vibrant & Bold)
 Inspired by Dracula. Maximum visual energy, vivid saturated colors.
@@ -197,8 +197,8 @@ Inspired by Dracula. Maximum visual energy, vivid saturated colors.
 | Enums           | `#FF6E6E` | Neon coral (++ only)                 |
 | Comments        | `#6272A4` | Dracula blue-gray                    |
 | Accent          | `#BD93F9` | Vivid purple                         |
-| Doc Comments    | `#6E8074` | Muted sage, italic                   |
-| Doc Keywords    | `#7E9084` | Brighter sage                        |
+| Doc Comments    | `#565E90` | Dimmed blue-purple, italic             |
+| Doc Keywords    | `#A898B0` | Muted lilac                            |
 
 ### Apex Carbon++ (Original — Achromatic Dark)
 Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation syntax with evenly distributed hues. De-yellowed: warm tokens redistributed across hue wheel to eliminate amber cast.
@@ -222,8 +222,8 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 | Enums           | `#C48088` | Garnet, brighter                     |
 | Comments        | `#7A7A7A` | Pure gray (achromatic)               |
 | Accent          | `#68B8E4` | Steel blue                           |
-| Doc Comments    | `#788078` | Muted achromatic sage, italic        |
-| Doc Keywords    | `#889088` | Brighter achromatic sage             |
+| Doc Comments    | `#686868` | Pure gray (R=G=B), italic              |
+| Doc Keywords    | `#A09890` | Near-achromatic sand (S≈5%)            |
 
 ### Apex Theme Family Naming
 - **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic)
@@ -273,7 +273,7 @@ Assign colors to these roles, ensuring they are visually distinct from each othe
 | **Interfaces** | Lavender/purple family to contrast with teal classes. Only distinct in ++ tier. |
 | **Enums** | Coral/pink/rose to contrast with other type colors. Only distinct in ++ tier. |
 | **Comments** | Muted gray matching the background temperature. Should be clearly de-emphasized. |
-| **Doc Comments** | Slightly brighter/tinted version of comments. Muted sage/teal works for Apex; green for Rider; grayscale for VS Dark. Must be distinct from regular comments but not compete with syntax. |
+| **Doc Comments** | Dimmed below regular comments so documentation recedes behind code. Temperature-tinted gray matching the theme's comment hue family. Must be distinct from regular comments but never compete with syntax. |
 | **Accent** | Usually matches function or keyword color. Used for links, focus borders, buttons. |
 
 ### Step 4: Saturation & Contrast Checks
@@ -588,13 +588,13 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Theme | Doc Body | Doc Keywords | Style |
 |-------|---------|-------------|-------|
 | Rider New UI | `#636770` | `#A89888` | Dimmed gray + warm sand |
-| Rider Darcula | `#629755` | `#629755` (bold italic) | Green (official) |
-| Visual Studio Dark | `#656A6E` | `#747980` | Grayscale (muted) |
-| Apex Ember++ | `#6B7D6E` | `#7B8D7E` | Warm sage |
-| Apex Frost++ | `#5E7270` | `#6E8280` | Cool teal |
-| Apex Steel++ | `#667268` | `#768278` | Neutral sage |
-| Apex Neon++ | `#6E8074` | `#7E9084` | Muted sage |
-| Apex Carbon++ | `#788078` | `#889088` | Achromatic sage |
+| Rider Darcula | `#6E7074` | `#A89888` | Dimmed gray + warm sand |
+| Visual Studio Dark | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
+| Apex Ember++ | `#5E6270` | `#A8907E` | Dimmed purple-gray + warm amber-sand |
+| Apex Frost++ | `#4C5576` | `#7E90A8` | Dimmed blue-gray + cool steel-blue |
+| Apex Steel++ | `#515660` | `#A89888` | Dimmed neutral gray + warm sand |
+| Apex Neon++ | `#565E90` | `#A898B0` | Dimmed blue-purple + muted lilac |
+| Apex Carbon++ | `#686868` | `#A09890` | Pure gray + near-achromatic sand |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)

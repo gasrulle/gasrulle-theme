@@ -1095,16 +1095,16 @@
             "fontStyle": "italic"
         },
         "xmlDocCommentDelimiter": "#656A6E",
-        "xmlDocCommentName": "#747980",
-        "xmlDocCommentAttributeName": "#747980",
+        "xmlDocCommentName": "#A89888",
+        "xmlDocCommentAttributeName": "#A89888",
         "xmlDocCommentAttributeQuotes": "#656A6E",
-        "xmlDocCommentAttributeValue": "#747980",
+        "xmlDocCommentAttributeValue": "#A89888",
         "xmlDocCommentCDataSection": {
             "foreground": "#656A6E",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#747980",
-        "xmlDocCommentProcessingInstruction": "#747980",
+        "xmlDocCommentEntityReference": "#A89888",
+        "xmlDocCommentProcessingInstruction": "#A89888",
         "xmlDocCommentComment": "#7A7E85",
         // ── Static modifiers ──
         "function.static": {

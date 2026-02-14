@@ -300,7 +300,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#629755",
+                "foreground": "#6E7074",
                 "fontStyle": "italic"
             }
         },
@@ -313,8 +313,7 @@
                 "entity.name.type.instance.jsdoc"
             ],
             "settings": {
-                "foreground": "#629755",
-                "fontStyle": "bold italic"
+                "foreground": "#A89888"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -902,29 +901,20 @@
         "method.declaration": "#FFC66D",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
-            "foreground": "#629755",
+            "foreground": "#6E7074",
             "fontStyle": "italic"
         },
-        "xmlDocCommentDelimiter": "#629755",
-        "xmlDocCommentName": {
-            "foreground": "#629755",
-            "fontStyle": "bold italic"
-        },
-        "xmlDocCommentAttributeName": {
-            "foreground": "#629755",
-            "fontStyle": "bold italic"
-        },
-        "xmlDocCommentAttributeQuotes": "#629755",
-        "xmlDocCommentAttributeValue": {
-            "foreground": "#629755",
-            "fontStyle": "bold italic"
-        },
+        "xmlDocCommentDelimiter": "#6E7074",
+        "xmlDocCommentName": "#A89888",
+        "xmlDocCommentAttributeName": "#A89888",
+        "xmlDocCommentAttributeQuotes": "#6E7074",
+        "xmlDocCommentAttributeValue": "#A89888",
         "xmlDocCommentCDataSection": {
-            "foreground": "#629755",
+            "foreground": "#6E7074",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#629755",
-        "xmlDocCommentProcessingInstruction": "#629755",
+        "xmlDocCommentEntityReference": "#A89888",
+        "xmlDocCommentProcessingInstruction": "#A89888",
         "xmlDocCommentComment": "#808080",
         "function.static": {
             "foreground": "#FFC66D",

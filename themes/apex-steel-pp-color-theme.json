@@ -346,7 +346,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#667268",
+                "foreground": "#515660",
                 "fontStyle": "italic"
             }
         },
@@ -359,7 +359,7 @@
                 "storage.type.class.jsdoc"
             ],
             "settings": {
-                "foreground": "#768278"
+                "foreground": "#A89888"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -1073,20 +1073,20 @@
         "label": "#828997",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
-            "foreground": "#667268",
+            "foreground": "#515660",
             "fontStyle": "italic"
         },
-        "xmlDocCommentDelimiter": "#667268",
-        "xmlDocCommentName": "#768278",
-        "xmlDocCommentAttributeName": "#768278",
-        "xmlDocCommentAttributeQuotes": "#667268",
-        "xmlDocCommentAttributeValue": "#768278",
+        "xmlDocCommentDelimiter": "#515660",
+        "xmlDocCommentName": "#A89888",
+        "xmlDocCommentAttributeName": "#A89888",
+        "xmlDocCommentAttributeQuotes": "#515660",
+        "xmlDocCommentAttributeValue": "#A89888",
         "xmlDocCommentCDataSection": {
-            "foreground": "#667268",
+            "foreground": "#515660",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#768278",
-        "xmlDocCommentProcessingInstruction": "#768278",
+        "xmlDocCommentEntityReference": "#A89888",
+        "xmlDocCommentProcessingInstruction": "#A89888",
         "xmlDocCommentComment": "#5c6370",
         // ── Static modifiers — italic signals static ──
         "function.static": {
