@@ -9,10 +9,10 @@
         "editor.lineHighlightBackground": "#26282E",
         "editor.lineHighlightBorder": "#26282E",
         "editor.selectionBackground": "#2E436E",
-        "editor.selectionHighlightBackground": "#34384044",
+        "editor.selectionHighlightBackground": "#2F446155",
         "editor.inactiveSelectionBackground": "#2E436E88",
-        "editor.wordHighlightBackground": "#34384044",
-        "editor.wordHighlightStrongBackground": "#402F3366",
+        "editor.wordHighlightBackground": "#2F446180",
+        "editor.wordHighlightStrongBackground": "#40332B99",
         "editor.findMatchBackground": "#2D543F80",
         "editor.findMatchHighlightBackground": "#11495766",
         "editor.findRangeHighlightBackground": "#3A3D4166",
@@ -318,7 +318,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#5F826B",
+                "foreground": "#636770",
                 "fontStyle": "italic"
             }
         },
@@ -331,7 +331,7 @@
                 "entity.name.type.instance.jsdoc"
             ],
             "settings": {
-                "foreground": "#67A37C"
+                "foreground": "#A89888"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -919,20 +919,20 @@
         "method.declaration": "#56A8F5",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
-            "foreground": "#5F826B",
+            "foreground": "#636770",
             "fontStyle": "italic"
         },
-        "xmlDocCommentDelimiter": "#5F826B",
-        "xmlDocCommentName": "#67A37C",
-        "xmlDocCommentAttributeName": "#67A37C",
-        "xmlDocCommentAttributeQuotes": "#5F826B",
-        "xmlDocCommentAttributeValue": "#67A37C",
+        "xmlDocCommentDelimiter": "#636770",
+        "xmlDocCommentName": "#A89888",
+        "xmlDocCommentAttributeName": "#A89888",
+        "xmlDocCommentAttributeQuotes": "#636770",
+        "xmlDocCommentAttributeValue": "#A89888",
         "xmlDocCommentCDataSection": {
-            "foreground": "#5F826B",
+            "foreground": "#636770",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#67A37C",
-        "xmlDocCommentProcessingInstruction": "#67A37C",
+        "xmlDocCommentEntityReference": "#A89888",
+        "xmlDocCommentProcessingInstruction": "#A89888",
         "xmlDocCommentComment": "#7A7E85",
         "function.static": {
             "foreground": "#57AAF7",

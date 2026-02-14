@@ -80,8 +80,8 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Comments    | `#7A7E85` | DEFAULT_BLOCK_COMMENT    |
 | Annotations | `#B3AE60` | DEFAULT_METADATA         |
 | Accent      | `#3574F0` | Blue6                    |
-| Doc Comments| `#5F826B` | Muted green, italic      |
-| Doc Keywords| `#67A37C` | Brighter doc green       |
+| Doc Comments| `#636770` | Dimmed gray, italic      |
+| Doc Keywords| `#A89888` | Warm sand                |
 
 ### Classic Darcula
 | Role        | Hex       |
@@ -587,7 +587,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 **Current doc comment colors per theme:**
 | Theme | Doc Body | Doc Keywords | Style |
 |-------|---------|-------------|-------|
-| Rider New UI | `#5F826B` | `#67A37C` | Green (matches Rider) |
+| Rider New UI | `#636770` | `#A89888` | Dimmed gray + warm sand |
 | Rider Darcula | `#629755` | `#629755` (bold italic) | Green (official) |
 | Visual Studio Dark | `#656A6E` | `#747980` | Grayscale (muted) |
 | Apex Ember++ | `#6B7D6E` | `#7B8D7E` | Warm sage |
