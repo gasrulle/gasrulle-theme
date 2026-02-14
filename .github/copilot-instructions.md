@@ -105,8 +105,8 @@ Synthesized from Night Owl (accessibility), Catppuccin (warmth), Tokyo Night (se
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#1C1D2A` | Warm purple-tinted dark              |
-| Sidebar BG      | `#232334` | Lower contrast than editor           |
+| Editor BG       | `#141522` | Warm purple-tinted dark              |
+| Sidebar BG      | `#1B1B2C` | Lower contrast than editor           |
 | Foreground      | `#C8CEE0` | Warm off-white                       |
 | Keywords        | `#C9A0F5` | Catppuccin mauve + One Dark purple   |
 | Control Flow    | `#D8B0F8` | Brighter purple, italic              |
@@ -130,8 +130,8 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#1A1B2E` | Cool blue-tinted dark                |
-| Sidebar BG      | `#212236` | Cool, lower contrast                 |
+| Editor BG       | `#121326` | Cool blue-tinted dark                |
+| Sidebar BG      | `#191A2E` | Cool, lower contrast                 |
 | Foreground      | `#A9B1D6` | Cool blue-white                      |
 | Keywords        | `#7AA2F7` | Azure blue                           |
 | Control Flow    | `#89B4FA` | Brighter blue, italic                |
@@ -155,8 +155,8 @@ Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#1E2127` | Neutral dark gray                    |
-| Sidebar BG      | `#252830` | Neutral lighter                      |
+| Editor BG       | `#16191F` | Neutral dark gray                    |
+| Sidebar BG      | `#1D2028` | Neutral lighter                      |
 | Foreground      | `#ABB2BF` | One Dark neutral                     |
 | Keywords        | `#C678DD` | One Dark purple                      |
 | Control Flow    | `#D183E8` | Brighter purple, italic              |
@@ -180,8 +180,8 @@ Inspired by Dracula. Maximum visual energy, vivid saturated colors.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#1A1A2E` | Deep neon-dark                       |
-| Sidebar BG      | `#222240` | Dark purple                          |
+| Editor BG       | `#16162A` | Deep neon-dark                       |
+| Sidebar BG      | `#1E1E40` | Dark purple                          |
 | Foreground      | `#F0F0F8` | Bright near-white                    |
 | Keywords        | `#FF79C6` | Hot pink                             |
 | Control Flow    | `#FF92D0` | Brighter pink, italic                |
@@ -205,23 +205,23 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#202020` | Pure gray (R=G=B=32)                 |
-| Sidebar BG      | `#282828` | Pure gray, raised surface            |
-| Foreground      | `#D8D8D8` | Pure silver                          |
-| Keywords        | `#D8809A` | Dusty rose, brighter                 |
-| Control Flow    | `#E090AA` | Brighter rose, italic                |
-| Strings         | `#8CC47C` | Sage green, brighter                 |
-| Functions       | `#68B8E4` | Steel blue, brighter                 |
-| Numbers         | `#C8A078` | Desaturated sand (S:28%, cooled)     |
-| Properties      | `#C88878` | Muted terracotta (hue 12°, cooled)   |
-| Variables       | `#D4D4D4` | Pure silver (achromatic)             |
-| Parameters      | `#98B880` | Eucalyptus sage (hue ~100°, cooled)  |
-| Classes         | `#58B8B8` | Muted turquoise, brighter            |
-| Structs         | `#68C490` | Malachite green, brighter            |
-| Interfaces      | `#A888C8` | Soft amethyst, brighter              |
-| Enums           | `#C48088` | Garnet, brighter                     |
+| Editor BG       | `#181818` | Pure gray (R=G=B=24)                 |
+| Sidebar BG      | `#202020` | Pure gray, raised surface            |
+| Foreground      | `#E6E6E6` | Bright silver                          |
+| Keywords        | `#E68CA5` | Dusty rose, brighter                 |
+| Control Flow    | `#F09CB5` | Brighter rose, italic                |
+| Strings         | `#9AD68A` | Sage green, brighter                 |
+| Functions       | `#78C8F0` | Steel blue, brighter                 |
+| Numbers         | `#D9B086` | Warm sand     |
+| Properties      | `#DB9685` | Salmon (hue 12°, cooled)   |
+| Variables       | `#E6E6E6` | Bright silver (achromatic)             |
+| Parameters      | `#A8C98E` | Eucalyptus sage (hue ~100°, cooled)  |
+| Classes         | `#66CACA` | Bright turquoise, brighter            |
+| Structs         | `#7AD6A2` | Malachite green, brighter            |
+| Interfaces      | `#B896D8` | Bright amethyst, brighter              |
+| Enums           | `#D48C94` | Bright garnet, brighter                     |
 | Comments        | `#7A7A7A` | Pure gray (achromatic)               |
-| Accent          | `#68B8E4` | Steel blue                           |
+| Accent          | `#78C8F0` | Steel blue                           |
 | Doc Comments    | `#686868` | Pure gray (R=G=B), italic              |
 | Doc Keywords    | `#A09890` | Near-achromatic sand (S≈5%)            |
 
@@ -253,7 +253,7 @@ All backgrounds should share the same color temperature. Build from darkest to l
 
 **Achromatic rule**: If the variant has no color cast, all background channels must satisfy R=G=B (pure gray).
 
-**Color-tinted rule**: Add a subtle hue shift to all backgrounds matching the temperature (e.g., Ember adds warm purple `#1C1D2A`, Frost adds cool blue `#1A1B2E`).
+**Color-tinted rule**: Add a subtle hue shift to all backgrounds matching the temperature (e.g., Ember adds warm purple `#141522`, Frost adds cool blue `#121326`).
 
 ### Step 3: Derive the Core Syntax Palette
 Assign colors to these roles, ensuring they are visually distinct from each other and readable against the editor BG:
@@ -617,3 +617,6 @@ This produces a `.vsix` file for distribution.
 
 ### Testing
 Press `F5` in VS Code to launch the Extension Development Host, then select the theme under **File > Preferences > Color Theme**.
+
+
+
