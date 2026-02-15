@@ -249,7 +249,7 @@ All backgrounds should share the same color temperature. Build from darkest to l
 | Sidebar / Activity Bar | +2–4 lightness steps | Subtle distinction |
 | Panel / Terminal BG | Same as sidebar or editor | Depends on preference |
 | Input / Dropdown BG | +1–3 above sidebar | Interactive surfaces |
-| Hover / Selection | Editor BG + alpha overlay | Use `#RRGGBBAA` with `30`–`50` alpha |
+| Hover / Selection | Bright accent/keyword color + alpha overlay | Use `#RRGGBBAA` — see **Overlay & Highlight Color Rules** below |
 
 **Achromatic rule**: If the variant has no color cast, all background channels must satisfy R=G=B (pure gray).
 
@@ -289,8 +289,9 @@ Clone the `colors` section from the closest existing Apex theme, then:
 1. Replace all background hex values with your new surface stack
 2. Replace foreground/text hex values with your new foreground
 3. Replace accent-colored UI elements (buttons, links, focus borders, badges) with your accent color
-4. Adjust selection/highlight overlays — keep the same alpha values, change the base hue
+4. Adjust selection/highlight overlays — follow the **Overlay & Highlight Color Rules** below
 5. Ensure all overlay colors include alpha channels (`#RRGGBBAA`)
+6. After changing any selection/highlight value, update **all** places that share the same selection color (see the consistency list in the overlay rules)
 
 ### Step 6: Build tokenColors and semanticTokenColors
 1. Clone from the closest existing Apex theme at the same tier
@@ -602,10 +603,60 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 3. Use the deprecated key checker — prefer `editorIndentGuide.background1` over `editorIndentGuide.background`
 4. Add the color to **all** theme files in the same family
 
+### Overlay & Highlight Color Rules
+
+Overlay/highlight colors are semi-transparent backgrounds layered on top of the editor. The critical rule:
+
+> **Always use a bright, saturated color as the base** (accent, keyword, string color from the palette) with reduced alpha — **never** use a dark/muted color close to the editor background as the base.
+
+A dark base at any alpha is nearly invisible against a dark editor background. A bright base at low alpha produces a clearly visible tinted highlight.
+
+#### Alpha guidelines by category
+
+| Category | Base color | Alpha range | Notes |
+|----------|-----------|------------|-------|
+| `editor.selectionBackground` | Opaque selection | No alpha | ~15 lightness above editor BG, hue-matched |
+| `editor.selectionHighlightBackground` | Accent | `30` | Same-word occurrences |
+| `editor.wordHighlightBackground` | Accent | `48` | Read-access highlights |
+| `editor.wordHighlightStrongBackground` | Keyword | `48` | Write-access highlights |
+| `editor.findMatchBackground` | String (green) | `60` | Active find match |
+| `editor.findMatchHighlightBackground` | String (green) | `40` | Other find matches |
+| `editor.hoverHighlightBackground` | Accent | `20` | Hover glow |
+| `editorBracketMatch.background` | Accent or keyword | `30` | Bracket pair |
+| `peekViewEditor.matchHighlightBackground` | String | `50` | Peek match |
+| `peekViewResult.matchHighlightBackground` | String | `50` | Peek result match |
+| `minimap.findMatchHighlight` | String | `80` | Minimap markers (smaller = needs more opacity) |
+| `minimap.selectionHighlight` | Accent | `BB` | Minimap selection |
+| `diffEditor.insertedTextBackground` | Green/added | `30` | Diff added |
+| `diffEditor.removedTextBackground` | Red/error | `30` | Diff removed |
+| `merge.currentContentBackground` | Green | `30` | Merge current |
+| `merge.incomingContentBackground` | Blue/accent | `30` | Merge incoming |
+| `merge.currentHeaderBackground` | Green | `44` | Merge current header |
+| `merge.incomingHeaderBackground` | Blue/accent | `44` | Merge incoming header |
+
+#### Selection color consistency
+
+The following keys must all share the same opaque selection color (or its alpha variant):
+
+| Key | Variant |
+|-----|---------|
+| `editor.selectionBackground` | Opaque |
+| `editor.inactiveSelectionBackground` | + `66` alpha |
+| `list.activeSelectionBackground` | Opaque |
+| `list.focusBackground` | Opaque |
+| `list.inactiveSelectionBackground` | + `66` alpha |
+| `quickInputList.focusBackground` | Opaque |
+| `editorSuggestWidget.selectedBackground` | Opaque |
+| `peekViewResult.selectionBackground` | Opaque |
+| `terminal.selectionBackground` | Opaque |
+| `selection.background` | Opaque |
+
 ### Quality Checks
 - Run `get_errors` on all modified theme files after any edit to catch invalid/deprecated properties and transparency requirements
 - Colors marked "must be transparent" by VS Code need an alpha channel suffix (e.g., `CC`, `80`, `44`)
 - Property names must exist in the VS Code API — invalid ones cause warnings
+- **Overlay visibility**: Every semi-transparent highlight must use a bright base color from the palette — never a dark/muted color near the editor background. Verify visually or compute the effective blended color against the editor BG
+- **Selection consistency**: After changing any selection color, verify that all keys in the selection consistency table above are updated to match
 - For ported themes: verify colors match official sources before committing
 
 ### Packaging
