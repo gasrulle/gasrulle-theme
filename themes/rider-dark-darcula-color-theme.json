@@ -9,14 +9,14 @@
         "editor.lineHighlightBackground": "#2C2C2C",
         "editor.lineHighlightBorder": "#2C2C2C",
         "editor.selectionBackground": "#214283",
-        "editor.selectionHighlightBackground": "#32593D44",
+        "editor.selectionHighlightBackground": "#7EA86D30",
         "editor.inactiveSelectionBackground": "#21428388",
-        "editor.wordHighlightBackground": "#344134CC",
-        "editor.wordHighlightStrongBackground": "#40523ECC",
-        "editor.findMatchBackground": "#61461880",
-        "editor.findMatchHighlightBackground": "#61461850",
+        "editor.wordHighlightBackground": "#4A88C748",
+        "editor.wordHighlightStrongBackground": "#CC783248",
+        "editor.findMatchBackground": "#7EA86D60",
+        "editor.findMatchHighlightBackground": "#7EA86D40",
         "editor.findRangeHighlightBackground": "#34343466",
-        "editor.hoverHighlightBackground": "#21428344",
+        "editor.hoverHighlightBackground": "#4A88C720",
         "editor.rangeHighlightBackground": "#2C2C2C88",
         "editorCursor.foreground": "#BBBBBB",
         "editorWhitespace.foreground": "#424242",
@@ -25,7 +25,7 @@
         "editorLineNumber.foreground": "#5A5D5F",
         "editorLineNumber.activeForeground": "#A4A3A3",
         "editorRuler.foreground": "#343434",
-        "editorBracketMatch.background": "#3B514D44",
+        "editorBracketMatch.background": "#4A88C730",
         "editorBracketMatch.border": "#3B514D",
         "editorOverviewRuler.border": "#333333",
         "editorOverviewRuler.errorForeground": "#BC3F3C",
@@ -210,6 +210,7 @@
         "editorSuggestWidget.foreground": "#BBBBBB",
         "editorSuggestWidget.highlightForeground": "#589DF6",
         "editorSuggestWidget.selectedBackground": "#4B6EAF",
+        "editorSuggestWidget.selectedForeground": "#FFFFFF",
         "editorHoverWidget.background": "#2D2F31",
         "editorHoverWidget.border": "#454545",
         "editorHoverWidget.foreground": "#BBBBBB",
@@ -260,11 +261,11 @@
         // ── Focus Border ────────────────────────────────────────
         "focusBorder": "#3D6185",
         "foreground": "#BBBBBB",
-        "descriptionForeground": "#808080",
+        "descriptionForeground": "#9C9C9C",
         "errorForeground": "#BC3F3C",
         "widget.shadow": "#00000044",
         "selection.background": "#214283",
-        "icon.foreground": "#808080",
+        "icon.foreground": "#9C9C9C",
         "textLink.foreground": "#589DF6",
         "textLink.activeForeground": "#6CAAF5",
         "textBlockQuote.background": "#2D2F31",
@@ -365,7 +366,7 @@
                 "string.interpolated"
             ],
             "settings": {
-                "foreground": "#6A8759"
+                "foreground": "#7EA86D"
             }
         },
         {
@@ -451,7 +452,7 @@
                 "entity.name.type.type-parameter"
             ],
             "settings": {
-                "foreground": "#507874"
+                "foreground": "#6DA09B"
             }
         },
         // ── Variables / Parameters ───────────────────────────────
@@ -476,7 +477,7 @@
                 "meta.object-literal.key"
             ],
             "settings": {
-                "foreground": "#9876AA"
+                "foreground": "#A885B8"
             }
         },
         // ── Constants (all caps / enums) ────────────────────────
@@ -486,7 +487,7 @@
                 "variable.other.enummember"
             ],
             "settings": {
-                "foreground": "#9876AA",
+                "foreground": "#A885B8",
                 "fontStyle": "italic"
             }
         },
@@ -612,7 +613,7 @@
                 "variable.argument.css"
             ],
             "settings": {
-                "foreground": "#9876AA"
+                "foreground": "#A885B8"
             }
         },
         // ── JSON ────────────────────────────────────────────────
@@ -621,7 +622,7 @@
                 "support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#9876AA"
+                "foreground": "#A885B8"
             }
         },
         {
@@ -630,7 +631,7 @@
                 "string.quoted.double.json"
             ],
             "settings": {
-                "foreground": "#6A8759"
+                "foreground": "#7EA86D"
             }
         },
         // ── Markdown ────────────────────────────────────────────
@@ -675,7 +676,7 @@
                 "markup.raw"
             ],
             "settings": {
-                "foreground": "#6A8759"
+                "foreground": "#7EA86D"
             }
         },
         {
@@ -726,7 +727,7 @@
                 "string.regexp.character-class"
             ],
             "settings": {
-                "foreground": "#6A8759"
+                "foreground": "#7EA86D"
             }
         },
         {
@@ -757,7 +758,7 @@
                 "entity.name.variable.property.cs"
             ],
             "settings": {
-                "foreground": "#9876AA"
+                "foreground": "#A885B8"
             }
         },
         // ── Python Specific ─────────────────────────────────────
@@ -814,7 +815,7 @@
                 "variable.object.property.jsx"
             ],
             "settings": {
-                "foreground": "#9876AA"
+                "foreground": "#A885B8"
             }
         },
         // ── YAML ────────────────────────────────────────────────
@@ -835,7 +836,7 @@
                 "variable.other.special.shell"
             ],
             "settings": {
-                "foreground": "#9876AA"
+                "foreground": "#A885B8"
             }
         },
         // ── Support ─────────────────────────────────────────────
@@ -875,24 +876,24 @@
         "struct": "#A9B7C6",
         "interface": "#A9B7C6",
         "enum": "#A9B7C6",
-        "typeParameter": "#507874",
+        "typeParameter": "#6DA09B",
         "function": "#FFC66D",
         "method": "#FFC66D",
-        "property": "#9876AA",
+        "property": "#A885B8",
         "variable": "#A9B7C6",
         "variable.readonly": {
-            "foreground": "#9876AA",
+            "foreground": "#A885B8",
             "fontStyle": "italic"
         },
         "enumMember": {
-            "foreground": "#9876AA",
+            "foreground": "#A885B8",
             "fontStyle": "italic"
         },
         "parameter": "#A9B7C6",
         "keyword": "#CC7832",
-        "string": "#6A8759",
+        "string": "#7EA86D",
         "number": "#6897BB",
-        "regexp": "#6A8759",
+        "regexp": "#7EA86D",
         "operator": "#A9B7C6",
         "decorator": "#BBB529",
         "macro": "#BBB529",
@@ -925,11 +926,11 @@
             "fontStyle": "italic"
         },
         "property.static": {
-            "foreground": "#9876AA",
+            "foreground": "#A885B8",
             "fontStyle": "italic"
         },
         "variable.static": {
-            "foreground": "#9876AA",
+            "foreground": "#A885B8",
             "fontStyle": "italic"
         }
     }
