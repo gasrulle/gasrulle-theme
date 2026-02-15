@@ -145,7 +145,7 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 | Structs         | `#89DDFF` | Sky blue (++ only)                   |
 | Interfaces      | `#BB9AF7` | Lavender-purple (++ only)            |
 | Enums           | `#F7768E` | Rose-pink (++ only)                  |
-| Comments        | `#565F89` | Cool blue-gray                       |
+| Comments        | `#59638D` | Cool blue-gray                       |
 | Accent          | `#7AA2F7` | Azure blue                           |
 | Doc Comments    | `#4C5576` | Dimmed blue-gray, italic               |
 | Doc Keywords    | `#7E90A8` | Cool steel-blue                        |
@@ -170,9 +170,9 @@ Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
 | Structs         | `#73C990` | Balanced green (++ only)             |
 | Interfaces      | `#C8A2D6` | Soft lavender (++ only)              |
 | Enums           | `#E5A6A6` | Soft coral (++ only)                 |
-| Comments        | `#5C6370` | Neutral gray                         |
+| Comments        | `#5F6674` | Neutral gray                         |
 | Accent          | `#61AFEF` | Clear blue                           |
-| Doc Comments    | `#515660` | Dimmed neutral gray, italic            |
+| Doc Comments    | `#555A66` | Dimmed neutral gray, italic            |
 | Doc Keywords    | `#A89888` | Warm sand                              |
 
 ### Apex Neon++ (Original — Vibrant & Bold)
@@ -593,7 +593,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Visual Studio Dark | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
 | Apex Ember++ | `#5E6270` | `#A8907E` | Dimmed purple-gray + warm amber-sand |
 | Apex Frost++ | `#4C5576` | `#7E90A8` | Dimmed blue-gray + cool steel-blue |
-| Apex Steel++ | `#515660` | `#A89888` | Dimmed neutral gray + warm sand |
+| Apex Steel++ | `#555A66` | `#A89888` | Dimmed neutral gray + warm sand |
 | Apex Neon++ | `#565E90` | `#A898B0` | Dimmed blue-purple + muted lilac |
 | Apex Carbon++ | `#686868` | `#A09890` | Pure gray + near-achromatic sand |
 
@@ -638,6 +638,8 @@ A dark base at any alpha is nearly invisible against a dark editor background. A
 
 The following keys must all share the same opaque selection color (or its alpha variant):
 
+**Background keys** (10 keys — must all use the same selection color):
+
 | Key | Variant |
 |-----|---------|
 | `editor.selectionBackground` | Opaque |
@@ -651,6 +653,113 @@ The following keys must all share the same opaque selection color (or its alpha 
 | `terminal.selectionBackground` | Opaque |
 | `selection.background` | Opaque |
 
+**Foreground keys** (5 keys — must achieve ≥3:1 contrast against the selection background):
+
+| Key | Value rule |
+|-----|-----------|
+| `list.activeSelectionForeground` | Brightest palette-derived foreground that achieves ≥3:1 vs selBG |
+| `list.focusForeground` | Same as above |
+| `quickInputList.focusForeground` | Same as above |
+| `peekViewResult.selectionForeground` | Same as above |
+| `editorSuggestWidget.selectedForeground` | Same as above |
+
+> **Selection foreground rule**: If a theme's default `foreground` achieves ≥3:1 contrast against the selection background, use the foreground value for all 5 keys. If the default foreground is too dim (as with Frost++ and Steel++), use a brighter palette-derived value (e.g., the Variables color or a lightened neutral). VS Code Dark+, Rider, and most major themes use an explicit bright white or near-white for selection foregrounds — this is industry standard.
+
+**Current selection foreground values per theme:**
+| Theme | Selection FG | Default FG | FG vs selBG | Strategy |
+|-------|-------------|-----------|-------------|----------|
+| Ember++ | `#C8CEE0` | `#C8CEE0` | 7.40:1 | Default FG is bright enough |
+| Frost++ | `#C0CAF5` | `#A9B1D6` | 3.41:1 | Uses Variables color (brighter than FG) |
+| Steel++ | `#D0D6E0` | `#ABB2BF` | 3.58:1 | Uses brightened neutral |
+| Neon++ | `#F0F0F8` | `#F0F0F8` | 7.81:1 | Default FG is bright enough |
+| Carbon++ | `#E6E6E6` | `#E6E6E6` | 7.10:1 | Default FG is bright enough |
+
+### Minimum Contrast Requirements
+
+Every foreground/background combination in the theme must meet minimum contrast ratios. These are non-negotiable — they protect readability and accessibility.
+
+#### Syntax on Editor Background
+
+| Foreground role | Minimum ratio | Notes |
+|----------------|--------------|-------|
+| Keywords, Control Flow, Strings, Functions, Numbers, Properties, Parameters, Classes, Structs, Interfaces, Enums | ≥4.5:1 | WCAG AA for normal text |
+| Variables, Foreground | ≥4.5:1 | Primary content |
+| Comments | ≥3:1 | Relaxed — intentionally de-emphasized |
+| Doc Comments | ≥2.5:1 | Dimmer than comments, but still readable |
+| Doc Keywords | ≥3:1 | Tags within doc comments |
+
+#### UI Foregrounds on Backgrounds
+
+| Combination | Minimum ratio | Notes |
+|-------------|--------------|-------|
+| Foreground vs Sidebar BG | ≥4.5:1 | Must be clearly readable |
+| `descriptionForeground` / `icon.foreground` vs Sidebar BG | ≥3:1 | Secondary text / icons |
+| `descriptionForeground` vs Selection BG | ≥1.8:1 | Description text when item is selected |
+| Selection FG vs Selection BG | ≥3:1 | Primary text on selected items |
+| Foreground vs Selection BG | ≥2.5:1 | General text readability on selection |
+
+#### Selection / Highlight Visibility
+
+| Combination | Minimum ratio | Notes |
+|-------------|--------------|-------|
+| Selection BG vs Editor BG | ≥1.3:1 | Industry standard allows low contrast (Dark+ = 1.96:1); compensate with bright selection FG |
+| Selection BG vs Sidebar BG | ≥1.2:1 | Sidebar selections rely more on FG contrast than BG contrast |
+
+#### How to Compute Contrast Ratios
+
+Use the WCAG 2.0 relative luminance formula. Quick Node.js check:
+```js
+function lum(r,g,b) {
+  function c(v) { v/=255; return v<=0.04045 ? v/12.92 : Math.pow((v+0.055)/1.055,2.4); }
+  return 0.2126*c(r)+0.7152*c(g)+0.0722*c(b);
+}
+function hex(s) { return [parseInt(s.slice(0,2),16),parseInt(s.slice(2,4),16),parseInt(s.slice(4,6),16)]; }
+function cr(a,b) { const L1=lum(...hex(a)),L2=lum(...hex(b)); return (Math.max(L1,L2)+0.05)/(Math.min(L1,L2)+0.05); }
+// Example: cr('C8CEE0','141522') → 11.52:1
+```
+
+## Holistic Change Protocol
+
+> **Critical rule**: No color in a theme exists in isolation. Every color participates in multiple foreground/background combinations. Changing ANY single color requires evaluating its full ripple chain.
+
+### The Ripple Chain
+
+When a change request targets a single property (e.g., "darken the editor background"), the following chain must be evaluated:
+
+1. **Direct impact**: The requested color change itself
+2. **Syntax readability**: All syntax foreground colors vs the changed background — re-check the ≥4.5:1 minimums
+3. **Comment readability**: Comments and doc comments vs the changed background — re-check ≥3:1 / ≥2.5:1
+4. **Overlay visibility**: All semi-transparent highlights re-blend against the new background — verify they are still visible
+5. **Selection visibility**: Selection BG vs new background — verify ≥2:1 editor / ≥2.5:1 sidebar
+6. **Selection text**: FG and description text vs selection BG — verify ≥3:1 / ≥1.8:1
+7. **Surface hierarchy**: Editor → Sidebar → Panel → Input backgrounds must maintain clear visual separation
+8. **Temperature coherence**: All backgrounds must stay in the same temperature family (warm/cool/neutral/achromatic)
+9. **Cross-palette consistency**: If a color role changes, ALL occurrences in `colors`, `tokenColors`, AND `semanticTokenColors` must be updated together
+
+### Affected Surface Matrix
+
+Before making any change, identify which cells in this matrix are affected:
+
+| Background ↓ / Foreground → | Syntax tokens | Comments | Description/Icon | Selection FG | Overlay highlights |
+|------------------------------|--------------|----------|-----------------|-------------|-------------------|
+| Editor BG | ✓ | ✓ | | | ✓ |
+| Sidebar BG | | | ✓ | | |
+| Selection BG | | | ✓ | ✓ | |
+| Input/Widget BG | ✓ | | ✓ | | |
+| Panel BG | ✓ | ✓ | | | |
+
+Any change that affects a row (background change) requires re-checking **all** foregrounds in that row. Any change that affects a column (foreground change) requires re-checking against **all** backgrounds in that column.
+
+### Examples of Ripple Effects
+
+| Requested change | Ripple chain |
+|-----------------|-------------|
+| "Darken the editor background" | Re-check ALL syntax contrasts, comment readability, overlay alpha visibility, selection-on-editor visibility, line highlight distinction |
+| "Brighten the sidebar" | Re-check description/icon contrast on sidebar, selection-on-sidebar visibility, list hover visibility, surface hierarchy gap to editor |
+| "Change keyword color" | Re-check keyword vs editor BG contrast, `wordHighlightStrongBackground` overlay (uses keyword as base), bracket highlight if keyword-derived |
+| "Change accent color" | Re-check ALL accent-derived overlays (selection highlight, word highlight, hover highlight, minimap selection), buttons, badges, links, focus borders |
+| "Change string color" | Re-check string vs editor BG, ALL find match overlays (use string as base), peek match highlights, minimap find match, diff inserted text if green-based |
+
 ### Quality Checks
 - Run `get_errors` on all modified theme files after any edit to catch invalid/deprecated properties and transparency requirements
 - Colors marked "must be transparent" by VS Code need an alpha channel suffix (e.g., `CC`, `80`, `44`)
@@ -658,6 +767,19 @@ The following keys must all share the same opaque selection color (or its alpha 
 - **Overlay visibility**: Every semi-transparent highlight must use a bright base color from the palette — never a dark/muted color near the editor background. Verify visually or compute the effective blended color against the editor BG
 - **Selection consistency**: After changing any selection color, verify that all keys in the selection consistency table above are updated to match
 - For ported themes: verify colors match official sources before committing
+
+### Change Validation Protocol
+
+After **every** theme edit session, execute these steps in order:
+
+1. **Palette fidelity**: For each modified theme, verify that every syntax color in the file matches the documented palette table in this file. Use `grep` to confirm no undocumented hex values were introduced.
+2. **Error check**: Run `get_errors` on all modified theme files. Fix any invalid/deprecated property warnings.
+3. **Contrast audit**: For any changed foreground or background color, compute WCAG contrast ratios using the Node.js snippet above. Verify all pairs meet the minimums in the Minimum Contrast Requirements section.
+4. **Overlay audit**: For any changed accent, keyword, or string color, verify that all overlay/highlight colors derived from it are updated and still use a bright base + correct alpha from the alpha guidelines table.
+5. **Selection audit**: If any selection-related color changed, verify all 10 background keys and 5 foreground keys in the selection consistency table are in sync.
+6. **Cross-reference**: If a color role was changed (e.g., keyword color), search the entire theme file for both the old and new hex values to ensure no orphaned references remain.
+7. **Surface hierarchy**: Verify that Editor BG < Sidebar BG < Input BG in lightness, maintaining clear visual separation.
+8. **Temperature check**: For color-tinted themes, verify all background surfaces share the same hue family. For achromatic themes (Carbon), verify R=G=B on all background surfaces.
 
 ### Packaging
 ```bash
