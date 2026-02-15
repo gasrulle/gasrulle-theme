@@ -10,15 +10,15 @@
         "editor.foreground": "#e6e6e6",
         "editor.lineHighlightBackground": "#242424",
         "editor.lineHighlightBorder": "#242424",
-        "editor.selectionBackground": "#3e3e3e",
-        "editor.selectionHighlightBackground": "#3e3e3e44",
-        "editor.inactiveSelectionBackground": "#3e3e3e66",
-        "editor.wordHighlightBackground": "#70C2F030",
-        "editor.wordHighlightStrongBackground": "#99D68830",
-        "editor.findMatchBackground": "#D9AD8255",
-        "editor.findMatchHighlightBackground": "#D9AD8230",
-        "editor.findRangeHighlightBackground": "#32323266",
-        "editor.hoverHighlightBackground": "#3e3e3e33",
+        "editor.selectionBackground": "#444444",
+        "editor.selectionHighlightBackground": "#50505055",
+        "editor.inactiveSelectionBackground": "#44444466",
+        "editor.wordHighlightBackground": "#70C2F048",
+        "editor.wordHighlightStrongBackground": "#99D68848",
+        "editor.findMatchBackground": "#D9AD8265",
+        "editor.findMatchHighlightBackground": "#D9AD8248",
+        "editor.findRangeHighlightBackground": "#32323280",
+        "editor.hoverHighlightBackground": "#50505045",
         "editor.rangeHighlightBackground": "#242424CC",
         "editorCursor.foreground": "#e6e6e6",
         "editorWhitespace.foreground": "#37373780",
@@ -60,7 +60,7 @@
         "tab.inactiveBackground": "#181818",
         "tab.inactiveForeground": "#7a7a7a",
         "tab.border": "#181818",
-        "tab.hoverBackground": "#202020",
+        "tab.hoverBackground": "#2c2c2c",
         "tab.unfocusedActiveBackground": "#181818",
         "tab.unfocusedActiveForeground": "#7a7a7a",
         "tab.unfocusedInactiveBackground": "#181818",
@@ -108,14 +108,14 @@
         "panelTitle.activeForeground": "#e6e6e6",
         "panelTitle.inactiveForeground": "#5c5c5c",
         // ── Lists / Trees ───────────────────────────────────────
-        "list.activeSelectionBackground": "#3e3e3e",
+        "list.activeSelectionBackground": "#444444",
         "list.activeSelectionForeground": "#e6e6e6",
-        "list.focusBackground": "#3e3e3e",
+        "list.focusBackground": "#444444",
         "list.focusForeground": "#e6e6e6",
         "list.highlightForeground": "#70C2F0",
-        "list.hoverBackground": "#20202080",
+        "list.hoverBackground": "#38383860",
         "list.hoverForeground": "#e6e6e6",
-        "list.inactiveSelectionBackground": "#3e3e3e66",
+        "list.inactiveSelectionBackground": "#44444466",
         "list.inactiveSelectionForeground": "#e6e6e6",
         "list.invalidItemForeground": "#E07070",
         "list.errorForeground": "#E07070",
@@ -210,7 +210,7 @@
         // ── Command Palette / Quick Input ───────────────────────
         "quickInput.background": "#202020",
         "quickInput.foreground": "#e6e6e6",
-        "quickInputList.focusBackground": "#3e3e3e",
+        "quickInputList.focusBackground": "#444444",
         "quickInputList.focusForeground": "#e6e6e6",
         "quickInputTitle.background": "#202020",
         // ── Widgets (Find, Suggestions, Hover) ──────────────────
@@ -1103,6 +1103,3 @@
         }
     }
 }
-
-
-
