@@ -37,7 +37,7 @@
         "editorGutter.addedBackground": "#384C38",
         "editorGutter.modifiedBackground": "#374752",
         "editorGutter.deletedBackground": "#BC3F3C",
-        "editorCodeLens.foreground": "#808080",
+        "editorCodeLens.foreground": "#727272",
         // ── Editor Groups / Tabs ────────────────────────────────
         "editorGroup.border": "#2C2C2C",
         "editorGroup.dropBackground": "#21428344",
@@ -54,7 +54,7 @@
         "tab.unfocusedActiveBackground": "#2D2F31",
         "tab.unfocusedActiveForeground": "#BBBBBB",
         "tab.unfocusedInactiveBackground": "#2D2F31",
-        "tab.unfocusedInactiveForeground": "#808080",
+        "tab.unfocusedInactiveForeground": "#727272",
         // ── Sidebar / Activity Bar ──────────────────────────────
         "sideBar.background": "#2D2F31",
         "sideBar.foreground": "#D0D0D0",
@@ -67,14 +67,14 @@
         "activityBar.foreground": "#BBBBBB",
         "activityBar.border": "#454545",
         "activityBar.activeBorder": "#4A88C7",
-        "activityBar.inactiveForeground": "#808080",
+        "activityBar.inactiveForeground": "#727272",
         "activityBarBadge.background": "#4A88C7",
         "activityBarBadge.foreground": "#FFFFFF",
         // ── Title Bar ───────────────────────────────────────────
         "titleBar.activeBackground": "#2D2F31",
         "titleBar.activeForeground": "#BBBBBB",
         "titleBar.inactiveBackground": "#2D2F31",
-        "titleBar.inactiveForeground": "#808080",
+        "titleBar.inactiveForeground": "#727272",
         "titleBar.border": "#454545",
         // ── Status Bar ──────────────────────────────────────────
         "statusBar.background": "#2D2F31",
@@ -94,7 +94,7 @@
         "panel.border": "#454545",
         "panelTitle.activeBorder": "#4A88C7",
         "panelTitle.activeForeground": "#BBBBBB",
-        "panelTitle.inactiveForeground": "#808080",
+        "panelTitle.inactiveForeground": "#727272",
         // ── Lists / Trees ───────────────────────────────────────
         "list.activeSelectionBackground": "#4B6EAF",
         "list.activeSelectionForeground": "#FFFFFF",
@@ -113,7 +113,7 @@
         "input.background": "#363839",
         "input.foreground": "#BBBBBB",
         "input.border": "#454545",
-        "input.placeholderForeground": "#808080",
+        "input.placeholderForeground": "#727272",
         "inputOption.activeBorder": "#4A88C7",
         "inputOption.activeBackground": "#4A88C744",
         "inputValidation.errorBackground": "#2D2F31",
@@ -139,9 +139,9 @@
         "badge.foreground": "#FFFFFF",
         // ── Scrollbar ───────────────────────────────────────────
         "scrollbar.shadow": "#00000044",
-        "scrollbarSlider.activeBackground": "#80808088",
+        "scrollbarSlider.activeBackground": "#72727288",
         "scrollbarSlider.background": "#58585844",
-        "scrollbarSlider.hoverBackground": "#80808066",
+        "scrollbarSlider.hoverBackground": "#72727266",
         // ── Minimap ─────────────────────────────────────────────
         "minimap.findMatchHighlight": "#61461880",
         "minimap.selectionHighlight": "#214283CC",
@@ -165,7 +165,7 @@
         "peekViewResult.selectionBackground": "#4B6EAF",
         "peekViewResult.selectionForeground": "#FFFFFF",
         "peekViewTitle.background": "#2D2F31",
-        "peekViewTitleDescription.foreground": "#808080",
+        "peekViewTitleDescription.foreground": "#727272",
         "peekViewTitleLabel.foreground": "#BBBBBB",
         // ── Merge Conflicts ─────────────────────────────────────
         "merge.currentHeaderBackground": "#384C3844",
@@ -180,7 +180,7 @@
         "diffEditor.removedTextBackground": "#BC3F3C22",
         "diffEditor.diagonalFill": "#515151",
         // ── Breadcrumbs ─────────────────────────────────────────
-        "breadcrumb.foreground": "#808080",
+        "breadcrumb.foreground": "#727272",
         "breadcrumb.focusForeground": "#BBBBBB",
         "breadcrumb.activeSelectionForeground": "#BBBBBB",
         "breadcrumbPicker.background": "#2D2F31",
@@ -229,7 +229,7 @@
         "gitDecoration.modifiedResourceForeground": "#6897BB",
         "gitDecoration.deletedResourceForeground": "#BC3F3C",
         "gitDecoration.untrackedResourceForeground": "#6A8759",
-        "gitDecoration.ignoredResourceForeground": "#808080",
+        "gitDecoration.ignoredResourceForeground": "#727272",
         "gitDecoration.conflictingResourceForeground": "#BE9117",
         "gitDecoration.stageModifiedResourceForeground": "#6897BB",
         "gitDecoration.stageDeletedResourceForeground": "#BC3F3C",
@@ -244,7 +244,7 @@
         "terminal.ansiMagenta": "#9876AA",
         "terminal.ansiCyan": "#68A8C3",
         "terminal.ansiWhite": "#A9B7C6",
-        "terminal.ansiBrightBlack": "#808080",
+        "terminal.ansiBrightBlack": "#727272",
         "terminal.ansiBrightRed": "#FF8785",
         "terminal.ansiBrightGreen": "#A5C261",
         "terminal.ansiBrightYellow": "#FFC66D",
@@ -291,7 +291,7 @@
                 "punctuation.definition.comment"
             ],
             "settings": {
-                "foreground": "#808080",
+                "foreground": "#727272",
                 "fontStyle": "italic"
             }
         },
@@ -301,7 +301,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#6E7074",
+                "foreground": "#626468",
                 "fontStyle": "italic"
             }
         },
@@ -314,7 +314,7 @@
                 "entity.name.type.instance.jsdoc"
             ],
             "settings": {
-                "foreground": "#A89888"
+                "foreground": "#908070"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -684,7 +684,7 @@
                 "markup.quote"
             ],
             "settings": {
-                "foreground": "#808080"
+                "foreground": "#727272"
             }
         },
         {
@@ -902,21 +902,21 @@
         "method.declaration": "#FFC66D",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
-            "foreground": "#6E7074",
+            "foreground": "#626468",
             "fontStyle": "italic"
         },
-        "xmlDocCommentDelimiter": "#6E7074",
-        "xmlDocCommentName": "#A89888",
-        "xmlDocCommentAttributeName": "#A89888",
-        "xmlDocCommentAttributeQuotes": "#6E7074",
-        "xmlDocCommentAttributeValue": "#A89888",
+        "xmlDocCommentDelimiter": "#626468",
+        "xmlDocCommentName": "#908070",
+        "xmlDocCommentAttributeName": "#908070",
+        "xmlDocCommentAttributeQuotes": "#626468",
+        "xmlDocCommentAttributeValue": "#908070",
         "xmlDocCommentCDataSection": {
-            "foreground": "#6E7074",
+            "foreground": "#626468",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#A89888",
-        "xmlDocCommentProcessingInstruction": "#A89888",
-        "xmlDocCommentComment": "#808080",
+        "xmlDocCommentEntityReference": "#908070",
+        "xmlDocCommentProcessingInstruction": "#908070",
+        "xmlDocCommentComment": "#727272",
         "function.static": {
             "foreground": "#FFC66D",
             "fontStyle": "italic"

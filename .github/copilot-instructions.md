@@ -94,9 +94,9 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Functions   | `#FFC66D` |
 | Numbers     | `#6897BB` |
 | Properties  | `#9876AA` |
-| Comments    | `#808080` |
-| Doc Comments| `#6E7074` | Dimmed gray, italic      |
-| Doc Keywords| `#A89888` | Warm sand                |
+| Comments    | `#727272` |
+| Doc Comments| `#626468` | Dimmed gray, italic      |
+| Doc Keywords| `#908070` | Warm sand                |
 | Annotations | `#BBB529` |
 | Accent      | `#4A88C7` |
 
@@ -107,23 +107,23 @@ Synthesized from Night Owl (accessibility), Catppuccin (warmth), Tokyo Night (se
 |-----------------|-----------|--------------------------------------|
 | Editor BG       | `#141522` | Warm purple-tinted dark              |
 | Sidebar BG      | `#1B1B2C` | Lower contrast than editor           |
-| Foreground      | `#C8CEE0` | Warm off-white                       |
+| Foreground      | `#B6BCCE` | Warm off-white (softened)            |
 | Keywords        | `#C9A0F5` | Catppuccin mauve + One Dark purple   |
 | Control Flow    | `#D8B0F8` | Brighter purple, italic              |
 | Strings         | `#A6D189` | Catppuccin green warmth              |
 | Functions       | `#8CAAEE` | Night Owl blue (readability)         |
 | Numbers         | `#F2B07A` | Peach/amber                          |
 | Properties      | `#F4B8E4` | Catppuccin pink family               |
-| Variables       | `#C8CEE0` | Foreground (Night Owl: data = white) |
+| Variables       | `#B6BCCE` | Foreground (Night Owl: data = white) |
 | Parameters      | `#E5C890` | Warm amber, Tokyo Night style        |
 | Classes         | `#81C8BE` | Warm teal                            |
 | Structs         | `#A6D9A6` | Muted sage (++ only)                 |
 | Interfaces      | `#B4BEFE` | Catppuccin lavender (++ only)        |
 | Enums           | `#EEBEBE` | Flamingo/coral (++ only)             |
-| Comments        | `#6C7086` | Warm muted gray                      |
+| Comments        | `#60647A` | Warm muted gray                      |
 | Accent          | `#8CAAEE` | Warm blue                            |
-| Doc Comments    | `#5E6270` | Dimmed purple-gray, italic             |
-| Doc Keywords    | `#A8907E` | Warm amber-sand                        |
+| Doc Comments    | `#545866` | Dimmed purple-gray, italic             |
+| Doc Keywords    | `#927A68` | Warm amber-sand                        |
 
 ### Apex Frost++ (Original — Cool & Modern)
 Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
@@ -145,10 +145,10 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 | Structs         | `#89DDFF` | Sky blue (++ only)                   |
 | Interfaces      | `#BB9AF7` | Lavender-purple (++ only)            |
 | Enums           | `#F7768E` | Rose-pink (++ only)                  |
-| Comments        | `#59638D` | Cool blue-gray                       |
+| Comments        | `#535D87` | Cool blue-gray                       |
 | Accent          | `#7AA2F7` | Azure blue                           |
-| Doc Comments    | `#4C5576` | Dimmed blue-gray, italic               |
-| Doc Keywords    | `#7E90A8` | Cool steel-blue                        |
+| Doc Comments    | `#485172` | Dimmed blue-gray, italic               |
+| Doc Keywords    | `#6E8098` | Cool steel-blue                        |
 
 ### Apex Steel++ (Original — Balanced Neutral)
 Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
@@ -170,10 +170,10 @@ Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
 | Structs         | `#73C990` | Balanced green (++ only)             |
 | Interfaces      | `#C8A2D6` | Soft lavender (++ only)              |
 | Enums           | `#E5A6A6` | Soft coral (++ only)                 |
-| Comments        | `#5F6674` | Neutral gray                         |
+| Comments        | `#5B6270` | Neutral gray                         |
 | Accent          | `#61AFEF` | Clear blue                           |
-| Doc Comments    | `#555A66` | Dimmed neutral gray, italic            |
-| Doc Keywords    | `#A89888` | Warm sand                              |
+| Doc Comments    | `#515662` | Dimmed neutral gray, italic            |
+| Doc Keywords    | `#8E7E6E` | Warm sand                              |
 
 ### Apex Neon++ (Original — Vibrant & Bold)
 Inspired by Dracula. Maximum visual energy, vivid saturated colors.
@@ -182,23 +182,23 @@ Inspired by Dracula. Maximum visual energy, vivid saturated colors.
 |-----------------|-----------|--------------------------------------|
 | Editor BG       | `#16162A` | Deep neon-dark                       |
 | Sidebar BG      | `#1E1E40` | Dark purple                          |
-| Foreground      | `#F0F0F8` | Bright near-white                    |
+| Foreground      | `#C2C2CA` | Softened near-white                  |
 | Keywords        | `#FF79C6` | Hot pink                             |
 | Control Flow    | `#FF92D0` | Brighter pink, italic                |
 | Strings         | `#F1FA8C` | Electric yellow-green                |
 | Functions       | `#50FA7B` | Neon green                           |
 | Numbers         | `#BD93F9` | Vivid purple                         |
 | Properties      | `#FFB86C` | Bright orange                        |
-| Variables       | `#F0F0F8` | Near-white                           |
+| Variables       | `#C2C2CA` | Softened near-white                  |
 | Parameters      | `#FFD580` | Warm golden                          |
 | Classes         | `#8BE9FD` | Electric cyan                        |
 | Structs         | `#69FF94` | Bright green (++ only)               |
 | Interfaces      | `#CAA0F5` | Vivid lavender (++ only)             |
 | Enums           | `#FF6E6E` | Neon coral (++ only)                 |
-| Comments        | `#6272A4` | Dracula blue-gray                    |
+| Comments        | `#566698` | Dracula blue-gray                    |
 | Accent          | `#BD93F9` | Vivid purple                         |
-| Doc Comments    | `#565E90` | Dimmed blue-purple, italic             |
-| Doc Keywords    | `#A898B0` | Muted lilac                            |
+| Doc Comments    | `#4E5688` | Dimmed blue-purple, italic             |
+| Doc Keywords    | `#8C7C94` | Muted lilac                            |
 
 ### Apex Carbon++ (Original — Achromatic Dark)
 Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation syntax with evenly distributed hues. De-yellowed: warm tokens redistributed across hue wheel to eliminate amber cast.
@@ -207,23 +207,23 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 |-----------------|-----------|--------------------------------------|
 | Editor BG       | `#181818` | Pure gray (R=G=B=24)                 |
 | Sidebar BG      | `#202020` | Pure gray, raised surface            |
-| Foreground      | `#E6E6E6` | Bright silver                          |
+| Foreground      | `#C2C2C2` | Softened silver                        |
 | Keywords        | `#E68CA5` | Dusty rose, brighter                 |
 | Control Flow    | `#F09CB5` | Brighter rose, italic                |
 | Strings         | `#9AD68A` | Sage green, brighter                 |
 | Functions       | `#78C8F0` | Steel blue, brighter                 |
 | Numbers         | `#D9B086` | Warm sand     |
 | Properties      | `#DB9685` | Salmon (hue 12°, cooled)   |
-| Variables       | `#E6E6E6` | Bright silver (achromatic)             |
+| Variables       | `#C2C2C2` | Softened silver (achromatic)           |
 | Parameters      | `#A8C98E` | Eucalyptus sage (hue ~100°, cooled)  |
 | Classes         | `#66CACA` | Bright turquoise, brighter            |
 | Structs         | `#7AD6A2` | Malachite green, brighter            |
 | Interfaces      | `#B896D8` | Bright amethyst, brighter              |
 | Enums           | `#D48C94` | Bright garnet, brighter                     |
-| Comments        | `#7A7A7A` | Pure gray (achromatic)               |
+| Comments        | `#6E6E6E` | Pure gray (achromatic)               |
 | Accent          | `#78C8F0` | Steel blue                           |
-| Doc Comments    | `#686868` | Pure gray (R=G=B), italic              |
-| Doc Keywords    | `#A09890` | Near-achromatic sand (S≈5%)            |
+| Doc Comments    | `#5A5A5A` | Pure gray (R=G=B), italic              |
+| Doc Keywords    | `#888078` | Near-achromatic sand (S≈5%)            |
 
 ### Apex Theme Family Naming
 - **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic)
@@ -589,13 +589,13 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Theme | Doc Body | Doc Keywords | Style |
 |-------|---------|-------------|-------|
 | Rider New UI | `#636770` | `#A89888` | Dimmed gray + warm sand |
-| Rider Darcula | `#6E7074` | `#A89888` | Dimmed gray + warm sand |
+| Rider Darcula | `#626468` | `#908070` | Dimmed gray + warm sand |
 | Visual Studio Dark | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
-| Apex Ember++ | `#5E6270` | `#A8907E` | Dimmed purple-gray + warm amber-sand |
-| Apex Frost++ | `#4C5576` | `#7E90A8` | Dimmed blue-gray + cool steel-blue |
-| Apex Steel++ | `#555A66` | `#A89888` | Dimmed neutral gray + warm sand |
-| Apex Neon++ | `#565E90` | `#A898B0` | Dimmed blue-purple + muted lilac |
-| Apex Carbon++ | `#686868` | `#A09890` | Pure gray + near-achromatic sand |
+| Apex Ember++ | `#545866` | `#927A68` | Dimmed purple-gray + warm amber-sand |
+| Apex Frost++ | `#485172` | `#6E8098` | Dimmed blue-gray + cool steel-blue |
+| Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |
+| Apex Neon++ | `#4E5688` | `#8C7C94` | Dimmed blue-purple + muted lilac |
+| Apex Carbon++ | `#5A5A5A` | `#888078` | Pure gray + near-achromatic sand |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
@@ -668,11 +668,11 @@ The following keys must all share the same opaque selection color (or its alpha 
 **Current selection foreground values per theme:**
 | Theme | Selection FG | Default FG | FG vs selBG | Strategy |
 |-------|-------------|-----------|-------------|----------|
-| Ember++ | `#C8CEE0` | `#C8CEE0` | 7.40:1 | Default FG is bright enough |
+| Ember++ | `#C3C9DB` | `#B6BCCE` | 3.32:1 | Brightened neutral (FG dimmed below 3:1) |
 | Frost++ | `#C0CAF5` | `#A9B1D6` | 3.41:1 | Uses Variables color (brighter than FG) |
 | Steel++ | `#D0D6E0` | `#ABB2BF` | 3.58:1 | Uses brightened neutral |
-| Neon++ | `#F0F0F8` | `#F0F0F8` | 7.81:1 | Default FG is bright enough |
-| Carbon++ | `#E6E6E6` | `#E6E6E6` | 7.10:1 | Default FG is bright enough |
+| Neon++ | `#D1D1D9` | `#C2C2CA` | 3.47:1 | Brightened neutral (FG dimmed below 3:1) |
+| Carbon++ | `#D0D0D0` | `#C2C2C2` | 3.40:1 | Brightened achromatic (FG dimmed below 3:1) |
 
 ### Minimum Contrast Requirements
 
@@ -682,17 +682,17 @@ Every foreground/background combination in the theme must meet minimum contrast 
 
 | Foreground role | Minimum ratio | Notes |
 |----------------|--------------|-------|
-| Keywords, Control Flow, Strings, Functions, Numbers, Properties, Parameters, Classes, Structs, Interfaces, Enums | ≥4.5:1 | WCAG AA for normal text |
-| Variables, Foreground | ≥4.5:1 | Primary content |
-| Comments | ≥3:1 | Relaxed — intentionally de-emphasized |
-| Doc Comments | ≥2.5:1 | Dimmer than comments, but still readable |
-| Doc Keywords | ≥3:1 | Tags within doc comments |
+| Keywords, Control Flow, Strings, Functions, Numbers, Properties, Parameters, Classes, Structs, Interfaces, Enums | ≥4.0:1 | Relaxed from WCAG AA to reduce eye strain on dark backgrounds |
+| Variables, Foreground | ≥4.0:1 | Primary content |
+| Comments | ≥2.75:1 | Relaxed — intentionally de-emphasized |
+| Doc Comments | ≥2.25:1 | Dimmer than comments, but still readable |
+| Doc Keywords | ≥2.75:1 | Tags within doc comments |
 
 #### UI Foregrounds on Backgrounds
 
 | Combination | Minimum ratio | Notes |
 |-------------|--------------|-------|
-| Foreground vs Sidebar BG | ≥4.5:1 | Must be clearly readable |
+| Foreground vs Sidebar BG | ≥4.0:1 | Must be clearly readable |
 | `descriptionForeground` / `icon.foreground` vs Sidebar BG | ≥3:1 | Secondary text / icons |
 | `descriptionForeground` vs Selection BG | ≥1.8:1 | Description text when item is selected |
 | Selection FG vs Selection BG | ≥3:1 | Primary text on selected items |
@@ -715,7 +715,7 @@ function lum(r,g,b) {
 }
 function hex(s) { return [parseInt(s.slice(0,2),16),parseInt(s.slice(2,4),16),parseInt(s.slice(4,6),16)]; }
 function cr(a,b) { const L1=lum(...hex(a)),L2=lum(...hex(b)); return (Math.max(L1,L2)+0.05)/(Math.min(L1,L2)+0.05); }
-// Example: cr('C8CEE0','141522') → 11.52:1
+// Example: cr('B6BCCE','141522') → 9.55:1
 ```
 
 ## Holistic Change Protocol
@@ -727,8 +727,8 @@ function cr(a,b) { const L1=lum(...hex(a)),L2=lum(...hex(b)); return (Math.max(L
 When a change request targets a single property (e.g., "darken the editor background"), the following chain must be evaluated:
 
 1. **Direct impact**: The requested color change itself
-2. **Syntax readability**: All syntax foreground colors vs the changed background — re-check the ≥4.5:1 minimums
-3. **Comment readability**: Comments and doc comments vs the changed background — re-check ≥3:1 / ≥2.5:1
+2. **Syntax readability**: All syntax foreground colors vs the changed background — re-check the ≥4.0:1 minimums
+3. **Comment readability**: Comments and doc comments vs the changed background — re-check ≥2.75:1 / ≥2.25:1
 4. **Overlay visibility**: All semi-transparent highlights re-blend against the new background — verify they are still visible
 5. **Selection visibility**: Selection BG vs new background — verify ≥2:1 editor / ≥2.5:1 sidebar
 6. **Selection text**: FG and description text vs selection BG — verify ≥3:1 / ≥1.8:1

@@ -39,7 +39,7 @@
         "editorGutter.addedBackground": "#9ece6a",
         "editorGutter.modifiedBackground": "#7aa2f7",
         "editorGutter.deletedBackground": "#f7768e",
-        "editorCodeLens.foreground": "#59638d",
+        "editorCodeLens.foreground": "#535D87",
         // ── Bracket Pair Colorization ───────────────────────────
         "editorBracketHighlight.foreground1": "#e0af68",
         "editorBracketHighlight.foreground2": "#7aa2f7",
@@ -58,11 +58,11 @@
         "tab.activeForeground": "#a9b1d6",
         "tab.activeBorderTop": "#7aa2f7",
         "tab.inactiveBackground": "#121326",
-        "tab.inactiveForeground": "#59638d",
+        "tab.inactiveForeground": "#535D87",
         "tab.border": "#121326",
         "tab.hoverBackground": "#191a2e",
         "tab.unfocusedActiveBackground": "#121326",
-        "tab.unfocusedActiveForeground": "#59638d",
+        "tab.unfocusedActiveForeground": "#535D87",
         "tab.unfocusedInactiveBackground": "#121326",
         "tab.unfocusedInactiveForeground": "#4a4e6a",
         "tab.lastPinnedBorder": "#282a3c",
@@ -151,9 +151,9 @@
         "badge.foreground": "#121326",
         // ── Scrollbar ───────────────────────────────────────────
         "scrollbar.shadow": "#00000044",
-        "scrollbarSlider.activeBackground": "#59638d88",
+        "scrollbarSlider.activeBackground": "#535D8788",
         "scrollbarSlider.background": "#3b3f5c44",
-        "scrollbarSlider.hoverBackground": "#59638d66",
+        "scrollbarSlider.hoverBackground": "#535D8766",
         // ── Minimap ─────────────────────────────────────────────
         "minimap.findMatchHighlight": "#9ECE6A80",
         "minimap.selectionHighlight": "#7AA2F7BB",
@@ -177,7 +177,7 @@
         "peekViewResult.selectionBackground": "#4865B6",
         "peekViewResult.selectionForeground": "#C0CAF5",
         "peekViewTitle.background": "#191a2e",
-        "peekViewTitleDescription.foreground": "#59638d",
+        "peekViewTitleDescription.foreground": "#535D87",
         "peekViewTitleLabel.foreground": "#a9b1d6",
         // ── Merge Conflicts ─────────────────────────────────────
         "merge.currentHeaderBackground": "#9ece6a44",
@@ -192,7 +192,7 @@
         "diffEditor.removedTextBackground": "#f7768e30",
         "diffEditor.diagonalFill": "#282a3c",
         // ── Breadcrumbs ─────────────────────────────────────────
-        "breadcrumb.foreground": "#59638d",
+        "breadcrumb.foreground": "#535D87",
         "breadcrumb.focusForeground": "#a9b1d6",
         "breadcrumb.activeSelectionForeground": "#a9b1d6",
         "breadcrumbPicker.background": "#191a2e",
@@ -239,12 +239,12 @@
         // ── Git Decoration ──────────────────────────────────────
         "gitDecoration.addedResourceForeground": "#9ece6a",
         "gitDecoration.modifiedResourceForeground": "#7aa2f7",
-        "gitDecoration.deletedResourceForeground": "#59638d",
+        "gitDecoration.deletedResourceForeground": "#535D87",
         "gitDecoration.untrackedResourceForeground": "#9ece6a",
         "gitDecoration.ignoredResourceForeground": "#4a4e6a",
         "gitDecoration.conflictingResourceForeground": "#f7768e",
         "gitDecoration.stageModifiedResourceForeground": "#7aa2f7",
-        "gitDecoration.stageDeletedResourceForeground": "#59638d",
+        "gitDecoration.stageDeletedResourceForeground": "#535D87",
         // ── Terminal ANSI Colors ────────────────────────────────
         // Cool blue-tinted ANSI palette matching the Apex Frost aesthetic
         "terminal.background": "#121326",
@@ -257,7 +257,7 @@
         "terminal.ansiMagenta": "#bb9af7",
         "terminal.ansiCyan": "#7dcfff",
         "terminal.ansiWhite": "#a9b1d6",
-        "terminal.ansiBrightBlack": "#59638d",
+        "terminal.ansiBrightBlack": "#535D87",
         "terminal.ansiBrightRed": "#ff899b",
         "terminal.ansiBrightGreen": "#b0d982",
         "terminal.ansiBrightYellow": "#ebc380",
@@ -286,11 +286,11 @@
         "textCodeBlock.background": "#282a3c",
         "textPreformat.foreground": "#a9b1d6",
         // ── Inlay Hints ──────────────────────────────────────────
-        "editorInlayHint.foreground": "#59638d",
+        "editorInlayHint.foreground": "#535D87",
         "editorInlayHint.background": "#282a3c80",
-        "editorInlayHint.parameterForeground": "#59638d",
+        "editorInlayHint.parameterForeground": "#535D87",
         "editorInlayHint.parameterBackground": "#282a3c80",
-        "editorInlayHint.typeForeground": "#59638d",
+        "editorInlayHint.typeForeground": "#535D87",
         "editorInlayHint.typeBackground": "#282a3c80",
         // ── Additional UI ───────────────────────────────────────
         "sash.hoverBorder": "#7aa2f7",
@@ -298,7 +298,7 @@
         "editorStickyScroll.background": "#121326",
         "editorStickyScrollHover.background": "#191a30",
         "editor.foldBackground": "#282a3c30",
-        "editorGutter.foldingControlForeground": "#59638d",
+        "editorGutter.foldingControlForeground": "#535D87",
         "editorOverviewRuler.findMatchForeground": "#ff9e6480",
         "progressBar.background": "#7aa2f7",
         "editorLightBulb.foreground": "#e0af68",
@@ -314,8 +314,8 @@
         "testing.iconFailed": "#f7768e",
         "testing.iconErrored": "#f7768e",
         "testing.iconQueued": "#e0af68",
-        "testing.iconUnset": "#59638d",
-        "testing.iconSkipped": "#59638d"
+        "testing.iconUnset": "#535D87",
+        "testing.iconSkipped": "#535D87"
     },
     "tokenColors": [
         // ── General ─────────────────────────────────────────────
@@ -337,7 +337,7 @@
                 "punctuation.definition.comment"
             ],
             "settings": {
-                "foreground": "#59638d",
+                "foreground": "#535D87",
                 "fontStyle": "italic"
             }
         },
@@ -347,7 +347,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#4C5576",
+                "foreground": "#485172",
                 "fontStyle": "italic"
             }
         },
@@ -360,7 +360,7 @@
                 "storage.type.class.jsdoc"
             ],
             "settings": {
-                "foreground": "#7E90A8"
+                "foreground": "#6E8098"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -764,7 +764,7 @@
                 "markup.quote"
             ],
             "settings": {
-                "foreground": "#59638d",
+                "foreground": "#535D87",
                 "fontStyle": "italic"
             }
         },
@@ -864,7 +864,7 @@
                 "meta.preprocessor"
             ],
             "settings": {
-                "foreground": "#59638d"
+                "foreground": "#535D87"
             }
         },
         {
@@ -1074,21 +1074,21 @@
         "label": "#7982a9",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
-            "foreground": "#4C5576",
+            "foreground": "#485172",
             "fontStyle": "italic"
         },
-        "xmlDocCommentDelimiter": "#4C5576",
-        "xmlDocCommentName": "#7E90A8",
-        "xmlDocCommentAttributeName": "#7E90A8",
-        "xmlDocCommentAttributeQuotes": "#4C5576",
-        "xmlDocCommentAttributeValue": "#7E90A8",
+        "xmlDocCommentDelimiter": "#485172",
+        "xmlDocCommentName": "#6E8098",
+        "xmlDocCommentAttributeName": "#6E8098",
+        "xmlDocCommentAttributeQuotes": "#485172",
+        "xmlDocCommentAttributeValue": "#6E8098",
         "xmlDocCommentCDataSection": {
-            "foreground": "#4C5576",
+            "foreground": "#485172",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#7E90A8",
-        "xmlDocCommentProcessingInstruction": "#7E90A8",
-        "xmlDocCommentComment": "#59638d",
+        "xmlDocCommentEntityReference": "#6E8098",
+        "xmlDocCommentProcessingInstruction": "#6E8098",
+        "xmlDocCommentComment": "#535D87",
         // ── Static modifiers — italic signals static ──
         "function.static": {
             "foreground": "#7dcfff",
