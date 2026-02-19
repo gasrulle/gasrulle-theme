@@ -1,5 +1,53 @@
 # Changelog
 
+## [0.4.7] - 2026-02-16
+
+### Changed
+- Adjusted foreground colors across Apex Frost++, Apex Neon++, Apex Steel++, and Rider Dark (Darcula) for improved readability and visual harmony
+- Updated `editorCodeLens`, tab, breadcrumb, and other UI element colors for consistency
+
+## [0.4.6] - 2026-02-15
+
+### Added
+- Reset skills for all three ported themes (Rider Dark New UI, Rider Dark Darcula, Visual Studio Dark) with original reference theme files for easy restoration to initial state
+
+## [0.4.5] - 2026-02-15
+
+### Changed
+- Overhauled selection background colors across Apex Carbon++, Apex Ember++, Apex Frost++, Apex Neon++, and Apex Steel++ for improved visibility and consistency
+- Updated inactive selection and related UI properties to match new selection scheme
+
+### Removed
+- Cleaned up misplaced icon file from root directory
+
+## [0.4.4] - 2026-02-15
+
+### Changed
+- Refined color values across all five Apex themes for improved visibility and contrast consistency
+- Updated doc comment color guidelines in copilot instructions
+
+## [0.4.3] - 2026-02-15
+
+### Changed
+- Adjusted Apex Carbon++ color values for improved visibility and consistency
+
+## [0.4.2] - 2026-02-14
+
+### Changed
+- Major color value overhaul across all five Apex themes to enhance visual consistency and readability
+- Apex Carbon++ received the largest rework (~500 lines) for better UI cohesion
+- Updated palette documentation in copilot instructions to reflect new color values
+
+## [0.4.1] - 2026-02-14
+
+### Added
+- **C# XML Doc Comment support** across all 8 themes via Roslyn custom semantic tokens
+  - Styled `xmlDocCommentText`, `xmlDocCommentDelimiter`, `xmlDocCommentName`, `xmlDocCommentAttributeName`, `xmlDocCommentAttributeQuotes`, `xmlDocCommentAttributeValue`, and more
+  - Dimmed doc body text with italic styling, warm sand doc keywords for tag names
+  - Each theme uses temperature-matched doc comment colors (see palette tables)
+- Refined doc comment colors for improved visibility across all themes
+- Updated extension icon
+
 ## [0.4.0] - 2026-02-13
 
 ### Added
@@ -27,7 +75,7 @@
 ## [0.2.0] - 2026-02-13
 
 ### Added
-- **Apex Ember++** — Original "golden standard" dark theme with warm pastel palette
+- **Apex Ember++** — Dark theme with warm pastel palette
   - Synthesized from best elements of Night Owl, Catppuccin, Tokyo Night, One Dark Pro, and Dracula
   - Maximum C# semantic differentiation: unique colors for classes, structs, interfaces, enums, properties, parameters
   - Accessibility-informed design: blue for reading comprehension, meaningful contrast hierarchy

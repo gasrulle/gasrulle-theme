@@ -90,10 +90,10 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Sidebar BG  | `#2D2F31` |
 | Foreground  | `#A9B7C6` |
 | Keywords    | `#CC7832` |
-| Strings     | `#6A8759` |
+| Strings     | `#7EA86D` |
 | Functions   | `#FFC66D` |
 | Numbers     | `#6897BB` |
-| Properties  | `#9876AA` |
+| Properties  | `#A885B8` |
 | Comments    | `#727272` |
 | Doc Comments| `#626468` | Dimmed gray, italic      |
 | Doc Keywords| `#908070` | Warm sand                |

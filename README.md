@@ -2,19 +2,13 @@
 
 A curated **theme pack** for Visual Studio Code — featuring faithfully ported IDE themes and original creations.
 
-## Vision
-
-This extension is a growing collection of themes:
-- **Ported themes** — pixel-accurate recreations of popular IDE themes (JetBrains Rider, Visual Studio, and more)
-- **Original themes** — unique color schemes designed from scratch
-
 ## Currently Included
 
 ### Rider Dark (New UI)
 The modern JetBrains New UI dark theme (2023+), featuring the refined gray palette, blue accents, and updated syntax highlighting with distinct colors for functions (`#56A8F5`), keywords (`#CF8E6D`), strings (`#6AAB73`), and more.
 
 ### Rider Dark (Darcula)
-The classic JetBrains Darcula theme, featuring the iconic warm color palette with golden functions (`#FFC66D`), orange keywords (`#CC7832`), green strings (`#6A8759`), and purple properties (`#9876AA`).
+The classic JetBrains Darcula theme, featuring the iconic warm color palette with golden functions (`#FFC66D`), orange keywords (`#CC7832`), green strings (`#7EA86D`), and purple properties (`#A885B8`).
 
 ### Visual Studio Dark
 A faithful port of the Visual Studio IDE Dark theme, with key differences from VS Code's built-in Dark+:
@@ -23,14 +17,14 @@ A faithful port of the Visual Studio IDE Dark theme, with key differences from V
 - **Namespaces as white**: `using System.Text` shows namespaces in white, not teal
 - **`using` keyword in blue**: Treated as a regular keyword (`#569CD6`), not purple
 - **VS IDE string color**: Pinkish `#D69D85` instead of orange `#CE9178`
-- **VS IDE comment color**: Brighter green `#57A64A` instead of muted olive `#6A9955`
+- **Comment color**: Muted gray `#7A7E85` instead of olive `#6A9955`
 - **Control flow keywords**: Lavender `#D8A0DF` instead of purple `#C586C0`
 
 Colors sourced from [Roslyn VisualStudio2019.xml](https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/ColorSchemes/VisualStudio2019.xml) (MIT License).
 
 ---
 
-### Apex Ember++ *(Original)*
+### Apex Ember++
 An original "golden standard" dark theme synthesized from the best elements of the most popular community themes. Designed with warm pastels, accessibility research, and maximum C# semantic differentiation.
 
 **Design Philosophy** — what makes this theme special:
@@ -42,7 +36,7 @@ An original "golden standard" dark theme synthesized from the best elements of t
 
 **C# Semantic Depth (++ = Maximum)**:
 - Every type category has a unique color: classes (`#81C8BE` teal), structs (`#A6D9A6` sage), interfaces (`#B4BEFE` lavender), enums (`#EEBEBE` flamingo)
-- Properties (`#F4B8E4` pink) are distinct from variables (`#C8CEE0` foreground)
+- Properties (`#F4B8E4` pink) are distinct from variables (`#B6BCCE` foreground)
 - Parameters (`#E5C890` amber) are distinct from local variables
 - Control flow keywords (`#D8B0F8` italic) stand out from regular keywords (`#C9A0F5`)
 - Static members get italic styling across all categories
@@ -55,57 +49,33 @@ An original "golden standard" dark theme synthesized from the best elements of t
 | **Frost++** | Cool & modern | Tokyo Night blue-tinted | `#7AA2F7` azure |
 | **Steel++** | Balanced neutral | One Dark Pro balance | `#61AFEF` clear blue |
 | **Neon++** | Vibrant & bold | Dracula high energy | `#BD93F9` vivid purple |
-| **Carbon++** | Achromatic dark | Pure gray, measured saturation | `#6CAED4` steel blue |
+| **Carbon++** | Achromatic dark | Pure gray, measured saturation | `#78C8F0` steel blue |
 
 All five use **maximum C# semantic depth (++)** — every type category gets a unique color, properties are distinct from variables, parameters are distinct from locals, static members get italic styling.
 
-### Apex Frost++ *(Original — Cool & Modern)*
+### Apex Frost++ *(Cool & Modern temperature)*
 A cool blue-tinted dark theme inspired by Tokyo Night Storm. Sleek and professional with sharp syntax against quiet chrome.
 - Keywords in azure blue (`#7AA2F7`), functions in cyan (`#7DCFFF`)
 - Properties in teal-green (`#73DACA`) for a cool, functional feel
-- Blue-gray comments (`#565F89`) blend into the cool background
+- Blue-gray comments (`#535D87`) blend into the cool background
 
-### Apex Steel++ *(Original — Balanced Neutral)*
+### Apex Steel++ *(Balanced Neutral)*
 A neutral, balanced dark theme inspired by One Dark Pro. Professional clarity without color temperature bias.
 - Keywords in purple (`#C678DD`), functions in blue (`#61AFEF`)
 - Properties in red-rose (`#E06C75`), the One Dark signature
-- Neutral gray comments (`#5C6370`) for clean readability
+- Neutral gray comments (`#5B6270`) for clean readability
 
-### Apex Neon++ *(Original — Vibrant & Bold)*
+### Apex Neon++ *(Vibrant & Bold)*
 A high-energy dark theme inspired by Dracula. Maximum visual intensity with vivid, saturated colors.
 - Keywords in hot pink (`#FF79C6`), functions in neon green (`#50FA7B`)
 - Properties in bright orange (`#FFB86C`), electric and warm
-- Dracula blue-gray comments (`#6272A4`) stay quiet while neon blazes
+- Dracula blue-gray comments (`#566698`) stay quiet while neon blazes
 
-### Apex Carbon++ *(Original — Achromatic Dark)*
+### Apex Carbon++ *(Achromatic Dark)*
 The only theme in the family with truly achromatic backgrounds (R=G=B). Pure graphite editor surface with zero color cast — every other Apex theme has blue or purple undertones. Syntax colors use measured saturation (25–54%) with hues evenly distributed across the color wheel for perfect temperature neutrality.
-- Keywords in dusty rose (`#D4879C`), functions in steel blue (`#6CAED4`)
-- Properties in copper (`#D4956C`), warm but never hot
-- Pure gray comments (`#6A6A6A`) — achromatic scaffolding for measured syntax
-
-## Planned Themes
-- Visual Studio Light
-- JetBrains Rider Light (New UI / IntelliJ)
-
-## Installation
-
-### From Source
-1. Clone this repository
-2. Copy the folder to your VS Code extensions directory:
-   - **Windows:** `%USERPROFILE%\.vscode\extensions\`
-   - **macOS:** `~/.vscode/extensions/`
-   - **Linux:** `~/.vscode/extensions/`
-3. Restart VS Code
-4. Open **File > Preferences > Color Theme** and select either:
-   - `Rider Dark (New UI)`
-   - `Rider Dark (Darcula)`
-
-### Using VSCE (for development)
-```bash
-npm install -g @vscode/vsce
-vsce package
-code --install-extension gasrulle-theme-0.4.0.vsix
-```
+- Keywords in dusty rose (`#E68CA5`), functions in steel blue (`#78C8F0`)
+- Properties in salmon (`#DB9685`), warm but never hot
+- Pure gray comments (`#6E6E6E`) — achromatic scaffolding for measured syntax
 
 ## Color Palette Comparison
 
@@ -113,15 +83,15 @@ code --install-extension gasrulle-theme-0.4.0.vsix
 
 | Element        | New UI Dark   | Darcula       |
 |----------------|---------------|---------------|
-| Editor BG      | `#1E1F22`     | `#2B2B2B`     |
-| Sidebar BG     | `#2B2D30`     | `#3C3F41`     |
+| Editor BG      | `#1E1F22`     | `#242424`     |
+| Sidebar BG     | `#2B2D30`     | `#2D2F31`     |
 | Foreground     | `#BCBEC4`     | `#A9B7C6`     |
 | Keywords       | `#CF8E6D`     | `#CC7832`     |
-| Strings        | `#6AAB73`     | `#6A8759`     |
+| Strings        | `#6AAB73`     | `#7EA86D`     |
 | Functions      | `#56A8F5`     | `#FFC66D`     |
 | Numbers        | `#2AACB8`     | `#6897BB`     |
-| Properties     | `#C77DBB`     | `#9876AA`     |
-| Comments       | `#7A7E85`     | `#808080`     |
+| Properties     | `#C77DBB`     | `#A885B8`     |
+| Comments       | `#7A7E85`     | `#727272`     |
 | Annotations    | `#B3AE60`     | `#BBB529`     |
 | Accent         | `#3574F0`     | `#4A88C7`     |
 
@@ -129,30 +99,30 @@ code --install-extension gasrulle-theme-0.4.0.vsix
 
 | Role            | Hex       | Design Source |
 |-----------------|-----------|---------------|
-| Editor BG       | `#1C1D2A` | Warm purple-tinted dark |
-| Sidebar BG      | `#232334` | Lower contrast than editor |
-| Foreground      | `#C8CEE0` | Warm off-white |
+| Editor BG       | `#141522` | Warm purple-tinted dark |
+| Sidebar BG      | `#1B1B2C` | Lower contrast than editor |
+| Foreground      | `#B6BCCE` | Warm off-white (softened) |
 | Keywords        | `#C9A0F5` | Catppuccin mauve + One Dark purple |
 | Control Flow    | `#D8B0F8` | Brighter purple, italic |
 | Strings         | `#A6D189` | Catppuccin green warmth |
 | Functions       | `#8CAAEE` | Night Owl blue (readability) |
 | Numbers         | `#F2B07A` | Peach/amber, warm |
 | Properties      | `#F4B8E4` | Catppuccin pink family |
-| Variables       | `#C8CEE0` | Foreground (Night Owl: data = white) |
+| Variables       | `#B6BCCE` | Foreground (Night Owl: data = white) |
 | Parameters      | `#E5C890` | Warm amber, Tokyo Night style |
 | Classes         | `#81C8BE` | Warm teal |
 | Structs         | `#A6D9A6` | Muted sage |
 | Interfaces      | `#B4BEFE` | Catppuccin lavender |
 | Enums           | `#EEBEBE` | Flamingo/coral |
-| Comments        | `#6C7086` | Warm muted gray |
+| Comments        | `#60647A` | Warm muted gray |
 | Accent          | `#8CAAEE` | Warm blue |
 
 ### Apex Frost++ (Cool & Modern)
 
 | Role            | Hex       | Design Source |
 |-----------------|-----------|---------------|
-| Editor BG       | `#1A1B2E` | Cool blue-tinted dark |
-| Sidebar BG      | `#212236` | Cool, lower contrast |
+| Editor BG       | `#121326` | Cool blue-tinted dark |
+| Sidebar BG      | `#191A2E` | Cool, lower contrast |
 | Foreground      | `#A9B1D6` | Cool blue-white |
 | Keywords        | `#7AA2F7` | Azure blue |
 | Control Flow    | `#89B4FA` | Brighter blue, italic |
@@ -166,15 +136,15 @@ code --install-extension gasrulle-theme-0.4.0.vsix
 | Structs         | `#89DDFF` | Sky blue |
 | Interfaces      | `#BB9AF7` | Lavender-purple |
 | Enums           | `#F7768E` | Rose-pink |
-| Comments        | `#565F89` | Cool blue-gray |
+| Comments        | `#535D87` | Cool blue-gray |
 | Accent          | `#7AA2F7` | Azure blue |
 
 ### Apex Steel++ (Balanced Neutral)
 
 | Role            | Hex       | Design Source |
 |-----------------|-----------|---------------|
-| Editor BG       | `#1E2127` | Neutral dark gray |
-| Sidebar BG      | `#252830` | Neutral lighter |
+| Editor BG       | `#16191F` | Neutral dark gray |
+| Sidebar BG      | `#1D2028` | Neutral lighter |
 | Foreground      | `#ABB2BF` | One Dark neutral |
 | Keywords        | `#C678DD` | One Dark purple |
 | Control Flow    | `#D183E8` | Brighter purple, italic |
@@ -188,56 +158,58 @@ code --install-extension gasrulle-theme-0.4.0.vsix
 | Structs         | `#73C990` | Balanced green |
 | Interfaces      | `#C8A2D6` | Soft lavender |
 | Enums           | `#E5A6A6` | Soft coral |
-| Comments        | `#5C6370` | Neutral gray |
+| Comments        | `#5B6270` | Neutral gray |
 | Accent          | `#61AFEF` | Clear blue |
 
 ### Apex Neon++ (Vibrant & Bold)
 
 | Role            | Hex       | Design Source |
 |-----------------|-----------|---------------|
-| Editor BG       | `#1A1A2E` | Deep neon-dark |
-| Sidebar BG      | `#222240` | Dark purple |
-| Foreground      | `#F0F0F8` | Bright near-white |
+| Editor BG       | `#16162A` | Deep neon-dark |
+| Sidebar BG      | `#1E1E40` | Dark purple |
+| Foreground      | `#C2C2CA` | Softened near-white |
 | Keywords        | `#FF79C6` | Hot pink |
 | Control Flow    | `#FF92D0` | Brighter pink, italic |
 | Strings         | `#F1FA8C` | Electric yellow-green |
 | Functions       | `#50FA7B` | Neon green |
 | Numbers         | `#BD93F9` | Vivid purple |
 | Properties      | `#FFB86C` | Bright orange |
-| Variables       | `#F0F0F8` | Near-white |
+| Variables       | `#C2C2CA` | Softened near-white |
 | Parameters      | `#FFD580` | Warm golden |
 | Classes         | `#8BE9FD` | Electric cyan |
 | Structs         | `#69FF94` | Bright green |
 | Interfaces      | `#CAA0F5` | Vivid lavender |
 | Enums           | `#FF6E6E` | Neon coral |
-| Comments        | `#6272A4` | Dracula blue-gray |
+| Comments        | `#566698` | Dracula blue-gray |
 | Accent          | `#BD93F9` | Vivid purple |
 
 ### Apex Carbon++ (Achromatic Dark)
 
 | Role            | Hex       | Design Source |
 |-----------------|-----------|---------------|
-| Editor BG       | `#1C1C1C` | Pure gray (R=G=B=28) |
-| Sidebar BG      | `#242424` | Pure gray, raised surface |
-| Foreground      | `#B8B8B8` | Pure silver |
-| Keywords        | `#D4879C` | Dusty rose (S:43%) |
-| Control Flow    | `#E098AF` | Brighter rose, italic |
-| Strings         | `#8BB87E` | Sage green (S:28%) |
-| Functions       | `#6CAED4` | Steel blue (S:53%) |
-| Numbers         | `#C9A06A` | Topaz amber (S:45%) |
-| Properties      | `#D4956C` | Copper (S:54%) |
-| Variables       | `#B8B8B8` | Pure silver (achromatic) |
-| Parameters      | `#BBA870` | Citrine gold (S:35%) |
-| Classes         | `#6AADAE` | Muted turquoise (S:30%) |
-| Structs         | `#7DB898` | Malachite green (S:28%) |
-| Interfaces      | `#A990C0` | Soft amethyst (S:28%) |
-| Enums           | `#C09090` | Garnet (S:25%) |
-| Comments        | `#6A6A6A` | Pure gray (achromatic) |
-| Accent          | `#6CAED4` | Steel blue |
+| Editor BG       | `#181818` | Pure gray (R=G=B=24) |
+| Sidebar BG      | `#202020` | Pure gray, raised surface |
+| Foreground      | `#C2C2C2` | Softened silver |
+| Keywords        | `#E68CA5` | Dusty rose, brighter |
+| Control Flow    | `#F09CB5` | Brighter rose, italic |
+| Strings         | `#9AD68A` | Sage green, brighter |
+| Functions       | `#78C8F0` | Steel blue, brighter |
+| Numbers         | `#D9B086` | Warm sand |
+| Properties      | `#DB9685` | Salmon (hue 12°, cooled) |
+| Variables       | `#C2C2C2` | Softened silver (achromatic) |
+| Parameters      | `#A8C98E` | Eucalyptus sage (hue ~100°, cooled) |
+| Classes         | `#66CACA` | Bright turquoise, brighter |
+| Structs         | `#7AD6A2` | Malachite green, brighter |
+| Interfaces      | `#B896D8` | Bright amethyst, brighter |
+| Enums           | `#D48C94` | Bright garnet, brighter |
+| Comments        | `#6E6E6E` | Pure gray (achromatic) |
+| Accent          | `#78C8F0` | Steel blue |
 
 ## Credits
 
 JetBrains theme colors sourced from the official [JetBrains IntelliJ Community Edition](https://github.com/JetBrains/intellij-community) repository (Apache 2.0 License).
+
+Visual Studio Dark theme colors sourced from the [Roslyn VisualStudio2019.xml](https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/ColorSchemes/VisualStudio2019.xml) color scheme (MIT License).
 
 ## License
 
