@@ -2,6 +2,8 @@
 
 A curated **theme pack** for Visual Studio Code — featuring faithfully ported IDE themes and original creations.
 
+![Theme Preview](https://raw.githubusercontent.com/gasrulle/gasrulle-theme/main/theme-hero.gif)
+
 ## Currently Included
 
 ### Rider Dark (New UI)
