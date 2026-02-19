@@ -9,14 +9,14 @@
         "editor.lineHighlightBackground": "#26282E",
         "editor.lineHighlightBorder": "#26282E",
         "editor.selectionBackground": "#2E436E",
-        "editor.selectionHighlightBackground": "#6AAB7330",
+        "editor.selectionHighlightBackground": "#34384044",
         "editor.inactiveSelectionBackground": "#2E436E88",
-        "editor.wordHighlightBackground": "#3574F048",
-        "editor.wordHighlightStrongBackground": "#CF8E6D48",
-        "editor.findMatchBackground": "#6AAB7360",
-        "editor.findMatchHighlightBackground": "#6AAB7340",
+        "editor.wordHighlightBackground": "#34384044",
+        "editor.wordHighlightStrongBackground": "#402F3366",
+        "editor.findMatchBackground": "#2D543F80",
+        "editor.findMatchHighlightBackground": "#11495766",
         "editor.findRangeHighlightBackground": "#3A3D4166",
-        "editor.hoverHighlightBackground": "#3574F020",
+        "editor.hoverHighlightBackground": "#2E436E44",
         "editor.rangeHighlightBackground": "#26282ECC",
         "editorCursor.foreground": "#CED0D6",
         "editorWhitespace.foreground": "#4B505980",
@@ -25,7 +25,7 @@
         "editorLineNumber.foreground": "#4B5059",
         "editorLineNumber.activeForeground": "#A1A3AB",
         "editorRuler.foreground": "#393B40",
-        "editorBracketMatch.background": "#3574F030",
+        "editorBracketMatch.background": "#43454A44",
         "editorBracketMatch.border": "#43454A",
         "editorOverviewRuler.border": "#1E1F22",
         "editorOverviewRuler.errorForeground": "#DB5C5C",
@@ -210,7 +210,6 @@
         "editorSuggestWidget.foreground": "#DFE1E5",
         "editorSuggestWidget.highlightForeground": "#548AF7",
         "editorSuggestWidget.selectedBackground": "#2E436E",
-        "editorSuggestWidget.selectedForeground": "#FFFFFF",
         "editorHoverWidget.background": "#2B2D30",
         "editorHoverWidget.border": "#393B40",
         "editorHoverWidget.foreground": "#DFE1E5",
@@ -319,7 +318,7 @@
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#636770",
+                "foreground": "#5F826B",
                 "fontStyle": "italic"
             }
         },
@@ -332,7 +331,7 @@
                 "entity.name.type.instance.jsdoc"
             ],
             "settings": {
-                "foreground": "#A89888"
+                "foreground": "#67A37C"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -914,27 +913,11 @@
         "regexp": "#6AAB73",
         "operator": "#BCBEC4",
         "decorator": "#B3AE60",
+        "comment": "#7A7E85",
         "macro": "#B3AE60",
         "label": "#BCBEC4",
         "function.declaration": "#56A8F5",
         "method.declaration": "#56A8F5",
-        // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
-        "xmlDocCommentText": {
-            "foreground": "#636770",
-            "fontStyle": "italic"
-        },
-        "xmlDocCommentDelimiter": "#636770",
-        "xmlDocCommentName": "#A89888",
-        "xmlDocCommentAttributeName": "#A89888",
-        "xmlDocCommentAttributeQuotes": "#636770",
-        "xmlDocCommentAttributeValue": "#A89888",
-        "xmlDocCommentCDataSection": {
-            "foreground": "#636770",
-            "fontStyle": "italic"
-        },
-        "xmlDocCommentEntityReference": "#A89888",
-        "xmlDocCommentProcessingInstruction": "#A89888",
-        "xmlDocCommentComment": "#7A7E85",
         "function.static": {
             "foreground": "#57AAF7",
             "fontStyle": "italic"
