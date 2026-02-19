@@ -42,10 +42,10 @@
         "editorCodeLens.foreground": "#6E6E6E",
         // ── Bracket Pair Colorization ───────────────────────────
         "editorBracketHighlight.foreground1": "#D9B086",
-        "editorBracketHighlight.foreground2": "#E68CA5",
+        "editorBracketHighlight.foreground2": "#B896D8",
         "editorBracketHighlight.foreground3": "#78C8F0",
         "editorBracketHighlight.foreground4": "#9AD68A",
-        "editorBracketHighlight.foreground5": "#B896D8",
+        "editorBracketHighlight.foreground5": "#E68CA5",
         "editorBracketHighlight.foreground6": "#66CACA",
         "editorBracketHighlight.unexpectedBracket.foreground": "#E07070",
         // ── Editor Groups / Tabs ────────────────────────────────
@@ -545,7 +545,7 @@
             }
         },
         // ── Properties / Fields ─────────────────────────────────
-        // Salmon — warm property color, distinct from variables
+        // Bright salmon — warm property color, brighter than keywords for visibility
         {
             "scope": [
                 "entity.name.tag.yaml",
@@ -555,7 +555,7 @@
                 "variable.other.property"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         // ── Constants (all caps / enums) ────────────────────────
@@ -658,7 +658,7 @@
                 "support.type.vendored.property-name.css"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         {
@@ -694,7 +694,7 @@
                 "variable.css"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         // ── JSON ────────────────────────────────────────────────
@@ -703,7 +703,7 @@
                 "support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         {
@@ -857,7 +857,7 @@
                 "entity.name.variable.property.cs"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         // ── C# Preprocessor ─────────────────────────────────────
@@ -939,7 +939,7 @@
                 "variable.object.property.tsx"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         // ── YAML ────────────────────────────────────────────────
@@ -948,7 +948,7 @@
                 "entity.name.tag.yaml"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         // ── TOML ────────────────────────────────────────────────
@@ -958,7 +958,7 @@
                 "support.type.property-name.table.toml"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         // ── Shell / Bash ────────────────────────────────────────
@@ -970,7 +970,7 @@
                 "variable.other.special.shell"
             ],
             "settings": {
-                "foreground": "#DB9685"
+                "foreground": "#E8A898"
             }
         },
         // ── Support ─────────────────────────────────────────────
@@ -1031,10 +1031,10 @@
         "method": "#78C8F0",
         "function.declaration": "#78C8F0",
         "method.declaration": "#78C8F0",
-        // ── Properties / Fields — salmon, distinct from variables ──
-        "property": "#DB9685",
+        // ── Properties / Fields — warm copper, distinct from variables ──
+        "property": "#E8A898",
         "property.static": {
-            "foreground": "#DB9685",
+            "foreground": "#E8A898",
             "fontStyle": "italic"
         },
         // ── Variables — pure silver, achromatic baseline ──

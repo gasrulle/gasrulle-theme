@@ -42,11 +42,11 @@
         "editorCodeLens.foreground": "#5B6270",
         // ── Bracket Pair Colorization ───────────────────────────
         "editorBracketHighlight.foreground1": "#e5c07b",
-        "editorBracketHighlight.foreground2": "#c678dd",
+        "editorBracketHighlight.foreground2": "#56b6c2",
         "editorBracketHighlight.foreground3": "#61afef",
         "editorBracketHighlight.foreground4": "#98c379",
         "editorBracketHighlight.foreground5": "#e06c75",
-        "editorBracketHighlight.foreground6": "#56b6c2",
+        "editorBracketHighlight.foreground6": "#c678dd",
         "editorBracketHighlight.unexpectedBracket.foreground": "#e06c75",
         // ── Editor Groups / Tabs ────────────────────────────────
         "editorGroup.border": "#16191f",

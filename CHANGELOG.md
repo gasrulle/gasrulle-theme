@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.8] - 2026-02-19
+
+### Fixed
+- **Bracket pair colorization**: Moved keyword color from bracket level 2 to level 5/6 across all five Apex themes — level 2 brackets (property accessors, inner blocks) were previously identical to keyword-colored tokens, making them invisible in lines like `{ get; private set; }`
+- **Apex Carbon++ property visibility**: Changed property color from `#DB9685` (salmon) to `#E8A898` (bright salmon) — the old color had a 1.01:1 contrast ratio against keywords, making properties nearly indistinguishable in keyword-heavy lines
+
 ## [0.4.7] - 2026-02-16
 
 ### Changed

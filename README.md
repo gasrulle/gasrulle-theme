@@ -76,7 +76,7 @@ A high-energy dark theme inspired by Dracula. Maximum visual intensity with vivi
 ### Apex Carbon++ *(Achromatic Dark)*
 The only theme in the family with truly achromatic backgrounds (R=G=B). Pure graphite editor surface with zero color cast — every other Apex theme has blue or purple undertones. Syntax colors use measured saturation (25–54%) with hues evenly distributed across the color wheel for perfect temperature neutrality.
 - Keywords in dusty rose (`#E68CA5`), functions in steel blue (`#78C8F0`)
-- Properties in salmon (`#DB9685`), warm but never hot
+- Properties in bright salmon (`#E8A898`), warm and clearly visible
 - Pure gray comments (`#6E6E6E`) — achromatic scaffolding for measured syntax
 
 ## Color Palette Comparison
@@ -197,7 +197,7 @@ The only theme in the family with truly achromatic backgrounds (R=G=B). Pure gra
 | Strings         | `#9AD68A` | Sage green, brighter |
 | Functions       | `#78C8F0` | Steel blue, brighter |
 | Numbers         | `#D9B086` | Warm sand |
-| Properties      | `#DB9685` | Salmon (hue 12°, cooled) |
+| Properties      | `#E8A898` | Bright salmon (hue ~9°, brighter for visibility) |
 | Variables       | `#C2C2C2` | Softened silver (achromatic) |
 | Parameters      | `#A8C98E` | Eucalyptus sage (hue ~100°, cooled) |
 | Classes         | `#66CACA` | Bright turquoise, brighter |

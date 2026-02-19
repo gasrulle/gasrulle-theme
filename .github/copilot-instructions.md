@@ -213,7 +213,7 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 | Strings         | `#9AD68A` | Sage green, brighter                 |
 | Functions       | `#78C8F0` | Steel blue, brighter                 |
 | Numbers         | `#D9B086` | Warm sand     |
-| Properties      | `#DB9685` | Salmon (hue 12°, cooled)   |
+| Properties      | `#E8A898` | Bright salmon (hue ~9°, brighter than keywords for visibility) |
 | Variables       | `#C2C2C2` | Softened silver (achromatic)           |
 | Parameters      | `#A8C98E` | Eucalyptus sage (hue ~100°, cooled)  |
 | Classes         | `#66CACA` | Bright turquoise, brighter            |
