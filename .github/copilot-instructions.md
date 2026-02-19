@@ -194,7 +194,7 @@ Inspired by Dracula. Maximum visual energy, vivid saturated colors.
 | Classes         | `#8BE9FD` | Electric cyan                        |
 | Structs         | `#69FF94` | Bright green (++ only)               |
 | Interfaces      | `#CAA0F5` | Vivid lavender (++ only)             |
-| Enums           | `#FF6E6E` | Neon coral (++ only)                 |
+| Enums           | `#718BF4` | Electric blue (++ only)              |
 | Comments        | `#566698` | Dracula blue-gray                    |
 | Accent          | `#BD93F9` | Vivid purple                         |
 | Doc Comments    | `#4E5688` | Dimmed blue-purple, italic             |
@@ -219,7 +219,7 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 | Classes         | `#66CACA` | Bright turquoise, brighter            |
 | Structs         | `#7AD6A2` | Malachite green, brighter            |
 | Interfaces      | `#B896D8` | Bright amethyst, brighter              |
-| Enums           | `#D48C94` | Bright garnet, brighter                     |
+| Enums           | `#8A8EC8` | Slate indigo (hue 236°, S≈36%)             |
 | Comments        | `#6E6E6E` | Pure gray (achromatic)               |
 | Accent          | `#78C8F0` | Steel blue                           |
 | Doc Comments    | `#5A5A5A` | Pure gray (R=G=B), italic              |
@@ -271,7 +271,7 @@ Assign colors to these roles, ensuring they are visually distinct from each othe
 | **Classes** | Teal/cyan family is conventional. Serves as the "anchor" type color. |
 | **Structs** | Related to but lighter/greener than class color. Only distinct in ++ tier. |
 | **Interfaces** | Lavender/purple family to contrast with teal classes. Only distinct in ++ tier. |
-| **Enums** | Coral/pink/rose to contrast with other type colors. Only distinct in ++ tier. |
+| **Enums** | Must contrast with other type colors AND keywords (≥45° hue gap from keywords — pink/rose enums collide with pink/purple keywords). Blue, indigo, or amber work well. Only distinct in ++ tier. |
 | **Comments** | Muted gray matching the background temperature. Should be clearly de-emphasized. |
 | **Doc Comments** | Dimmed below regular comments so documentation recedes behind code. Temperature-tinted gray matching the theme's comment hue family. Must be distinct from regular comments but never compete with syntax. |
 | **Accent** | Usually matches function or keyword color. Used for links, focus borders, buttons. |
@@ -283,6 +283,8 @@ Assign colors to these roles, ensuring they are visually distinct from each othe
   - Standard themes: 40–70% saturation (Ember, Frost, Steel)
   - Achromatic themes: 25–54% saturation with even hue distribution (Carbon)
 - **Hue distribution**: For achromatic/neutral variants, distribute hues evenly across the color wheel so no temperature dominates. For temperature-biased variants, cluster syntax hues around the chosen temperature with 1–2 complementary contrast pops (e.g., Frost uses warm orange `#FF9E64` for numbers as a deliberate contrast against cool blues).
+- **Minimum hue gap**: Every syntax role color must have ≥30° hue separation from all other syntax role colors. Enum vs keyword requires ≥45° — both tend toward pink/rose hues in warm and achromatic palettes, making them the most commonly confused pair. After assigning all colors, plot hue angles and verify no two roles violate these minimums.
+- **Inter-token luminance contrast**: Any two syntax roles that commonly appear adjacent to each other on the same line must have ≥1.2:1 WCAG contrast ratio between them. The most critical pair is **property vs keyword** — in C# auto-properties (`public static int TotalUsers { get; private set; }`), the property name is surrounded by keywords on both sides. If property and keyword colors share similar luminance, the property becomes invisible regardless of hue difference, because human spatial separation relies primarily on luminance, not hue. Target ≥1.2:1 minimum, ≥1.4:1 recommended. Other high-risk adjacent pairs: parameter vs variable, class vs function (in constructor calls), enum vs constant.
 
 ### Step 5: Build the Workbench Colors
 Clone the `colors` section from the closest existing Apex theme, then:
@@ -292,6 +294,7 @@ Clone the `colors` section from the closest existing Apex theme, then:
 4. Adjust selection/highlight overlays — follow the **Overlay & Highlight Color Rules** below
 5. Ensure all overlay colors include alpha channels (`#RRGGBBAA`)
 6. After changing any selection/highlight value, update **all** places that share the same selection color (see the consistency list in the overlay rules)
+7. Set `editorBracketHighlight.foreground1` through `foreground6` — follow the **Bracket Pair Colorization Rules** below
 
 ### Step 6: Build tokenColors and semanticTokenColors
 1. Clone from the closest existing Apex theme at the same tier
@@ -674,6 +677,27 @@ The following keys must all share the same opaque selection color (or its alpha 
 | Neon++ | `#D1D1D9` | `#C2C2CA` | 3.47:1 | Brightened neutral (FG dimmed below 3:1) |
 | Carbon++ | `#D0D0D0` | `#C2C2C2` | 3.40:1 | Brightened achromatic (FG dimmed below 3:1) |
 
+### Bracket Pair Colorization Rules
+
+VS Code's bracket pair colorization assigns colors to nested brackets by level. When active (the default), these colors **override** any TextMate `tokenColors` for brackets. This creates a critical collision risk:
+
+> **Never assign a syntax token color to bracket levels 1–3.** Levels 1–3 are the most commonly encountered nesting depths in typical code (class body, method body, control flow blocks). If a bracket level color matches a syntax token color (especially keywords), brackets at that level become visually indistinguishable from the surrounding code.
+
+The most dangerous collision is **keyword color at level 2** — in C#, level 2 brackets include property accessor blocks (`{ get; set; }`), method bodies inside classes, and inner control flow blocks. These are surrounded by keyword-colored tokens, making identical-colored brackets invisible.
+
+#### Rules
+1. **No exact matches**: No `editorBracketHighlight.foregroundN` value may be an exact hex match for any `semanticTokenColors` entry (keyword, function, property, string, number, class, etc.)
+2. **Minimum contrast vs keywords**: Every bracket level color must have ≥1.2:1 WCAG contrast ratio against the keyword color, since keywords are the most common adjacent tokens around brackets
+3. **Level 1–3 priority**: Levels 1–3 are high-traffic — assign your most visually distinct, non-syntax colors here. Push any syntax-matching colors to levels 5–6 where they rarely appear
+4. **Verification**: After setting bracket colors, compare each `foregroundN` hex against ALL `semanticTokenColors` values. Flag and fix any exact matches or near-matches (< 1.1:1 contrast)
+
+#### Recommended bracket color strategy
+Draw from the palette but **avoid** the keyword, property, and variable/foreground colors:
+- Level 1: Numbers or warm accent color
+- Level 2: A type color (class, interface, struct) or a color NOT used for any syntax token
+- Level 3: Function/method color (less collision risk since brackets rarely sit next to function names)
+- Levels 4–6: Remaining palette colors, including keyword if needed
+
 ### Minimum Contrast Requirements
 
 Every foreground/background combination in the theme must meet minimum contrast ratios. These are non-negotiable — they protect readability and accessibility.
@@ -775,11 +799,13 @@ After **every** theme edit session, execute these steps in order:
 1. **Palette fidelity**: For each modified theme, verify that every syntax color in the file matches the documented palette table in this file. Use `grep` to confirm no undocumented hex values were introduced.
 2. **Error check**: Run `get_errors` on all modified theme files. Fix any invalid/deprecated property warnings.
 3. **Contrast audit**: For any changed foreground or background color, compute WCAG contrast ratios using the Node.js snippet above. Verify all pairs meet the minimums in the Minimum Contrast Requirements section.
-4. **Overlay audit**: For any changed accent, keyword, or string color, verify that all overlay/highlight colors derived from it are updated and still use a bright base + correct alpha from the alpha guidelines table.
-5. **Selection audit**: If any selection-related color changed, verify all 10 background keys and 5 foreground keys in the selection consistency table are in sync.
-6. **Cross-reference**: If a color role was changed (e.g., keyword color), search the entire theme file for both the old and new hex values to ensure no orphaned references remain.
-7. **Surface hierarchy**: Verify that Editor BG < Sidebar BG < Input BG in lightness, maintaining clear visual separation.
-8. **Temperature check**: For color-tinted themes, verify all background surfaces share the same hue family. For achromatic themes (Carbon), verify R=G=B on all background surfaces.
+4. **Inter-token contrast audit**: For any changed syntax color, compute the WCAG contrast ratio between it and all commonly-adjacent syntax roles (especially property↔keyword, parameter↔variable, class↔function). Verify ≥1.2:1 minimum for all adjacent pairs.
+5. **Bracket collision audit**: Verify that no `editorBracketHighlight.foreground1`–`foreground6` value is an exact hex match for any `semanticTokenColors` entry, especially the keyword color. Check all 6 levels against all semantic token colors.
+6. **Overlay audit**: For any changed accent, keyword, or string color, verify that all overlay/highlight colors derived from it are updated and still use a bright base + correct alpha from the alpha guidelines table.
+7. **Selection audit**: If any selection-related color changed, verify all 10 background keys and 5 foreground keys in the selection consistency table are in sync.
+8. **Cross-reference**: If a color role was changed (e.g., keyword color), search the entire theme file for both the old and new hex values to ensure no orphaned references remain.
+9. **Surface hierarchy**: Verify that Editor BG < Sidebar BG < Input BG in lightness, maintaining clear visual separation.
+10. **Temperature check**: For color-tinted themes, verify all background surfaces share the same hue family. For achromatic themes (Carbon), verify R=G=B on all background surfaces.
 
 ### Packaging
 ```bash

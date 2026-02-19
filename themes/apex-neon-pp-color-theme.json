@@ -1017,7 +1017,7 @@
         "class": "#8be9fd",
         "struct": "#69ff94",
         "interface": "#caa0f5",
-        "enum": "#ff6e6e",
+        "enum": "#718BF4",
         "typeParameter": "#a4ffff",
         // ── Namespace — muted, navigational not semantic ──
         "namespace": "#7a7fb5",

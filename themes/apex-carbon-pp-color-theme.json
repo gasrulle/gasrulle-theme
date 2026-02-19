@@ -1022,7 +1022,7 @@
         "class": "#66CACA",
         "struct": "#7AD6A2",
         "interface": "#B896D8",
-        "enum": "#D48C94",
+        "enum": "#8A8EC8",
         "typeParameter": "#68C8C8",
         // ── Namespace — muted gray, navigational not semantic ──
         "namespace": "#989898",
