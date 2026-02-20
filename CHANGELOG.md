@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.4.10] - 2026-02-20
+
+### Added
+- **Rider Dark (New UI)**: C# XML doc comment semantic tokens (`xmlDocCommentText`, `xmlDocCommentDelimiter`, `xmlDocCommentName`, `xmlDocCommentAttributeName`, `xmlDocCommentAttributeQuotes`, `xmlDocCommentAttributeValue`, `xmlDocCommentCDataSection`, `xmlDocCommentEntityReference`, `xmlDocCommentProcessingInstruction`, `xmlDocCommentComment`) using official JetBrains colors (`#5F826B` / `#67A37C`)
+- **Rider Dark (New UI)**: `newOperator` semantic token (`#CF8E6D`) and `event` semantic token (`#C77DBB`) sourced from official JetBrains syntax scheme
+- **Rider Dark (New UI)**: `editorSuggestWidget.selectedForeground` set to `#DFE1E5` (JetBrains Gray12)
+- **Ported Theme Primacy Rule**: New rule in copilot-instructions establishing that ported themes always follow the original creator's design — project-specific rules (bracket colors, overlay alphas, depth tiers, etc.) apply only to original themes
+
+### Changed
+- Scoped 6 sections in copilot-instructions to "original themes only": Overlay & Highlight Color Rules, Selection Color Consistency, Bracket Pair Colorization Rules, Minimum Contrast Requirements, C# Semantic Depth Tiers, Holistic Change Protocol
+- Updated Rider Dark (New UI) reset skill (`SKILL.md` and reference JSON) to reflect verified faithful state with official JetBrains source provenance
+- Fixed Rider Dark (New UI) doc comment palette in copilot-instructions from incorrect values to official `#5F826B` / `#67A37C`
+
+### Removed
+- **Rider Dark (New UI)**: Removed flat `"comment"` entry from `semanticTokenColors` — it was overriding all comment sub-types (including doc comments) with a single color
+
+## [0.4.9] - 2026-02-19
+
+### Fixed
+- **Apex Neon++**: Changed enum color from `#FF6E6E` (neon coral) to `#718BF4` (electric blue) — the old color collided with the hot pink keyword color (`#FF79C6`), violating the ≥45° hue gap requirement
+- **Apex Carbon++**: Changed enum color from `#D48C94` (garnet) to `#8A8EC8` (slate indigo) — the old color collided with the dusty rose keyword color (`#E68CA5`)
+
+### Added
+- Minimum hue gap rule (≥30° between all syntax roles, ≥45° for enum vs keyword) in copilot-instructions palette methodology
+- Inter-token luminance contrast rule (≥1.2:1 for commonly adjacent syntax roles) in copilot-instructions
+- Bracket pair colorization rules section in copilot-instructions with collision avoidance guidelines
+
 ## [0.4.8] - 2026-02-19
 
 ### Fixed

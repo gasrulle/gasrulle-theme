@@ -5,7 +5,7 @@ description: Reset the Rider Dark (New UI) theme to its original faithful port f
 
 # Reset Rider Dark (New UI) Theme
 
-This skill restores `themes/rider-dark-new-ui-color-theme.json` to its exact original state from the initial commit (`9def7a0b71910c21535f6fcfebbb8cb30d73a034`, 2026-02-13).
+This skill restores `themes/rider-dark-new-ui-color-theme.json` to its verified faithful state — all colors sourced from official JetBrains `expUI_dark.theme.json` (UI) and `expUI_darkScheme.xml` (syntax).
 
 ## When to use
 - User asks to "reset", "restore", or "revert" the Rider Dark (New UI) theme
@@ -19,21 +19,21 @@ This skill restores `themes/rider-dark-new-ui-color-theme.json` to its exact ori
 3. Confirm the reset was applied
 
 ## What this resets
-- All workbench `colors` to the original JetBrains New UI values
-- All `tokenColors` to the original TextMate scope rules
-- All `semanticTokenColors` to the original semantic token mappings
-- Removes any overlay fixes, doc comment additions, contrast adjustments, or other modifications made after the initial commit
+- All workbench `colors` to the official JetBrains New UI values (from `expUI_dark.theme.json`)
+- All `tokenColors` to the official TextMate scope rules (from `expUI_darkScheme.xml`)
+- All `semanticTokenColors` including `xmlDocComment*` tokens, `newOperator`, `event`, and `editorSuggestWidget.selectedForeground`
+- Removes any modifications not traceable to official JetBrains source files
 
-## Warning
-This is a **destructive reset** — it removes ALL changes made since the initial commit, including intentional improvements like:
-- WCAG contrast fixes
-- Overlay visibility improvements
-- XML doc comment semantic token entries
-- `editorSuggestWidget.selectedForeground` additions
-
-After resetting, you may want to re-apply specific fixes selectively.
+## Included official features
+This reference state includes all colors verified against JetBrains sources:
+- `xmlDocComment*` semantic tokens (`DEFAULT_DOC_COMMENT` `#5F826B` / `DEFAULT_DOC_COMMENT_TAG` `#67A37C`)
+- `newOperator` (`#CF8E6D` — `DEFAULT_KEYWORD`)
+- `event` (`#C77DBB` — `DEFAULT_INSTANCE_FIELD`)
+- `editorSuggestWidget.selectedForeground` (`#DFE1E5` — `Gray12` / `selectionForeground`)
+- No flat `"comment"` semantic token entry (preserves doc vs regular comment distinction)
+- No bracket pair colors (JetBrains does not define them)
 
 ## Source provenance
-- **Commit**: `9def7a0b71910c21535f6fcfebbb8cb30d73a034`
-- **Date**: 2026-02-13
-- **Description**: Initial commit — faithful port of JetBrains Rider New UI dark theme
+- **Official UI source**: `expUI_dark.theme.json` from `JetBrains/intellij-community`
+- **Official syntax source**: `expUI_darkScheme.xml` from `JetBrains/intellij-community`
+- **Base commit**: `9def7a0b71910c21535f6fcfebbb8cb30d73a034` (2026-02-13) + verified additions
