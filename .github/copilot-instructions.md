@@ -56,6 +56,8 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
 ## Color Sources & Accuracy
 For ported themes, colors must be sourced from official repositories to maintain fidelity.
 
+> **Ported Theme Primacy Rule**: Ported themes exist to faithfully recreate the source IDE's appearance in VS Code. When any project rule (bracket colors, overlay alphas, contrast minimums, selection consistency, C# depth tiers, etc.) conflicts with the original creator's design, **the original creator's design wins**. Only add colors or behaviors that the source IDE actually defines. Do not invent values — such as bracket pair colorization or custom highlight overlays — that have no basis in the official source files. Project-specific rules (Apex palette methodology, depth tiers, holistic change protocol, etc.) apply **only to original themes**.
+
 ### JetBrains Rider Themes
 Sourced from the official [JetBrains IntelliJ Community Edition](https://github.com/JetBrains/intellij-community) repository (Apache 2.0):
 
@@ -80,8 +82,8 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Comments    | `#7A7E85` | DEFAULT_BLOCK_COMMENT    |
 | Annotations | `#B3AE60` | DEFAULT_METADATA         |
 | Accent      | `#3574F0` | Blue6                    |
-| Doc Comments| `#636770` | Dimmed gray, italic      |
-| Doc Keywords| `#A89888` | Warm sand                |
+| Doc Comments| `#5F826B` | Green-tinted, italic (DEFAULT_DOC_COMMENT) |
+| Doc Keywords| `#67A37C` | Green-tinted (DEFAULT_DOC_COMMENT_TAG)     |
 
 ### Classic Darcula
 | Role        | Hex       |
@@ -310,6 +312,8 @@ After creating a new variant, add its palette table to this file following the e
 - For inspired themes, note which source theme influenced each color
 
 ## C# Semantic Depth Tiers — Base / + / ++
+
+> *The tier system applies to **original (Apex) themes only**. Ported themes follow the source IDE's semantic model, not our tier system. See [Ported Theme Primacy Rule](#color-sources--accuracy).*
 
 The Apex family supports three depth tiers controlling how many distinct semantic tokens are used. Each tier builds on the previous. When creating a new theme or converting between tiers, use this reference.
 
@@ -591,7 +595,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 **Current doc comment colors per theme:**
 | Theme | Doc Body | Doc Keywords | Style |
 |-------|---------|-------------|-------|
-| Rider New UI | `#636770` | `#A89888` | Dimmed gray + warm sand |
+| Rider New UI | `#5F826B` | `#67A37C` | Green-tinted (official JetBrains DEFAULT_DOC_COMMENT) |
 | Rider Darcula | `#626468` | `#908070` | Dimmed gray + warm sand |
 | Visual Studio Dark | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
 | Apex Ember++ | `#545866` | `#927A68` | Dimmed purple-gray + warm amber-sand |
@@ -607,6 +611,8 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 4. Add the color to **all** theme files in the same family
 
 ### Overlay & Highlight Color Rules
+
+> *These guidelines apply to **original themes only**. For ported themes, see [Ported Theme Primacy Rule](#color-sources--accuracy).*
 
 Overlay/highlight colors are semi-transparent backgrounds layered on top of the editor. The critical rule:
 
@@ -638,6 +644,8 @@ A dark base at any alpha is nearly invisible against a dark editor background. A
 | `merge.incomingHeaderBackground` | Blue/accent | `44` | Merge incoming header |
 
 #### Selection color consistency
+
+> *These consistency rules apply to **original themes only**. For ported themes, see [Ported Theme Primacy Rule](#color-sources--accuracy).*
 
 The following keys must all share the same opaque selection color (or its alpha variant):
 
@@ -679,6 +687,8 @@ The following keys must all share the same opaque selection color (or its alpha 
 
 ### Bracket Pair Colorization Rules
 
+> *These rules apply to **original themes only**. Ported themes should not define bracket colors unless the source IDE specifies them. See [Ported Theme Primacy Rule](#color-sources--accuracy).*
+
 VS Code's bracket pair colorization assigns colors to nested brackets by level. When active (the default), these colors **override** any TextMate `tokenColors` for brackets. This creates a critical collision risk:
 
 > **Never assign a syntax token color to bracket levels 1–3.** Levels 1–3 are the most commonly encountered nesting depths in typical code (class body, method body, control flow blocks). If a bracket level color matches a syntax token color (especially keywords), brackets at that level become visually indistinguishable from the surrounding code.
@@ -699,6 +709,8 @@ Draw from the palette but **avoid** the keyword, property, and variable/foregrou
 - Levels 4–6: Remaining palette colors, including keyword if needed
 
 ### Minimum Contrast Requirements
+
+> *These minimums apply to **original themes only**. For ported themes, faithfulness to the source IDE takes precedence — see [Ported Theme Primacy Rule](#color-sources--accuracy).*
 
 Every foreground/background combination in the theme must meet minimum contrast ratios. These are non-negotiable — they protect readability and accessibility.
 
@@ -743,6 +755,8 @@ function cr(a,b) { const L1=lum(...hex(a)),L2=lum(...hex(b)); return (Math.max(L
 ```
 
 ## Holistic Change Protocol
+
+> *This protocol applies to **original themes only**. For ported themes, changes must be verified against official source files — see [Ported Theme Primacy Rule](#color-sources--accuracy).*
 
 > **Critical rule**: No color in a theme exists in isolation. Every color participates in multiple foreground/background combinations. Changing ANY single color requires evaluating its full ripple chain.
 
