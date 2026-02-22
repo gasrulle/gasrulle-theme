@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.5.0] - 2026-02-22
+
+### Added
+- **Apex Pastel++**: New original theme — warm+cool balanced pastel syntax on a darker Ember-derived purple background (`#0E0F1B`). Pastel lavender keywords (`#C298D8`), mint strings (`#96CCAA`), sky blue functions (`#8CBADC`), rose properties (`#E4B0BC`), chamomile parameters (`#B4B080`). Five distinct type colors: teal classes, sage structs, orchid interfaces, periwinkle enums. Full ++ tier C# semantic depth with XML doc comment support.
+
 ## [0.4.10] - 2026-02-20
 
 ### Added

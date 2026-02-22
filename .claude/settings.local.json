@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "mcp__microsoft-learn__microsoft_docs_fetch",
+      "WebFetch(domain:developercommunity.visualstudio.com)",
+      "WebFetch(domain:devblogs.microsoft.com)",
+      "WebFetch(domain:draculatheme.com)"
+    ]
+  }
+}

@@ -17,6 +17,7 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 - **Apex Steel++** — Original neutral balanced dark theme, One Dark Pro inspired, max C# depth (`themes/apex-steel-pp-color-theme.json`)
 - **Apex Neon++** — Original vibrant high-energy dark theme, Dracula inspired, max C# depth (`themes/apex-neon-pp-color-theme.json`)
 - **Apex Carbon++** — Original achromatic dark theme, pure gray backgrounds, measured syntax, max C# depth (`themes/apex-carbon-pp-color-theme.json`)
+- **Apex Pastel++** — Original soft pastel dark theme, warm+cool balanced, darker Ember BG, max C# depth (`themes/apex-pastel-pp-color-theme.json`)
 
 ### Planned
 - Visual Studio Light
@@ -35,6 +36,7 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
   - `apex-steel-pp-color-theme.json` — Original Apex Steel++ (neutral balanced, One Dark Pro inspired)
   - `apex-neon-pp-color-theme.json` — Original Apex Neon++ (vibrant high-energy, Dracula inspired)
   - `apex-carbon-pp-color-theme.json` — Original Apex Carbon++ (achromatic dark, measured syntax)
+  - `apex-pastel-pp-color-theme.json` — Original Apex Pastel++ (soft pastel, warm+cool balanced)
 - `README.md` — User-facing documentation
 - `CHANGELOG.md` — Version history
 - `LICENSE` — Apache 2.0
@@ -229,8 +231,33 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 | Doc Comments    | `#5A5A5A` | Pure gray (R=G=B), italic              |
 | Doc Keywords    | `#888078` | Near-achromatic sand (S≈5%)            |
 
+### Apex Pastel++ (Original — Soft & Chalky)
+Warm+cool balanced pastel palette on a darker Ember-derived purple background. Every syntax color is a soft, chalky pastel. Designed from scratch with intentional luminance banding for readability despite narrow pastel saturation.
+
+| Role            | Hex       | Design Source                        |
+|-----------------|-----------|--------------------------------------|
+| Editor BG       | `#0E0F1B` | Darker Ember purple-tinted           |
+| Sidebar BG      | `#161728` | Warm purple, raised surface          |
+| Foreground      | `#C8C8D6` | Lavender-silver                      |
+| Keywords        | `#C298D8` | Pastel lavender (signature)          |
+| Control Flow    | `#D2ACEA` | Brighter lavender, italic            |
+| Strings         | `#96CCAA` | Pastel mint                          |
+| Functions       | `#8CBADC` | Pastel sky blue                      |
+| Numbers         | `#D8B0A0` | Pastel coral-peach                   |
+| Properties      | `#E4B0BC` | Pastel rose                          |
+| Variables       | `#C8C8D6` | Foreground (lavender-silver)         |
+| Parameters      | `#B4B080` | Pastel chamomile                     |
+| Classes         | `#98D0CC` | Pastel teal                          |
+| Structs         | `#9AC08C` | Pastel sage                          |
+| Interfaces      | `#D8B0CC` | Pastel orchid                        |
+| Enums           | `#B0B8E4` | Pastel periwinkle                    |
+| Comments        | `#585870` | Muted lavender-gray                  |
+| Accent          | `#8CBADC` | Sky blue                             |
+| Doc Comments    | `#505068` | Dimmed lavender-gray, italic         |
+| Doc Keywords    | `#806E64` | Warm muted sand                      |
+
 ### Apex Theme Family Naming
-- **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic)
+- **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic), Pastel (soft)
 - **C# depth**: Only ++ (maximum) tier is currently implemented
 - **Labels**: `Gasrulle - Apex {Variant}++`
 - **File names**: `apex-{variant}-pp-color-theme.json`
@@ -605,6 +632,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |
 | Apex Neon++ | `#4E5688` | `#8C7C94` | Dimmed blue-purple + muted lilac |
 | Apex Carbon++ | `#5A5A5A` | `#888078` | Pure gray + near-achromatic sand |
+| Apex Pastel++ | `#505068` | `#806E64` | Dimmed lavender-gray + warm muted sand |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
@@ -686,6 +714,7 @@ The following keys must all share the same opaque selection color (or its alpha 
 | Steel++ | `#D0D6E0` | `#ABB2BF` | 3.58:1 | Uses brightened neutral |
 | Neon++ | `#D1D1D9` | `#C2C2CA` | 3.47:1 | Brightened neutral (FG dimmed below 3:1) |
 | Carbon++ | `#D0D0D0` | `#C2C2C2` | 3.40:1 | Brightened achromatic (FG dimmed below 3:1) |
+| Pastel++ | `#D0D0DE` | `#C8C8D6` | 4.10:1 | Brightened lavender |
 
 ### Bracket Pair Colorization Rules
 

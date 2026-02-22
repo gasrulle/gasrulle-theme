@@ -2,7 +2,7 @@
     "name": "gasrulle-theme",
     "displayName": "Gasrulle Theme",
     "description": "A curated theme pack for VS Code — ported IDE themes (JetBrains Rider, Visual Studio, and more) plus original creations by Gasrulle.",
-    "version": "0.4.10",
+    "version": "0.5.0",
     "publisher": "Gasrulle",
     "license": "Apache-2.0",
     "engines": {
@@ -77,6 +77,11 @@
                 "label": "Gasrulle - Apex Carbon++",
                 "uiTheme": "vs-dark",
                 "path": "./themes/apex-carbon-pp-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Apex Pastel++",
+                "uiTheme": "vs-dark",
+                "path": "./themes/apex-pastel-pp-color-theme.json"
             }
         ]
     }

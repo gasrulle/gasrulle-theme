@@ -52,8 +52,15 @@ An original "golden standard" dark theme synthesized from the best elements of t
 | **Steel++** | Balanced neutral | One Dark Pro balance | `#61AFEF` clear blue |
 | **Neon++** | Vibrant & bold | Dracula high energy | `#BD93F9` vivid purple |
 | **Carbon++** | Achromatic dark | Pure gray, measured saturation | `#78C8F0` steel blue |
+| **Pastel++** | Soft pastel | Warm+cool balanced pastels | `#8CBADC` sky blue |
 
 All five use **maximum C# semantic depth (++)** — every type category gets a unique color, properties are distinct from variables, parameters are distinct from locals, static members get italic styling.
+
+### Apex Pastel++ *(Soft & Chalky)*
+A warm+cool balanced pastel theme on a deeper purple-tinted background (darker Ember). Every syntax color is a soft, chalky pastel — lavender keywords, mint strings, sky blue functions, rose properties. Designed from scratch following the Apex methodology with intentional luminance banding to maintain readability despite the narrow pastel saturation range.
+- Keywords in pastel lavender (`#C298D8`), functions in sky blue (`#8CBADC`)
+- Properties in pastel rose (`#E4B0BC`), parameters in chamomile (`#B4B080`)
+- Five distinct type colors: classes in teal (`#98D0CC`), structs in sage (`#9AC08C`), interfaces in orchid (`#D8B0CC`), enums in periwinkle (`#B0B8E4`)
 
 ### Apex Frost++ *(Cool & Modern temperature)*
 A cool blue-tinted dark theme inspired by Tokyo Night Storm. Sleek and professional with sharp syntax against quiet chrome.
@@ -206,6 +213,28 @@ The only theme in the family with truly achromatic backgrounds (R=G=B). Pure gra
 | Enums           | `#D48C94` | Bright garnet, brighter |
 | Comments        | `#6E6E6E` | Pure gray (achromatic) |
 | Accent          | `#78C8F0` | Steel blue |
+
+### Apex Pastel++ (Soft & Chalky)
+
+| Role            | Hex       | Design Source |
+|-----------------|-----------|---------------|
+| Editor BG       | `#0E0F1B` | Darker Ember purple-tinted |
+| Sidebar BG      | `#161728` | Warm purple, raised surface |
+| Foreground      | `#C8C8D6` | Lavender-silver |
+| Keywords        | `#C298D8` | Pastel lavender (signature) |
+| Control Flow    | `#D2ACEA` | Brighter lavender, italic |
+| Strings         | `#96CCAA` | Pastel mint |
+| Functions       | `#8CBADC` | Pastel sky blue |
+| Numbers         | `#D8B0A0` | Pastel coral-peach |
+| Properties      | `#E4B0BC` | Pastel rose |
+| Variables       | `#C8C8D6` | Foreground (lavender-silver) |
+| Parameters      | `#B4B080` | Pastel chamomile |
+| Classes         | `#98D0CC` | Pastel teal |
+| Structs         | `#9AC08C` | Pastel sage |
+| Interfaces      | `#D8B0CC` | Pastel orchid |
+| Enums           | `#B0B8E4` | Pastel periwinkle |
+| Comments        | `#585870` | Muted lavender-gray |
+| Accent          | `#8CBADC` | Sky blue |
 
 ## Credits
 
