@@ -42,7 +42,7 @@
 ## [0.4.6] - 2026-02-15
 
 ### Added
-- Reset skills for all three ported themes (Rider Dark New UI, Rider Dark Darcula, Visual Studio Dark) with original reference theme files for easy restoration to initial state
+- Reset skills for all three ported themes (Rider Dark New UI, Rider Dark Darcula, Visual Studio Dark 2019) with original reference theme files for easy restoration to initial state
 
 ## [0.4.5] - 2026-02-15
 
@@ -122,7 +122,7 @@
 - Initial release
 - **Rider Dark (New UI)** — JetBrains New UI dark theme (2023+)
 - **Rider Dark (Darcula)** — Classic JetBrains Darcula dark theme
-- **Visual Studio Dark** — Faithful port of the VS IDE Dark theme with type differentiation (struct/interface/enum), properties/namespaces as white text, VS IDE string/comment colors, and more
+- **Visual Studio Dark 2019** — Faithful port of the VS IDE Dark theme with type differentiation (struct/interface/enum), properties/namespaces as white text, VS IDE string/comment colors, and more
 - Full workbench color customization for both themes
 - Syntax highlighting for: C#, TypeScript, JavaScript, Python, Java, HTML, CSS, JSON, YAML, Markdown, Shell/Bash, Regular Expressions
 - Semantic token colors for enhanced highlighting

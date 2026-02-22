@@ -49,7 +49,7 @@
                 "path": "./themes/rider-dark-darcula-color-theme.json"
             },
             {
-                "label": "Gasrulle - Visual Studio Dark",
+                "label": "Gasrulle - Visual Studio Dark 2019",
                 "uiTheme": "vs-dark",
                 "path": "./themes/vs-dark-color-theme.json"
             },

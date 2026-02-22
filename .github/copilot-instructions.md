@@ -1,5 +1,7 @@
 # Copilot Instructions — Gasrulle Theme Pack
 
+> **Dual-file sync rule**: This file (`.github/copilot-instructions.md`) and `CLAUDE.md` at the project root contain identical project instructions for GitHub Copilot and Claude Code respectively. Any edit to one file **must** be mirrored to the other so they stay in sync at all times. When updating instructions, palette tables, theme listings, naming conventions, or any other content in either file, always apply the same change to both files in the same edit session.
+
 ## Project Overview
 This is a **VS Code theme pack extension** containing a growing collection of color themes:
 
@@ -9,7 +11,7 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 ### Currently Implemented
 - **Rider Dark (New UI)** — The modern JetBrains 2023+ New UI dark theme (`themes/rider-dark-new-ui-color-theme.json`)
 - **Rider Dark (Darcula)** — The classic JetBrains Darcula theme (`themes/rider-dark-darcula-color-theme.json`)
-- **Visual Studio Dark** — Faithful VS IDE Dark port (`themes/vs-dark-color-theme.json`)
+- **Visual Studio Dark 2019** — Faithful VS IDE Dark port (`themes/vs-dark-color-theme.json`)
 - **Apex Ember++** — Original warm pastel dark theme, max C# depth (`themes/apex-ember-pp-color-theme.json`)
 - **Apex Frost++** — Original cool blue-tinted dark theme, Tokyo Night inspired, max C# depth (`themes/apex-frost-pp-color-theme.json`)
 - **Apex Steel++** — Original neutral balanced dark theme, One Dark Pro inspired, max C# depth (`themes/apex-steel-pp-color-theme.json`)
@@ -39,7 +41,7 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
 
 ## Theme Naming Convention
 - All theme labels in `package.json` must be prefixed with `Gasrulle - ` for discoverability in the VS Code theme picker
-- Ported themes: `Gasrulle - {Source IDE} {Variant}` (e.g., `Gasrulle - Rider Dark (New UI)`, `Gasrulle - Visual Studio Dark`)
+- Ported themes: `Gasrulle - {Source IDE} {Variant}` (e.g., `Gasrulle - Rider Dark (New UI)`, `Gasrulle - Visual Studio Dark 2019`)
 - Original themes: `Gasrulle - {Name}` (e.g., `Gasrulle - Midnight`)
 - Theme file names: `{source}-{variant}-color-theme.json` (e.g., `rider-dark-new-ui-color-theme.json`)
 
@@ -50,7 +52,7 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
 4. **Register it** in `package.json` under `contributes.themes` following the naming convention.
 5. **Choose a depth tier** (base/+/++) — see **C# Semantic Depth Tiers** section for the full specification. Adjust `semanticTokenColors` and `tokenColors` to match.
 6. **Validate**: Run `get_errors` on the new theme file to catch invalid/deprecated properties and transparency issues.
-7. **Document**: Update `README.md`, `CHANGELOG.md`, and this file (`.github/copilot-instructions.md`) with the new theme's palette table and file listing.
+7. **Document**: Update `README.md`, `CHANGELOG.md`, this file (`.github/copilot-instructions.md`), and `CLAUDE.md` with the new theme's palette table and file listing.
 8. **Bump version** in `package.json`.
 
 ## Color Sources & Accuracy
@@ -597,7 +599,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 |-------|---------|-------------|-------|
 | Rider New UI | `#5F826B` | `#67A37C` | Green-tinted (official JetBrains DEFAULT_DOC_COMMENT) |
 | Rider Darcula | `#626468` | `#908070` | Dimmed gray + warm sand |
-| Visual Studio Dark | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
+| Visual Studio Dark 2019 | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
 | Apex Ember++ | `#545866` | `#927A68` | Dimmed purple-gray + warm amber-sand |
 | Apex Frost++ | `#485172` | `#6E8098` | Dimmed blue-gray + cool steel-blue |
 | Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |

@@ -12,7 +12,7 @@ The modern JetBrains New UI dark theme (2023+), featuring the refined gray palet
 ### Rider Dark (Darcula)
 The classic JetBrains Darcula theme, featuring the iconic warm color palette with golden functions (`#FFC66D`), orange keywords (`#CC7832`), green strings (`#7EA86D`), and purple properties (`#A885B8`).
 
-### Visual Studio Dark
+### Visual Studio Dark 2019
 A faithful port of the Visual Studio IDE Dark theme, with key differences from VS Code's built-in Dark+:
 - **Type differentiation**: Structs (`#86C691`), interfaces/enums (`#B8D7A3`), and classes (`#4EC9B0`) each have distinct colors
 - **Properties as white**: `.Services`, `.Length`, etc. render as plain text (`#DCDCDC`), not variable-blue
@@ -211,7 +211,7 @@ The only theme in the family with truly achromatic backgrounds (R=G=B). Pure gra
 
 JetBrains theme colors sourced from the official [JetBrains IntelliJ Community Edition](https://github.com/JetBrains/intellij-community) repository (Apache 2.0 License).
 
-Visual Studio Dark theme colors sourced from the [Roslyn VisualStudio2019.xml](https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/ColorSchemes/VisualStudio2019.xml) color scheme (MIT License).
+Visual Studio Dark 2019 theme colors sourced from the [Roslyn VisualStudio2019.xml](https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/ColorSchemes/VisualStudio2019.xml) color scheme (MIT License).
 
 ## License
 

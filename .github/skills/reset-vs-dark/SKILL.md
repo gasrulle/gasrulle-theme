@@ -1,14 +1,14 @@
 ---
 name: reset-vs-dark
-description: Reset the Visual Studio Dark theme to its original faithful port from the initial commit. Use this when asked to reset, restore, or revert the VS Dark theme to its original state before any automated modifications.
+description: Reset the Visual Studio Dark 2019 theme to its original faithful port from the initial commit. Use this when asked to reset, restore, or revert the VS Dark theme to its original state before any automated modifications.
 ---
 
-# Reset Visual Studio Dark Theme
+# Reset Visual Studio Dark 2019 Theme
 
 This skill restores `themes/vs-dark-color-theme.json` to its exact original state from the initial commit (`9def7a0b71910c21535f6fcfebbb8cb30d73a034`, 2026-02-13).
 
 ## When to use
-- User asks to "reset", "restore", or "revert" the Visual Studio Dark theme
+- User asks to "reset", "restore", or "revert" the Visual Studio Dark 2019 theme
 - User wants to undo all modifications made after the initial faithful port
 - User wants the pre-modification baseline to start fresh
 
