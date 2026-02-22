@@ -41,12 +41,12 @@
         "editorGutter.deletedBackground": "#f7768e",
         "editorCodeLens.foreground": "#535D87",
         // ── Bracket Pair Colorization ───────────────────────────
-        "editorBracketHighlight.foreground1": "#e0af68",
-        "editorBracketHighlight.foreground2": "#bb9af7",
-        "editorBracketHighlight.foreground3": "#7dcfff",
-        "editorBracketHighlight.foreground4": "#9ece6a",
-        "editorBracketHighlight.foreground5": "#73daca",
-        "editorBracketHighlight.foreground6": "#7aa2f7",
+        "editorBracketHighlight.foreground1": "#ECCC78",
+        "editorBracketHighlight.foreground2": "#50D4B0",
+        "editorBracketHighlight.foreground3": "#B07858",
+        "editorBracketHighlight.foreground4": "#A8E070",
+        "editorBracketHighlight.foreground5": "#F4C8D0",
+        "editorBracketHighlight.foreground6": "#B8D4EC",
         "editorBracketHighlight.unexpectedBracket.foreground": "#f7768e",
         // ── Editor Groups / Tabs ────────────────────────────────
         "editorGroup.border": "#121326",
