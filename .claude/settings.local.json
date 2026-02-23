@@ -5,7 +5,8 @@
       "mcp__microsoft-learn__microsoft_docs_fetch",
       "WebFetch(domain:developercommunity.visualstudio.com)",
       "WebFetch(domain:devblogs.microsoft.com)",
-      "WebFetch(domain:draculatheme.com)"
+      "WebFetch(domain:draculatheme.com)",
+      "Bash(curl:*)"
     ]
   }
 }
