@@ -24,6 +24,15 @@ A faithful port of the Visual Studio IDE Dark theme, with key differences from V
 
 Colors sourced from [Roslyn VisualStudio2019.xml](https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/ColorSchemes/VisualStudio2019.xml) (MIT License).
 
+### Visual Studio Dark 2022
+The updated VS 2022 shell appearance with identical syntax highlighting to VS 2019. Key visual differences:
+- **Unified title bar + activity bar**: Both use `#1F1F1E` for a seamless top chrome (vs `#383838`/`#313131` in 2019)
+- **Purple accent indicators**: Active tab top border, activity bar indicator, and panel title border use `#715FE7` (vs blue `#0078D4`)
+- **Gray status bar**: `#424242` instead of blue `#007ACC`
+- **Updated input fields**: Darker `#333337` background with `#434346` border
+
+Shell colors sourced from the [Microsoft Color Value Reference](https://learn.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio?view=vs-2022) and community references (best effort — no official machine-readable color file exists for VS 2022).
+
 ---
 
 ### Apex Ember++
@@ -241,6 +250,8 @@ The only theme in the family with truly achromatic backgrounds (R=G=B). Pure gra
 JetBrains theme colors sourced from the official [JetBrains IntelliJ Community Edition](https://github.com/JetBrains/intellij-community) repository (Apache 2.0 License).
 
 Visual Studio Dark 2019 theme colors sourced from the [Roslyn VisualStudio2019.xml](https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/ColorSchemes/VisualStudio2019.xml) color scheme (MIT License).
+
+Visual Studio Dark 2022 shell colors sourced from the [Microsoft Color Value Reference](https://learn.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio?view=vs-2022) and community references. Syntax highlighting identical to VS 2019.
 
 ## License
 

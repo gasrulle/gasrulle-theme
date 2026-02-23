@@ -3,6 +3,7 @@
 ## [0.5.0] - 2026-02-22
 
 ### Added
+- **Visual Studio Dark 2022**: New ported theme — VS 2022 shell appearance with identical syntax to VS 2019. Unified title bar + activity bar (`#1F1F1E`), purple accent indicators (`#715FE7`), gray status bar (`#424242`), updated input field colors. Shell colors sourced from Microsoft Color Value Reference and community references (best effort — no official machine-readable VS 2022 color file exists).
 - **Apex Pastel++**: New original theme — rose-tinted dark pastel (Dusk direction) with 3-band WCAG luminance strategy. Rose background (`#170E11`, H≈340°) with teal keywords (`#8CBDC6`), lilac functions (`#AA8BC1`), amber classes (`#D5CFB5`), sage strings (`#97BF93`), salmon numbers (`#DECBC4`), rose properties (`#E2C8CF`), chartreuse parameters (`#C7D3B3`). Five distinct type colors: amber classes, jade structs, orchid interfaces, periwinkle enums. Full ++ tier C# semantic depth with XML doc comment support. All syntax tokens S≤36% (strict pastel).
 - **Apex Pastel++**: Bold `function.declaration` and `method.declaration` semantic tokens — compensates for low-saturation keyword↔function hue similarity at S≤36%
 - **Bold Declaration Rule**: New project rule — themes with all-pastel syntax (S≤40%) must use bold on function/method declarations to provide a secondary visual cue beyond color

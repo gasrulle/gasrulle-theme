@@ -12,6 +12,7 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 - **Rider Dark (New UI)** — The modern JetBrains 2023+ New UI dark theme (`themes/rider-dark-new-ui-color-theme.json`)
 - **Rider Dark (Darcula)** — The classic JetBrains Darcula theme (`themes/rider-dark-darcula-color-theme.json`)
 - **Visual Studio Dark 2019** — Faithful VS IDE Dark port (`themes/vs-dark-color-theme.json`)
+- **Visual Studio Dark 2022** — Faithful VS IDE 2022 Dark port (`themes/vs-dark-2022-color-theme.json`)
 - **Apex Ember++** — Original warm pastel dark theme, max C# depth (`themes/apex-ember-pp-color-theme.json`)
 - **Apex Frost++** — Original cool blue-tinted dark theme, Tokyo Night inspired, max C# depth (`themes/apex-frost-pp-color-theme.json`)
 - **Apex Steel++** — Original neutral balanced dark theme, One Dark Pro inspired, max C# depth (`themes/apex-steel-pp-color-theme.json`)
@@ -30,7 +31,8 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
 - `themes/` — Theme JSON files, one per theme variant
   - `rider-dark-new-ui-color-theme.json` — New UI Dark workbench colors, tokenColors, and semanticTokenColors
   - `rider-dark-darcula-color-theme.json` — Classic Darcula workbench colors, tokenColors, and semanticTokenColors
-  - `vs-dark-color-theme.json` — Visual Studio IDE Dark port
+  - `vs-dark-color-theme.json` — Visual Studio IDE 2019 Dark port
+  - `vs-dark-2022-color-theme.json` — Visual Studio IDE 2022 Dark port
   - `apex-ember-pp-color-theme.json` — Original Apex Ember++ (warm pastels, max C# depth)
   - `apex-frost-pp-color-theme.json` — Original Apex Frost++ (cool blue-tinted, Tokyo Night inspired)
   - `apex-steel-pp-color-theme.json` — Original Apex Steel++ (neutral balanced, One Dark Pro inspired)
@@ -69,6 +71,15 @@ Sourced from the official [JetBrains IntelliJ Community Edition](https://github.
 - **Classic Darcula**: `darcula.theme.json` (workbench) + classic Darcula syntax defaults
 
 When modifying or adding colors, always cross-reference the official JetBrains sources above to maintain fidelity.
+
+### Visual Studio Themes
+- **Visual Studio Dark 2019**: Syntax colors sourced from the official [Roslyn VisualStudio2019.xml](https://github.com/dotnet/roslyn/blob/main/src/VisualStudio/Core/Def/ColorSchemes/VisualStudio2019.xml) (MIT License). Workbench colors sourced from VS Code's built-in dark_vs.json and VS IDE Dark theme defaults.
+- **Visual Studio Dark 2022**: Syntax highlighting is identical to VS 2019 (no `VisualStudio2022.xml` exists in Roslyn). Shell/UI changes sourced from the [Microsoft Color Value Reference](https://learn.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio?view=vs-2022) and community references, as no official machine-readable color file exists for VS 2022. Key differences from VS 2019:
+  - **Unified title bar**: Title bar blends with activity bar at `#1F1F1E` (vs `#383838`)
+  - **Darker activity bar**: `#1F1F1E` (vs `#313131`)
+  - **Purple accent indicators**: Tab top border, activity bar indicator, panel title use `#715FE7`
+  - **Gray status bar**: `#424242` (vs blue `#007ACC`)
+  - **Updated input fields**: `#333337` background, `#434346` border (from MS Color Value Reference)
 
 ## Key Color Palettes
 
@@ -638,6 +649,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Rider New UI | `#5F826B` | `#67A37C` | Green-tinted (official JetBrains DEFAULT_DOC_COMMENT) |
 | Rider Darcula | `#626468` | `#908070` | Dimmed gray + warm sand |
 | Visual Studio Dark 2019 | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
+| Visual Studio Dark 2022 | `#656A6E` | `#A89888` | Dimmed gray + warm sand (same as VS 2019) |
 | Apex Ember++ | `#545866` | `#927A68` | Dimmed purple-gray + warm amber-sand |
 | Apex Frost++ | `#485172` | `#6E8098` | Dimmed blue-gray + cool steel-blue |
 | Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |

@@ -54,6 +54,11 @@
                 "path": "./themes/vs-dark-color-theme.json"
             },
             {
+                "label": "Gasrulle - Visual Studio Dark 2022",
+                "uiTheme": "vs-dark",
+                "path": "./themes/vs-dark-2022-color-theme.json"
+            },
+            {
                 "label": "Gasrulle - Apex Ember++",
                 "uiTheme": "vs-dark",
                 "path": "./themes/apex-ember-pp-color-theme.json"
