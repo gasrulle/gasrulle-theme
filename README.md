@@ -52,15 +52,15 @@ An original "golden standard" dark theme synthesized from the best elements of t
 | **Steel++** | Balanced neutral | One Dark Pro balance | `#61AFEF` clear blue |
 | **Neon++** | Vibrant & bold | Dracula high energy | `#BD93F9` vivid purple |
 | **Carbon++** | Achromatic dark | Pure gray, measured saturation | `#78C8F0` steel blue |
-| **Pastel++** | Soft pastel | Warm+cool balanced pastels | `#8CBADC` sky blue |
+| **Pastel++** | Soft pastel | Rose-tinted dusk, chalky pastels | `#8CBDC6` teal |
 
 All five use **maximum C# semantic depth (++)** — every type category gets a unique color, properties are distinct from variables, parameters are distinct from locals, static members get italic styling.
 
 ### Apex Pastel++ *(Soft & Chalky)*
-A warm+cool balanced pastel theme on a deeper purple-tinted background (darker Ember). Every syntax color is a soft, chalky pastel — lavender keywords, mint strings, sky blue functions, rose properties. Designed from scratch following the Apex methodology with intentional luminance banding to maintain readability despite the narrow pastel saturation range.
-- Keywords in pastel lavender (`#C298D8`), functions in sky blue (`#8CBADC`)
-- Properties in pastel rose (`#E4B0BC`), parameters in chamomile (`#B4B080`)
-- Five distinct type colors: classes in teal (`#98D0CC`), structs in sage (`#9AC08C`), interfaces in orchid (`#D8B0CC`), enums in periwinkle (`#B0B8E4`)
+A rose-tinted dark theme with soft, chalky pastel syntax. Warm dusk backgrounds (H≈340°) paired with teal keywords, lilac functions, and amber classes — entirely different hue families from Ember. Uses a 3-band WCAG luminance strategy to maintain readability across all pastels (S≤36%).
+- Keywords in pastel teal (`#8CBDC6`), functions in lilac (`#AA8BC1`)
+- Properties in pastel rose (`#E2C8CF`), parameters in chartreuse (`#C7D3B3`)
+- Five distinct type colors: classes in amber (`#D5CFB5`), structs in jade (`#8EBFAB`), interfaces in orchid (`#BB87B2`), enums in periwinkle (`#9393C5`)
 
 ### Apex Frost++ *(Cool & Modern temperature)*
 A cool blue-tinted dark theme inspired by Tokyo Night Storm. Sleek and professional with sharp syntax against quiet chrome.
@@ -218,23 +218,23 @@ The only theme in the family with truly achromatic backgrounds (R=G=B). Pure gra
 
 | Role            | Hex       | Design Source |
 |-----------------|-----------|---------------|
-| Editor BG       | `#0E0F1B` | Darker Ember purple-tinted |
-| Sidebar BG      | `#161728` | Warm purple, raised surface |
-| Foreground      | `#C8C8D6` | Lavender-silver |
-| Keywords        | `#C298D8` | Pastel lavender (signature) |
-| Control Flow    | `#D2ACEA` | Brighter lavender, italic |
-| Strings         | `#96CCAA` | Pastel mint |
-| Functions       | `#8CBADC` | Pastel sky blue |
-| Numbers         | `#D8B0A0` | Pastel coral-peach |
-| Properties      | `#E4B0BC` | Pastel rose |
-| Variables       | `#C8C8D6` | Foreground (lavender-silver) |
-| Parameters      | `#B4B080` | Pastel chamomile |
-| Classes         | `#98D0CC` | Pastel teal |
-| Structs         | `#9AC08C` | Pastel sage |
-| Interfaces      | `#D8B0CC` | Pastel orchid |
-| Enums           | `#B0B8E4` | Pastel periwinkle |
-| Comments        | `#585870` | Muted lavender-gray |
-| Accent          | `#8CBADC` | Sky blue |
+| Editor BG       | `#170E11` | Rose-tinted dark (Dusk) |
+| Sidebar BG      | `#201418` | Rose, raised surface |
+| Foreground      | `#C3B9BD` | Rose-tinted near-white |
+| Keywords        | `#8CBDC6` | Pastel teal (signature) |
+| Control Flow    | `#ABCBD2` | Brighter teal, italic |
+| Strings         | `#97BF93` | Pastel sage |
+| Functions       | `#AA8BC1` | Pastel lilac (LOW band) |
+| Numbers         | `#DECBC4` | Pastel salmon |
+| Properties      | `#E2C8CF` | Pastel rose (HIGH band) |
+| Variables       | `#C3B9BD` | Foreground |
+| Parameters      | `#C7D3B3` | Pastel chartreuse |
+| Classes         | `#D5CFB5` | Pastel amber (HIGH band) |
+| Structs         | `#8EBFAB` | Pastel jade (MID band) |
+| Interfaces      | `#BB87B2` | Pastel orchid (LOW band) |
+| Enums           | `#9393C5` | Pastel periwinkle (LOW band) |
+| Comments        | `#716066` | Rose-tinted muted gray |
+| Accent          | `#8CBDC6` | Teal |
 
 ## Credits
 

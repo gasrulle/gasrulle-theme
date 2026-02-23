@@ -17,7 +17,7 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 - **Apex Steel++** — Original neutral balanced dark theme, One Dark Pro inspired, max C# depth (`themes/apex-steel-pp-color-theme.json`)
 - **Apex Neon++** — Original vibrant high-energy dark theme, Dracula inspired, max C# depth (`themes/apex-neon-pp-color-theme.json`)
 - **Apex Carbon++** — Original achromatic dark theme, pure gray backgrounds, measured syntax, max C# depth (`themes/apex-carbon-pp-color-theme.json`)
-- **Apex Pastel++** — Original soft pastel dark theme, warm+cool balanced, darker Ember BG, max C# depth (`themes/apex-pastel-pp-color-theme.json`)
+- **Apex Pastel++** — Original soft pastel dark theme, rose-tinted dusk BG, teal keywords, max C# depth (`themes/apex-pastel-pp-color-theme.json`)
 
 ### Planned
 - Visual Studio Light
@@ -36,7 +36,7 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
   - `apex-steel-pp-color-theme.json` — Original Apex Steel++ (neutral balanced, One Dark Pro inspired)
   - `apex-neon-pp-color-theme.json` — Original Apex Neon++ (vibrant high-energy, Dracula inspired)
   - `apex-carbon-pp-color-theme.json` — Original Apex Carbon++ (achromatic dark, measured syntax)
-  - `apex-pastel-pp-color-theme.json` — Original Apex Pastel++ (soft pastel, warm+cool balanced)
+  - `apex-pastel-pp-color-theme.json` — Original Apex Pastel++ (soft pastel, rose-tinted dusk)
 - `README.md` — User-facing documentation
 - `CHANGELOG.md` — Version history
 - `LICENSE` — Apache 2.0
@@ -231,33 +231,33 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 | Doc Comments    | `#5A5A5A` | Pure gray (R=G=B), italic              |
 | Doc Keywords    | `#888078` | Near-achromatic sand (S≈5%)            |
 
-### Apex Pastel++ (Original — Soft & Chalky)
-Warm+cool balanced pastel palette on a darker Ember-derived purple background. Every syntax color is a soft, chalky pastel. Designed from scratch with intentional luminance banding for readability despite narrow pastel saturation.
+### Apex Pastel++ (Original — Dusk Pastels)
+Rose-tinted dusk background with 3-band WCAG luminance strategy exploiting green-channel weighting to create natural luminance diversity among pastels. All syntax colors strictly pastel (S≤36%, L 60–85%).
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#0E0F1B` | Darker Ember purple-tinted           |
-| Sidebar BG      | `#161728` | Warm purple, raised surface          |
-| Foreground      | `#C8C8D6` | Lavender-silver                      |
-| Keywords        | `#C298D8` | Pastel lavender (signature)          |
-| Control Flow    | `#D2ACEA` | Brighter lavender, italic            |
-| Strings         | `#96CCAA` | Pastel mint                          |
-| Functions       | `#8CBADC` | Pastel sky blue                      |
-| Numbers         | `#D8B0A0` | Pastel coral-peach                   |
-| Properties      | `#E4B0BC` | Pastel rose                          |
-| Variables       | `#C8C8D6` | Foreground (lavender-silver)         |
-| Parameters      | `#B4B080` | Pastel chamomile                     |
-| Classes         | `#98D0CC` | Pastel teal                          |
-| Structs         | `#9AC08C` | Pastel sage                          |
-| Interfaces      | `#D8B0CC` | Pastel orchid                        |
-| Enums           | `#B0B8E4` | Pastel periwinkle                    |
-| Comments        | `#585870` | Muted lavender-gray                  |
-| Accent          | `#8CBADC` | Sky blue                             |
-| Doc Comments    | `#505068` | Dimmed lavender-gray, italic         |
-| Doc Keywords    | `#806E64` | Warm muted sand                      |
+| Editor BG       | `#170E11` | Rose-tinted dark (Dusk, H≈340°)      |
+| Sidebar BG      | `#201418` | Rose, raised surface                 |
+| Foreground      | `#C3B9BD` | Rose-tinted near-white               |
+| Keywords        | `#8CBDC6` | Pastel teal (signature)              |
+| Control Flow    | `#ABCBD2` | Brighter teal, italic                |
+| Strings         | `#97BF93` | Pastel sage                          |
+| Functions       | `#AA8BC1` | Pastel lilac (LOW band)              |
+| Numbers         | `#DECBC4` | Pastel salmon                        |
+| Properties      | `#E2C8CF` | Pastel rose (HIGH band)              |
+| Variables       | `#C3B9BD` | Foreground (rose near-white)         |
+| Parameters      | `#C7D3B3` | Pastel chartreuse                    |
+| Classes         | `#D5CFB5` | Pastel amber (HIGH band)             |
+| Structs         | `#8EBFAB` | Pastel jade (MID band)               |
+| Interfaces      | `#BB87B2` | Pastel orchid (LOW band)             |
+| Enums           | `#9393C5` | Pastel periwinkle (LOW band)         |
+| Comments        | `#716066` | Rose-tinted muted gray               |
+| Accent          | `#8CBDC6` | Teal                                 |
+| Doc Comments    | `#5C5155` | Dimmed rose-gray, italic             |
+| Doc Keywords    | `#746458` | Warm muted sand                      |
 
 ### Apex Theme Family Naming
-- **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic), Pastel (soft)
+- **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic), Pastel (soft, rose-tinted dusk)
 - **C# depth**: Only ++ (maximum) tier is currently implemented
 - **Labels**: `Gasrulle - Apex {Variant}++`
 - **File names**: `apex-{variant}-pp-color-theme.json`
@@ -601,6 +601,17 @@ Each theme file uses this structure (with JSONC — comments are allowed):
 4. Keep scope arrays sorted alphabetically within each rule
 5. **Never** add a flat `"comment"` entry to `semanticTokenColors` — it overrides all comment sub-types (including doc comments) with a single color. Instead, rely on TextMate `tokenColors` for comment styling.
 
+### Bold Function/Method Declarations
+Themes with low-saturation syntax palettes (S≤36%, such as Pastel++) must use `fontStyle: "bold"` on `function.declaration` and `method.declaration` semantic tokens. At low saturation, hue differences between keywords and function names become hard to perceive — bold provides a secondary visual cue that makes method definitions stand out as landmarks regardless of color proximity.
+
+**When to apply:**
+- Required when both keyword and function colors have saturation ≤40% (the hue channel alone cannot carry the distinction)
+- Not needed for standard-saturation themes (Ember, Frost, Steel, Neon, Carbon) where S≥60% makes hue differences clearly visible
+
+**Scope:** Only `function.declaration` and `method.declaration` in `semanticTokenColors` — not function calls/references (call sites should stay visually subtle), and not TextMate `tokenColors` (no reliable declaration-vs-call scope distinction in TextMate grammars).
+
+**Current themes using bold declarations:** Pastel++ only.
+
 ### C# XML Doc Comment Semantic Tokens
 C# Roslyn emits custom semantic token types for XML doc comments that are **not** part of the standard VS Code semantic token set. All themes must include explicit entries in `semanticTokenColors` to prevent these from falling back to default comment gray:
 
@@ -632,7 +643,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |
 | Apex Neon++ | `#4E5688` | `#8C7C94` | Dimmed blue-purple + muted lilac |
 | Apex Carbon++ | `#5A5A5A` | `#888078` | Pure gray + near-achromatic sand |
-| Apex Pastel++ | `#505068` | `#806E64` | Dimmed lavender-gray + warm muted sand |
+| Apex Pastel++ | `#5C5155` | `#746458` | Dimmed rose-gray + warm muted sand |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
@@ -714,7 +725,7 @@ The following keys must all share the same opaque selection color (or its alpha 
 | Steel++ | `#D0D6E0` | `#ABB2BF` | 3.58:1 | Uses brightened neutral |
 | Neon++ | `#D1D1D9` | `#C2C2CA` | 3.47:1 | Brightened neutral (FG dimmed below 3:1) |
 | Carbon++ | `#D0D0D0` | `#C2C2C2` | 3.40:1 | Brightened achromatic (FG dimmed below 3:1) |
-| Pastel++ | `#D0D0DE` | `#C8C8D6` | 4.10:1 | Brightened lavender |
+| Pastel++ | `#D4CCD0` | `#C3B9BD` | 8.97:1 | Brightened rose |
 
 ### Bracket Pair Colorization Rules
 

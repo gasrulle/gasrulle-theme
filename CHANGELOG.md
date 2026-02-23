@@ -3,7 +3,9 @@
 ## [0.5.0] - 2026-02-22
 
 ### Added
-- **Apex Pastel++**: New original theme — warm+cool balanced pastel syntax on a darker Ember-derived purple background (`#0E0F1B`). Pastel lavender keywords (`#C298D8`), mint strings (`#96CCAA`), sky blue functions (`#8CBADC`), rose properties (`#E4B0BC`), chamomile parameters (`#B4B080`). Five distinct type colors: teal classes, sage structs, orchid interfaces, periwinkle enums. Full ++ tier C# semantic depth with XML doc comment support.
+- **Apex Pastel++**: New original theme — rose-tinted dark pastel (Dusk direction) with 3-band WCAG luminance strategy. Rose background (`#170E11`, H≈340°) with teal keywords (`#8CBDC6`), lilac functions (`#AA8BC1`), amber classes (`#D5CFB5`), sage strings (`#97BF93`), salmon numbers (`#DECBC4`), rose properties (`#E2C8CF`), chartreuse parameters (`#C7D3B3`). Five distinct type colors: amber classes, jade structs, orchid interfaces, periwinkle enums. Full ++ tier C# semantic depth with XML doc comment support. All syntax tokens S≤36% (strict pastel).
+- **Apex Pastel++**: Bold `function.declaration` and `method.declaration` semantic tokens — compensates for low-saturation keyword↔function hue similarity at S≤36%
+- **Bold Declaration Rule**: New project rule — themes with all-pastel syntax (S≤40%) must use bold on function/method declarations to provide a secondary visual cue beyond color
 
 ## [0.4.10] - 2026-02-20
 
