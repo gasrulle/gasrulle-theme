@@ -6,7 +6,9 @@
       "WebFetch(domain:developercommunity.visualstudio.com)",
       "WebFetch(domain:devblogs.microsoft.com)",
       "WebFetch(domain:draculatheme.com)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(node calc-new-bgs.js)",
+      "Bash(node validate-themes.js)"
     ]
   }
 }

@@ -122,8 +122,8 @@ Synthesized from Night Owl (accessibility), Catppuccin (warmth), Tokyo Night (se
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#141522` | Warm purple-tinted dark              |
-| Sidebar BG      | `#1B1B2C` | Lower contrast than editor           |
+| Editor BG       | `#1B1C2E` | Warm purple-tinted dark              |
+| Sidebar BG      | `#222238` | Lower contrast than editor           |
 | Foreground      | `#B6BCCE` | Warm off-white (softened)            |
 | Keywords        | `#C9A0F5` | Catppuccin mauve + One Dark purple   |
 | Control Flow    | `#D8B0F8` | Brighter purple, italic              |
@@ -147,8 +147,8 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#121326` | Cool blue-tinted dark                |
-| Sidebar BG      | `#191A2E` | Cool, lower contrast                 |
+| Editor BG       | `#1A1C37` | Cool blue-tinted dark                |
+| Sidebar BG      | `#22233E` | Cool, lower contrast                 |
 | Foreground      | `#A9B1D6` | Cool blue-white                      |
 | Keywords        | `#7AA2F7` | Azure blue                           |
 | Control Flow    | `#89B4FA` | Brighter blue, italic                |
@@ -172,8 +172,8 @@ Inspired by One Dark Pro. Clean, balanced, no strong color temperature bias.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#16191F` | Neutral dark gray                    |
-| Sidebar BG      | `#1D2028` | Neutral lighter                      |
+| Editor BG       | `#1B1E25` | Neutral dark gray                    |
+| Sidebar BG      | `#22252E` | Neutral lighter                      |
 | Foreground      | `#ABB2BF` | One Dark neutral                     |
 | Keywords        | `#C678DD` | One Dark purple                      |
 | Control Flow    | `#D183E8` | Brighter purple, italic              |
@@ -197,23 +197,23 @@ Inspired by Dracula. Maximum visual energy, vivid saturated colors.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#16162A` | Deep neon-dark                       |
-| Sidebar BG      | `#1E1E40` | Dark purple                          |
+| Editor BG       | `#1B1B34` | Deep neon-dark                       |
+| Sidebar BG      | `#23234B` | Dark purple                          |
 | Foreground      | `#C2C2CA` | Softened near-white                  |
-| Keywords        | `#FF79C6` | Hot pink                             |
-| Control Flow    | `#FF92D0` | Brighter pink, italic                |
-| Strings         | `#F1FA8C` | Electric yellow-green                |
-| Functions       | `#50FA7B` | Neon green                           |
-| Numbers         | `#BD93F9` | Vivid purple                         |
-| Properties      | `#FFB86C` | Bright orange                        |
+| Keywords        | `#EE8AC3` | Softened hot pink                             |
+| Control Flow    | `#F1A0CE` | Softened brighter pink, italic                |
+| Strings         | `#E9F096` | Softened yellow-green                |
+| Functions       | `#61E984` | Softened neon green                           |
+| Numbers         | `#BE9BF1` | Softened vivid purple                         |
+| Properties      | `#EDB77E` | Softened bright orange                        |
 | Variables       | `#C2C2CA` | Softened near-white                  |
-| Parameters      | `#FFD580` | Warm golden                          |
-| Classes         | `#8BE9FD` | Electric cyan                        |
-| Structs         | `#69FF94` | Bright green (++ only)               |
-| Interfaces      | `#CAA0F5` | Vivid lavender (++ only)             |
-| Enums           | `#718BF4` | Electric blue (++ only)              |
+| Parameters      | `#EFD090` | Softened warm golden                          |
+| Classes         | `#98E1F0` | Softened electric cyan                        |
+| Structs         | `#7CEC9C` | Softened bright green (++ only)               |
+| Interfaces      | `#CAA3F2` | Softened vivid lavender (++ only)             |
+| Enums           | `#7990EC` | Softened electric blue (++ only)              |
 | Comments        | `#566698` | Dracula blue-gray                    |
-| Accent          | `#BD93F9` | Vivid purple                         |
+| Accent          | `#BE9BF1` | Softened vivid purple                         |
 | Doc Comments    | `#4E5688` | Dimmed blue-purple, italic             |
 | Doc Keywords    | `#8C7C94` | Muted lilac                            |
 
@@ -222,8 +222,8 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#181818` | Pure gray (R=G=B=24)                 |
-| Sidebar BG      | `#202020` | Pure gray, raised surface            |
+| Editor BG       | `#1F1F1F` | Pure gray (R=G=B=31)                 |
+| Sidebar BG      | `#272727` | Pure gray, raised surface            |
 | Foreground      | `#C2C2C2` | Softened silver                        |
 | Keywords        | `#E68CA5` | Dusty rose, brighter                 |
 | Control Flow    | `#F09CB5` | Brighter rose, italic                |
@@ -247,8 +247,8 @@ Rose-tinted dusk background with 3-band WCAG luminance strategy exploiting green
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#170E11` | Rose-tinted dark (Dusk, H≈340°)      |
-| Sidebar BG      | `#201418` | Rose, raised surface                 |
+| Editor BG       | `#2A1A1F` | Rose-tinted dark (Dusk, H≈340°)      |
+| Sidebar BG      | `#332026` | Rose, raised surface                 |
 | Foreground      | `#C3B9BD` | Rose-tinted near-white               |
 | Keywords        | `#8CBDC6` | Pastel teal (signature)              |
 | Control Flow    | `#ABCBD2` | Brighter teal, italic                |
@@ -295,7 +295,7 @@ All backgrounds should share the same color temperature. Build from darkest to l
 
 **Achromatic rule**: If the variant has no color cast, all background channels must satisfy R=G=B (pure gray).
 
-**Color-tinted rule**: Add a subtle hue shift to all backgrounds matching the temperature (e.g., Ember adds warm purple `#141522`, Frost adds cool blue `#121326`).
+**Color-tinted rule**: Add a subtle hue shift to all backgrounds matching the temperature (e.g., Ember adds warm purple `#1B1C2E`, Frost adds cool blue `#1A1C37`).
 
 ### Step 3: Derive the Core Syntax Palette
 Assign colors to these roles, ensuring they are visually distinct from each other and readable against the editor BG:
@@ -651,11 +651,11 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Visual Studio Dark 2019 | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
 | Visual Studio Dark 2022 | `#656A6E` | `#A89888` | Dimmed gray + warm sand (same as VS 2019) |
 | Apex Ember++ | `#545866` | `#927A68` | Dimmed purple-gray + warm amber-sand |
-| Apex Frost++ | `#485172` | `#6E8098` | Dimmed blue-gray + cool steel-blue |
+| Apex Frost++ | `#4D577A` | `#6E8098` | Dimmed blue-gray + cool steel-blue |
 | Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |
 | Apex Neon++ | `#4E5688` | `#8C7C94` | Dimmed blue-purple + muted lilac |
 | Apex Carbon++ | `#5A5A5A` | `#888078` | Pure gray + near-achromatic sand |
-| Apex Pastel++ | `#5C5155` | `#746458` | Dimmed rose-gray + warm muted sand |
+| Apex Pastel++ | `#62565A` | `#746458` | Dimmed rose-gray + warm muted sand |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
@@ -805,7 +805,7 @@ function lum(r,g,b) {
 }
 function hex(s) { return [parseInt(s.slice(0,2),16),parseInt(s.slice(2,4),16),parseInt(s.slice(4,6),16)]; }
 function cr(a,b) { const L1=lum(...hex(a)),L2=lum(...hex(b)); return (Math.max(L1,L2)+0.05)/(Math.min(L1,L2)+0.05); }
-// Example: cr('B6BCCE','141522') → 9.55:1
+// Example: cr('B6BCCE','1B1C2E') → 8.82:1
 ```
 
 ## Holistic Change Protocol
