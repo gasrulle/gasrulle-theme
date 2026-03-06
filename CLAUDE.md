@@ -110,17 +110,17 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 ### Classic Darcula
 | Role        | Hex       |
 |-------------|-----------|
-| Editor BG   | `#242424` |
+| Editor BG   | `#2B2B2B` |
 | Sidebar BG  | `#2D2F31` |
 | Foreground  | `#A9B7C6` |
 | Keywords    | `#CC7832` |
-| Strings     | `#7EA86D` |
+| Strings     | `#6A8759` |
 | Functions   | `#FFC66D` |
 | Numbers     | `#6897BB` |
-| Properties  | `#A885B8` |
-| Comments    | `#727272` |
-| Doc Comments| `#626468` | Dimmed gray, italic      |
-| Doc Keywords| `#908070` | Warm sand                |
+| Properties  | `#9876AA` |
+| Comments    | `#808080` |
+| Doc Comments| `#629755` | Green, italic (DEFAULT_DOC_COMMENT) |
+| Doc Keywords| `#629755` | Green (DEFAULT_DOC_COMMENT_TAG)     |
 | Annotations | `#BBB529` |
 | Accent      | `#4A88C7` |
 
@@ -654,7 +654,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Theme | Doc Body | Doc Keywords | Style |
 |-------|---------|-------------|-------|
 | Rider New UI | `#5F826B` | `#67A37C` | Green-tinted (official JetBrains DEFAULT_DOC_COMMENT) |
-| Rider Darcula | `#626468` | `#908070` | Dimmed gray + warm sand |
+| Rider Darcula | `#629755` | `#629755` | Green, italic (DEFAULT_DOC_COMMENT) |
 | Visual Studio Dark 2019 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
 | Visual Studio Dark 2022 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
 | Visual Studio Dark 2026 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
@@ -879,7 +879,7 @@ All themes must include these 15 custom token entries in `semanticTokenColors` (
 |-------|-------|--------|
 | `controlKeyword` | `#CC7832` | Same as keyword |
 | `operatorOverloaded` | `#A9B7C6` | Same as operator |
-| `stringVerbatim` | `#7EA86D` | Same as string |
+| `stringVerbatim` | `#6A8759` | Same as string |
 | `stringEscapeCharacter` | `#CC7832` | DEFAULT_VALID_STRING_ESCAPE (keyword color) |
 | `preprocessorKeyword` | `#CC7832` | Same as keyword |
 | `preprocessorText` | `#A9B7C6` | Foreground |
@@ -890,7 +890,7 @@ All themes must include these 15 custom token entries in `semanticTokenColors` (
 | `recordClass` | `#A9B7C6` | Type color |
 | `recordStruct` | `#A9B7C6` | Type color |
 | `plainKeyword` | `#CC7832` | Same as keyword |
-| `field` | `#A885B8` | Instance field color |
+| `field` | `#9876AA` | Instance field color |
 | `local` | `#A9B7C6` | Foreground |
 
 ### When Adding Workbench Colors
