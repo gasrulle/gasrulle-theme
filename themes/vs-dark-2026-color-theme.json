@@ -1118,6 +1118,9 @@
         "extensionMethod": "#DCDCAA",
         "recordClass": "#4EC9B0",
         "recordStruct": "#86C691",
+        "plainKeyword": "#569CD6",
+        "field": "#DCDCDC",
+        "local": "#9CDCFE",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         // Green — sourced from Roslyn VisualStudio2019.xml
         "xmlDocCommentText": {
@@ -1135,7 +1138,7 @@
         },
         "xmlDocCommentEntityReference": "#608B4E",
         "xmlDocCommentProcessingInstruction": "#608B4E",
-        "xmlDocCommentComment": "#57A64A",
+        "xmlDocCommentComment": "#608B4E",
         // ── Static modifiers ──
         "function.static": {
             "foreground": "#DCDCAA",

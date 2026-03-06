@@ -1118,24 +1118,27 @@
         "extensionMethod": "#DCDCAA",
         "recordClass": "#4EC9B0",
         "recordStruct": "#86C691",
+        "plainKeyword": "#569CD6",
+        "field": "#DCDCDC",
+        "local": "#9CDCFE",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
-        // Grayscale — muted to fade into background, not compete with code
+        // Green — sourced from Roslyn VisualStudio2019.xml
         "xmlDocCommentText": {
-            "foreground": "#656A6E",
+            "foreground": "#608B4E",
             "fontStyle": "italic"
         },
-        "xmlDocCommentDelimiter": "#656A6E",
-        "xmlDocCommentName": "#A89888",
-        "xmlDocCommentAttributeName": "#A89888",
-        "xmlDocCommentAttributeQuotes": "#656A6E",
-        "xmlDocCommentAttributeValue": "#A89888",
+        "xmlDocCommentDelimiter": "#608B4E",
+        "xmlDocCommentName": "#608B4E",
+        "xmlDocCommentAttributeName": "#C8C8C8",
+        "xmlDocCommentAttributeQuotes": "#C8C8C8",
+        "xmlDocCommentAttributeValue": "#C8C8C8",
         "xmlDocCommentCDataSection": {
-            "foreground": "#656A6E",
+            "foreground": "#E9D585",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#A89888",
-        "xmlDocCommentProcessingInstruction": "#A89888",
-        "xmlDocCommentComment": "#7A7E85",
+        "xmlDocCommentEntityReference": "#608B4E",
+        "xmlDocCommentProcessingInstruction": "#608B4E",
+        "xmlDocCommentComment": "#608B4E",
         // ── Static modifiers ──
         "function.static": {
             "foreground": "#DCDCAA",

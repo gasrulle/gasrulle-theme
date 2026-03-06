@@ -1095,6 +1095,9 @@
         "extensionMethod": "#61afef",
         "recordClass": "#56b6c2",
         "recordStruct": "#73c990",
+        "plainKeyword": "#c678dd",
+        "field": "#e06c75",
+        "local": "#ABB2BF",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
             "foreground": "#515662",

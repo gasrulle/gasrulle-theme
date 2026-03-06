@@ -938,6 +938,9 @@
         "extensionMethod": "#56A8F5",
         "recordClass": "#6FAFBD",
         "recordStruct": "#6FAFBD",
+        "plainKeyword": "#CF8E6D",
+        "field": "#C77DBB",
+        "local": "#BCBEC4",
         "function.declaration": "#56A8F5",
         "method.declaration": "#56A8F5",
         "function.static": {

@@ -918,6 +918,9 @@
         "extensionMethod": "#FFC66D",
         "recordClass": "#A9B7C6",
         "recordStruct": "#A9B7C6",
+        "plainKeyword": "#CC7832",
+        "field": "#A885B8",
+        "local": "#A9B7C6",
         "function.declaration": "#FFC66D",
         "method.declaration": "#FFC66D",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──

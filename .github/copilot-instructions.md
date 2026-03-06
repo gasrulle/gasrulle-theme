@@ -171,7 +171,7 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 | Enums           | `#F7768E` | Rose-pink (++ only)                  |
 | Comments        | `#535D87` | Cool blue-gray                       |
 | Accent          | `#7AA2F7` | Azure blue                           |
-| Doc Comments    | `#485172` | Dimmed blue-gray, italic               |
+| Doc Comments    | `#4D577A` | Dimmed blue-gray, italic               |
 | Doc Keywords    | `#6E8098` | Cool steel-blue                        |
 
 ### Apex Steel++ (Original — Balanced Neutral)
@@ -655,8 +655,8 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 |-------|---------|-------------|-------|
 | Rider New UI | `#5F826B` | `#67A37C` | Green-tinted (official JetBrains DEFAULT_DOC_COMMENT) |
 | Rider Darcula | `#626468` | `#908070` | Dimmed gray + warm sand |
-| Visual Studio Dark 2019 | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
-| Visual Studio Dark 2022 | `#656A6E` | `#A89888` | Dimmed gray + warm sand (same as VS 2019) |
+| Visual Studio Dark 2019 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
+| Visual Studio Dark 2022 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
 | Visual Studio Dark 2026 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
 | Apex Ember++ | `#545866` | `#927A68` | Dimmed purple-gray + warm amber-sand |
 | Apex Frost++ | `#4D577A` | `#6E8098` | Dimmed blue-gray + cool steel-blue |
@@ -669,6 +669,128 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 The C# extension (powered by Roslyn LSP) emits custom semantic token types beyond the standard VS Code set. These are registered dynamically via the Language Server Protocol, not in the extension's `package.json`. If a theme doesn't explicitly handle them, they fall back through the `superType` chain — but this fallback is often wrong (e.g., `operatorOverloaded` falls back to `operator` instead of showing as method-yellow).
 
 **All ported VS themes must include explicit entries** for these custom types in `semanticTokenColors`. Source: [Roslyn ClassificationTypeNames.cs](https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/Portable/Classification/ClassificationTypeNames.cs).
+
+#### Complete Roslyn Classification Reference
+
+The table below lists **every** classification from Roslyn's `ClassificationTypeNames.cs`, grouped by category. Classifications marked **"Custom"** are non-standard VS Code types that require explicit `semanticTokenColors` entries. Classifications marked **"Standard"** map to built-in VS Code semantic token types and are handled by normal theme entries. Classifications marked **"Not used"** are either VB-only, mapped as modifiers, or not emitted as semantic tokens.
+
+**Keywords & Operators:**
+
+| Roslyn Classification | VS Code Token Type | Kind | Fallback Risk | Theme Entry |
+|---|---|---|---|---|
+| `Keyword` | `keyword` | Standard | — | `"keyword"` |
+| `ControlKeyword` ("keyword - control") | `controlKeyword` | **Custom** | Falls back to `keyword` — wrong color if control flow is distinct | `"controlKeyword"` |
+| `Operator` | `operator` | Standard | — | `"operator"` |
+| `OperatorOverloaded` ("operator - overloaded") | `operatorOverloaded` | **Custom** | Falls back to `operator` (gray) — should be method color | `"operatorOverloaded"` |
+| — (new keyword) | `newOperator` | **Custom** | Falls back to `operator` | `"newOperator"` |
+| — (non-control keywords) | `plainKeyword` | **Custom** | Falls back to `keyword` — usually correct | `"plainKeyword"` |
+
+**Strings & Literals:**
+
+| Roslyn Classification | VS Code Token Type | Kind | Fallback Risk | Theme Entry |
+|---|---|---|---|---|
+| `StringLiteral` | `string` | Standard | — | `"string"` |
+| `VerbatimStringLiteral` ("string - verbatim") | `stringVerbatim` | **Custom** | Falls back to `string` — usually correct | `"stringVerbatim"` |
+| `StringEscapeCharacter` ("string - escape character") | `stringEscapeCharacter` | **Custom** | Falls back to `string` — **wrong** (should be keyword/yellow) | `"stringEscapeCharacter"` |
+| `NumericLiteral` | `number` | Standard | — | `"number"` |
+
+**Preprocessor:**
+
+| Roslyn Classification | VS Code Token Type | Kind | Fallback Risk | Theme Entry |
+|---|---|---|---|---|
+| `PreprocessorKeyword` ("preprocessor keyword") | `preprocessorKeyword` | **Custom** | No guaranteed superType | `"preprocessorKeyword"` |
+| `PreprocessorText` ("preprocessor text") | `preprocessorText` | **Custom** | No guaranteed superType | `"preprocessorText"` |
+| `ExcludedCode` ("excluded code") | `excludedCode` | **Custom** | No guaranteed superType | `"excludedCode"` |
+
+**Type Names:**
+
+| Roslyn Classification | VS Code Token Type | Kind | Fallback Risk | Theme Entry |
+|---|---|---|---|---|
+| `ClassName` ("class name") | `class` | Standard | — | `"class"` |
+| `StructName` ("struct name") | `struct` | Standard | — | `"struct"` |
+| `InterfaceName` ("interface name") | `interface` | Standard | — | `"interface"` |
+| `EnumName` ("enum name") | `enum` | Standard | — | `"enum"` |
+| `TypeParameterName` ("type parameter name") | `typeParameter` | Standard | — | `"typeParameter"` |
+| `DelegateName` ("delegate name") | `delegate` | **Custom** | May not fall back to `class`/`type` | `"delegate"` |
+| `RecordClassName` ("record class name") | `recordClass` | **Custom** | May not fall back to `class` | `"recordClass"` |
+| `RecordStructName` ("record struct name") | `recordStruct` | **Custom** | May not fall back to `struct` | `"recordStruct"` |
+| `ModuleName` ("module name") | `module` | **Custom** | Falls back to `namespace` — usually correct | Not used (VB modules) |
+| `NamespaceName` ("namespace name") | `namespace` | Standard | — | `"namespace"` |
+
+**Member Names:**
+
+| Roslyn Classification | VS Code Token Type | Kind | Fallback Risk | Theme Entry |
+|---|---|---|---|---|
+| `MethodName` ("method name") | `method` | Standard | — | `"method"` |
+| `ExtensionMethodName` ("extension method name") | `extensionMethod` | **Custom** | Falls back to `method` — usually correct | `"extensionMethod"` |
+| `PropertyName` ("property name") | `property` | Standard | — | `"property"` |
+| `FieldName` ("field name") | `field` | **Custom** | May not fall back to `property` — **wrong** in Apex themes | `"field"` |
+| `EventName` ("event name") | `event` | Standard | — | `"event"` |
+| `EnumMemberName` ("enum member name") | `enumMember` | Standard | — | `"enumMember"` |
+| `ConstantName` ("constant name") | — | Not used | Mapped to `variable` + `readonly` modifier instead | — |
+| `LocalName` ("local name") | `local` | **Custom** | May not fall back to `variable` | `"local"` |
+| `ParameterName` ("parameter name") | `parameter` | Standard | — | `"parameter"` |
+| `LabelName` ("label name") | `label` | Standard | — | `"label"` |
+
+**Punctuation & Other:**
+
+| Roslyn Classification | VS Code Token Type | Kind | Fallback Risk | Theme Entry |
+|---|---|---|---|---|
+| `Punctuation` | `punctuation` | **Custom** | No guaranteed superType | `"punctuation"` |
+| `Comment` | `comment` | Standard | — | TextMate only (see note below) |
+| `Identifier` | — | Not used | Mapped to specific member types | — |
+| `Text` | — | Not used | Not emitted as semantic token | — |
+| `WhiteSpace` | — | Not used | Not emitted as semantic token | — |
+| `StaticSymbol` ("static symbol") | — | Not used | Mapped as `static` modifier on other types | — |
+
+**XML Doc Comments** (custom Roslyn tokens — see dedicated section above):
+
+| Roslyn Classification | VS Code Token Type | Theme Entry |
+|---|---|---|
+| `XmlDocCommentText` | `xmlDocCommentText` | `"xmlDocCommentText"` |
+| `XmlDocCommentDelimiter` | `xmlDocCommentDelimiter` | `"xmlDocCommentDelimiter"` |
+| `XmlDocCommentName` | `xmlDocCommentName` | `"xmlDocCommentName"` |
+| `XmlDocCommentAttributeName` | `xmlDocCommentAttributeName` | `"xmlDocCommentAttributeName"` |
+| `XmlDocCommentAttributeQuotes` | `xmlDocCommentAttributeQuotes` | `"xmlDocCommentAttributeQuotes"` |
+| `XmlDocCommentAttributeValue` | `xmlDocCommentAttributeValue` | `"xmlDocCommentAttributeValue"` |
+| `XmlDocCommentCDataSection` | `xmlDocCommentCDataSection` | `"xmlDocCommentCDataSection"` |
+| `XmlDocCommentComment` | `xmlDocCommentComment` | `"xmlDocCommentComment"` |
+| `XmlDocCommentEntityReference` | `xmlDocCommentEntityReference` | `"xmlDocCommentEntityReference"` |
+| `XmlDocCommentProcessingInstruction` | `xmlDocCommentProcessingInstruction` | `"xmlDocCommentProcessingInstruction"` |
+
+**XML Literals** (VB-only — not used in C# themes):
+
+| Roslyn Classification | VS Code Token Type | Notes |
+|---|---|---|
+| `XmlLiteralAttributeName` | `xmlLiteralAttributeName` | VB XML literal syntax only |
+| `XmlLiteralAttributeQuotes` | `xmlLiteralAttributeQuotes` | VB XML literal syntax only |
+| `XmlLiteralAttributeValue` | `xmlLiteralAttributeValue` | VB XML literal syntax only |
+| `XmlLiteralCDataSection` | `xmlLiteralCDataSection` | VB XML literal syntax only |
+| `XmlLiteralComment` | `xmlLiteralComment` | VB XML literal syntax only |
+| `XmlLiteralDelimiter` | `xmlLiteralDelimiter` | VB XML literal syntax only |
+| `XmlLiteralEmbeddedExpression` | `xmlLiteralEmbeddedExpression` | VB XML literal syntax only |
+| `XmlLiteralEntityReference` | `xmlLiteralEntityReference` | VB XML literal syntax only |
+| `XmlLiteralName` | `xmlLiteralName` | VB XML literal syntax only |
+| `XmlLiteralProcessingInstruction` | `xmlLiteralProcessingInstruction` | VB XML literal syntax only |
+| `XmlLiteralText` | `xmlLiteralText` | VB XML literal syntax only |
+
+**Regex Classifications** (fall back to `regexp` — not explicitly themed):
+
+| Roslyn Classification | VS Code Token Type | Notes |
+|---|---|---|
+| `RegexComment` ("regex - comment") | `regexComment` | Falls back to `regexp` |
+| `RegexCharacterClass` ("regex - character class") | `regexCharacterClass` | Falls back to `regexp` |
+| `RegexAnchor` ("regex - anchor") | `regexAnchor` | Falls back to `regexp` |
+| `RegexQuantifier` ("regex - quantifier") | `regexQuantifier` | Falls back to `regexp` |
+| `RegexGrouping` ("regex - grouping") | `regexGrouping` | Falls back to `regexp` |
+| `RegexAlternation` ("regex - alternation") | `regexAlternation` | Falls back to `regexp` |
+| `RegexText` ("regex - text") | `regexText` | Falls back to `regexp` |
+| `RegexSelfEscapedCharacter` ("regex - self escaped character") | `regexSelfEscapedCharacter` | Falls back to `regexp` |
+| `RegexOtherEscape` ("regex - other escape") | `regexOtherEscape` | Falls back to `regexp` |
+
+#### Required Theme Template
+
+All themes must include these 15 custom token entries in `semanticTokenColors` (in addition to the 10 xmlDocComment entries documented above):
 
 ```jsonc
 "semanticTokenColors": {
@@ -686,37 +808,90 @@ The C# extension (powered by Roslyn LSP) emits custom semantic token types beyon
     "preprocessorText": "{FOREGROUND}",
     // ── C# custom: excluded/disabled code (#if false blocks) ──
     "excludedCode": "#808080",
-    // ── C# custom: punctuation ──
-    "punctuation": "{FOREGROUND}",
+    // ── C# custom: punctuation (operator color to de-emphasize; ported themes use foreground) ──
+    "punctuation": "{OPERATOR_COLOR}",
     // ── C# custom: delegate, extension method, record types ──
     "delegate": "{CLASS_COLOR}",
     "extensionMethod": "{FUNCTION_COLOR}",
     "recordClass": "{CLASS_COLOR}",
-    "recordStruct": "{STRUCT_COLOR}"
+    "recordStruct": "{STRUCT_COLOR}",
+    // ── C# custom: additional classifications ──
+    "plainKeyword": "{KEYWORD_COLOR}",
+    "field": "{PROPERTY_COLOR}",
+    "local": "{VARIABLE_COLOR}"
 }
 ```
 
-**Key pitfall — `controlKeyword`**: The C# extension uses `controlKeyword` as a custom semantic token *type* (not `keyword` with a `controlFlow` modifier). The standard `keyword.controlFlow` entry in themes only works as a TextMate fallback mapping. You **must** add `"controlKeyword"` explicitly or control flow keywords (`if`, `else`, `for`, `foreach`, `while`, `return`, `await`, `yield`, `throw`, `try`, `catch`, `finally`, `switch`, `break`, `continue`) will inherit from `keyword` instead.
+#### Key Pitfalls
 
-**Key pitfall — `operatorOverloaded`**: Falls back to `operator` (gray) but VS IDE shows overloaded operators in method color (yellow `#DCDCAA`). Without an explicit entry, `+`, `-`, `==` etc. on custom types appear gray instead of yellow.
+**`controlKeyword`**: The C# extension uses `controlKeyword` as a custom semantic token *type* (not `keyword` with a `controlFlow` modifier). The standard `keyword.controlFlow` entry in themes only works as a TextMate fallback mapping. You **must** add `"controlKeyword"` explicitly or control flow keywords (`if`, `else`, `for`, `foreach`, `while`, `return`, `await`, `yield`, `throw`, `try`, `catch`, `finally`, `switch`, `break`, `continue`) will inherit from `keyword` instead.
+
+**`operatorOverloaded`**: Falls back to `operator` (gray) but VS IDE shows overloaded operators in method color (yellow `#DCDCAA`). Without an explicit entry, `+`, `-`, `==` etc. on custom types appear gray instead of yellow.
+
+**`stringEscapeCharacter`**: Falls back to `string` but should use a distinct color (keyword color in JetBrains, yellow `#FFD700` in VS IDE). Without an explicit entry, escape sequences (`\n`, `\t`, `\"`) are invisible inside strings.
+
+**`field`**: May not fall back to `property`. In Apex themes where properties have a distinct color (pink, rose, etc.), fields would show as plain foreground without an explicit entry.
 
 **TextMate scope for `await`/`yield`**: The actual TextMate scope is `keyword.operator.expression.await.cs` (not `keyword.other.await.cs`). Both must be included in the control flow TextMate rule.
 
-**Current custom token colors per VS theme (Dark):**
-| Token | VS 2019/2022/2026 |
-|-------|-------------------|
-| `controlKeyword` | `#D8A0DF` |
-| `operatorOverloaded` | `#DCDCAA` |
-| `stringVerbatim` | `#D69D85` |
-| `stringEscapeCharacter` | `#FFD700` |
-| `preprocessorKeyword` | `#569CD6` |
-| `preprocessorText` | `#DCDCDC` |
-| `excludedCode` | `#808080` |
-| `punctuation` | `#DCDCDC` |
-| `delegate` | `#4EC9B0` |
-| `extensionMethod` | `#DCDCAA` |
-| `recordClass` | `#4EC9B0` |
-| `recordStruct` | `#86C691` |
+#### Current Custom Token Colors Per Theme Family
+
+**VS Dark themes (2019/2022/2026):**
+| Token | Color | Source |
+|-------|-------|--------|
+| `controlKeyword` | `#D8A0DF` | Roslyn VisualStudio2019.xml |
+| `operatorOverloaded` | `#DCDCAA` | Roslyn VisualStudio2019.xml |
+| `stringVerbatim` | `#D69D85` | Same as string |
+| `stringEscapeCharacter` | `#FFD700` | VS IDE default |
+| `preprocessorKeyword` | `#569CD6` | Same as keyword |
+| `preprocessorText` | `#DCDCDC` | Foreground |
+| `excludedCode` | `#808080` | VS IDE default |
+| `punctuation` | `#DCDCDC` | Foreground |
+| `delegate` | `#4EC9B0` | Same as class/type |
+| `extensionMethod` | `#DCDCAA` | Same as method |
+| `recordClass` | `#4EC9B0` | Same as class |
+| `recordStruct` | `#86C691` | Same as struct |
+| `plainKeyword` | `#569CD6` | Same as keyword |
+| `field` | `#DCDCDC` | Identifier color |
+| `local` | `#9CDCFE` | Same as variable |
+
+**Rider New UI Dark:**
+| Token | Color | Source |
+|-------|-------|--------|
+| `controlKeyword` | `#CF8E6D` | Same as keyword (Rider doesn't distinguish) |
+| `operatorOverloaded` | `#BCBEC4` | Same as operator |
+| `stringVerbatim` | `#6AAB73` | Same as string |
+| `stringEscapeCharacter` | `#CF8E6D` | JetBrains DEFAULT_VALID_STRING_ESCAPE |
+| `preprocessorKeyword` | `#CF8E6D` | Same as keyword |
+| `preprocessorText` | `#BCBEC4` | Foreground |
+| `excludedCode` | `#808080` | Gray |
+| `punctuation` | `#BCBEC4` | Foreground |
+| `delegate` | `#6FAFBD` | Type color |
+| `extensionMethod` | `#56A8F5` | Function color |
+| `recordClass` | `#6FAFBD` | Type color |
+| `recordStruct` | `#6FAFBD` | Type color |
+| `plainKeyword` | `#CF8E6D` | Same as keyword |
+| `field` | `#C77DBB` | DEFAULT_INSTANCE_FIELD |
+| `local` | `#BCBEC4` | Foreground |
+
+**Rider Dark (Darcula):**
+| Token | Color | Source |
+|-------|-------|--------|
+| `controlKeyword` | `#CC7832` | Same as keyword |
+| `operatorOverloaded` | `#A9B7C6` | Same as operator |
+| `stringVerbatim` | `#7EA86D` | Same as string |
+| `stringEscapeCharacter` | `#CC7832` | DEFAULT_VALID_STRING_ESCAPE (keyword color) |
+| `preprocessorKeyword` | `#CC7832` | Same as keyword |
+| `preprocessorText` | `#A9B7C6` | Foreground |
+| `excludedCode` | `#808080` | Gray |
+| `punctuation` | `#A9B7C6` | Foreground |
+| `delegate` | `#A9B7C6` | Type color |
+| `extensionMethod` | `#FFC66D` | Function color |
+| `recordClass` | `#A9B7C6` | Type color |
+| `recordStruct` | `#A9B7C6` | Type color |
+| `plainKeyword` | `#CC7832` | Same as keyword |
+| `field` | `#A885B8` | Instance field color |
+| `local` | `#A9B7C6` | Foreground |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)

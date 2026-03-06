@@ -1085,7 +1085,7 @@
         "label": "#7982a9",
         // ── C# custom: preprocessor ──
         "preprocessorKeyword": "#7aa2f7",
-        "preprocessorText": "#C0CAF5",
+        "preprocessorText": "#A9B1D6",
         // ── C# custom: excluded/disabled code ──
         "excludedCode": "#808080",
         // ── C# custom: punctuation ──
@@ -1095,6 +1095,9 @@
         "extensionMethod": "#7dcfff",
         "recordClass": "#2ac3de",
         "recordStruct": "#89ddff",
+        "plainKeyword": "#7aa2f7",
+        "field": "#73daca",
+        "local": "#C0CAF5",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
             "foreground": "#4d577a",
