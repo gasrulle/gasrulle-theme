@@ -154,19 +154,19 @@ Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#1A1C37` | Cool blue-tinted dark                |
-| Sidebar BG      | `#22233E` | Cool, lower contrast                 |
-| Foreground      | `#A9B1D6` | Cool blue-white                      |
+| Editor BG       | `#1A1C2A` | Cool blue-tinted dark (desaturated)  |
+| Sidebar BG      | `#222332` | Cool, lower contrast (desaturated)   |
+| Foreground      | `#B0B4C4` | Neutral silver (desaturated cool)    |
 | Keywords        | `#7AA2F7` | Azure blue                           |
 | Control Flow    | `#89B4FA` | Brighter blue, italic                |
 | Strings         | `#9ECE6A` | Cool green                           |
 | Functions       | `#7DCFFF` | Tokyo Night cyan                     |
 | Numbers         | `#FF9E64` | Warm orange contrast pop             |
 | Properties      | `#73DACA` | Teal-green                           |
-| Variables       | `#C0CAF5` | Cool near-white                      |
+| Variables       | `#C4C8D6` | Neutral near-white (desaturated)     |
 | Parameters      | `#E0AF68` | Warm amber                           |
 | Classes         | `#2AC3DE` | Aqua                                 |
-| Structs         | `#89DDFF` | Sky blue (++ only)                   |
+| Structs         | `#8BD4A0` | Frosted mint (++ only)               |
 | Interfaces      | `#BB9AF7` | Lavender-purple (++ only)            |
 | Enums           | `#F7768E` | Rose-pink (++ only)                  |
 | Comments        | `#535D87` | Cool blue-gray                       |
@@ -969,7 +969,7 @@ The following keys must all share the same opaque selection color (or its alpha 
 | Theme | Selection FG | Default FG | FG vs selBG | Strategy |
 |-------|-------------|-----------|-------------|----------|
 | Ember++ | `#C3C9DB` | `#B6BCCE` | 3.32:1 | Brightened neutral (FG dimmed below 3:1) |
-| Frost++ | `#C0CAF5` | `#A9B1D6` | 3.41:1 | Uses Variables color (brighter than FG) |
+| Frost++ | `#C4C8D6` | `#B0B4C4` | 3.30:1 | Uses Variables color (brighter than FG) |
 | Steel++ | `#D0D6E0` | `#ABB2BF` | 3.58:1 | Uses brightened neutral |
 | Neon++ | `#D1D1D9` | `#C2C2CA` | 3.47:1 | Brightened neutral (FG dimmed below 3:1) |
 | Carbon++ | `#D0D0D0` | `#C2C2C2` | 3.40:1 | Brightened achromatic (FG dimmed below 3:1) |

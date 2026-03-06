@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.3] - 2026-03-07
+
+### Changed
+- **Apex Frost++**: Reduced blue-on-blue saturation across canvas and syntax. Desaturated all background surfaces — editor BG (`#1A1C2A`), sidebar BG (`#222332`), inputs (`#323540`), overlays — from heavy blue tint (S≈38%) to subtle cool tint (S≈24%), so azure blue keywords pop through saturation contrast against the canvas. Neutralized foreground/canvas colors — foreground (`#B0B4C4`), variables (`#C4C8D6`), operators (`#808498`) shifted from blue-tinted to neutral silver. Redistributed structs from cyan (`#89DDFF`) to frosted mint (`#8BD4A0`) to fix 3° hue gap vs classes. Blue syntax roles reduced from 80% to ~40% of palette. All contrast ratios verified passing; surface hierarchy maintained.
+
 ## [0.6.2] - 2026-03-06
 
 ### Changed
