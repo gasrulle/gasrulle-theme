@@ -910,14 +910,34 @@
         "parameter": "#BCBEC4",
         "keyword": "#CF8E6D",
         "newOperator": "#CF8E6D",
+        // ── C# custom: Roslyn emits controlKeyword as a separate token type ──
+        "controlKeyword": "#CF8E6D",
         "string": "#6AAB73",
+        // ── C# custom: verbatim strings (same as regular strings in Rider) ──
+        "stringVerbatim": "#6AAB73",
+        // ── C# custom: escape characters — keyword color (JetBrains DEFAULT_VALID_STRING_ESCAPE) ──
+        "stringEscapeCharacter": "#CF8E6D",
         "number": "#2AACB8",
         "regexp": "#6AAB73",
         "operator": "#BCBEC4",
+        // ── C# custom: overloaded operators (same as operator in Rider) ──
+        "operatorOverloaded": "#BCBEC4",
         "decorator": "#B3AE60",
         "event": "#C77DBB",
         "macro": "#B3AE60",
         "label": "#BCBEC4",
+        // ── C# custom: preprocessor ──
+        "preprocessorKeyword": "#CF8E6D",
+        "preprocessorText": "#BCBEC4",
+        // ── C# custom: excluded/disabled code ──
+        "excludedCode": "#808080",
+        // ── C# custom: punctuation ──
+        "punctuation": "#BCBEC4",
+        // ── C# custom: delegate, extension method, record types ──
+        "delegate": "#6FAFBD",
+        "extensionMethod": "#56A8F5",
+        "recordClass": "#6FAFBD",
+        "recordStruct": "#6FAFBD",
         "function.declaration": "#56A8F5",
         "method.declaration": "#56A8F5",
         "function.static": {

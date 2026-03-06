@@ -392,7 +392,9 @@
                 "keyword.control.flow",
                 "keyword.control.loop",
                 "keyword.control.conditional",
-                "keyword.control.trycatch"
+                "keyword.control.trycatch",
+                "keyword.operator.expression.await.cs",
+                "keyword.operator.expression.yield.cs"
             ],
             "settings": {
                 "foreground": "#D8A0DF"
@@ -1082,12 +1084,20 @@
         // ── Keywords ──
         "keyword": "#569CD6",
         "keyword.controlFlow": "#D8A0DF",
+        // ── C# custom: Roslyn emits controlKeyword as a separate token type ──
+        "controlKeyword": "#D8A0DF",
         // ── Operators ──
         "operator": "#B4B4B4",
         "newOperator": "#D8A0DF",
+        // ── C# custom: overloaded operators use method color (Roslyn) ──
+        "operatorOverloaded": "#DCDCAA",
         // ── Strings / Numbers ──
         "string": "#D69D85",
         "stringLiteral": "#D69D85",
+        // ── C# custom: verbatim strings (same color as regular strings in VS) ──
+        "stringVerbatim": "#D69D85",
+        // ── C# custom: escape characters in strings (VS IDE default yellow) ──
+        "stringEscapeCharacter": "#FFD700",
         "number": "#B5CEA8",
         "numberLiteral": "#B5CEA8",
         // ── Other ──
@@ -1096,6 +1106,18 @@
         "customLiteral": "#DCDCAA",
         "macro": "#569CD6",
         "label": "#C8C8C8",
+        // ── C# custom: preprocessor (Roslyn custom semantic tokens) ──
+        "preprocessorKeyword": "#569CD6",
+        "preprocessorText": "#DCDCDC",
+        // ── C# custom: excluded/disabled code (#if false blocks) ──
+        "excludedCode": "#808080",
+        // ── C# custom: punctuation ──
+        "punctuation": "#DCDCDC",
+        // ── C# custom: delegate, extension method, record types (Roslyn) ──
+        "delegate": "#4EC9B0",
+        "extensionMethod": "#DCDCAA",
+        "recordClass": "#4EC9B0",
+        "recordStruct": "#86C691",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         // Grayscale — muted to fade into background, not compete with code
         "xmlDocCommentText": {

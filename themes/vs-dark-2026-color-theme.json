@@ -1,15 +1,17 @@
 {
-    "name": "Visual Studio Dark 2019",
+    "name": "Visual Studio Dark 2026",
     "type": "dark",
     "semanticHighlighting": true,
     "colors": {
         // ── Editor ──────────────────────────────────────────────
-        // Colors sourced from Microsoft's VS Code dark_vs.json (MIT License)
-        // and Visual Studio IDE Dark theme defaults
-        "editor.background": "#1E1E1E",
+        // Shell/UI colors sourced from VS 2026 Fluent Design System tokens
+        // (see: learn.microsoft.com/en-us/visualstudio/extensibility/migration/modernize-theme-colors).
+        // Syntax highlighting identical to VS 2019/2022
+        // (sourced from Roslyn VisualStudio2019.xml — no updated color scheme exists).
+        "editor.background": "#1C1C1C",
         "editor.foreground": "#DCDCDC",
-        "editor.lineHighlightBackground": "#2A2A2A",
-        "editor.lineHighlightBorder": "#2A2A2A",
+        "editor.lineHighlightBackground": "#282828",
+        "editor.lineHighlightBorder": "#282828",
         "editor.selectionBackground": "#264F78",
         "editor.selectionHighlightBackground": "#ADD6FF26",
         "editor.inactiveSelectionBackground": "#3A3D41CC",
@@ -29,7 +31,7 @@
         "editorRuler.foreground": "#5A5A5A",
         "editorBracketMatch.background": "#0064001A",
         "editorBracketMatch.border": "#888888",
-        "editorOverviewRuler.border": "#1E1E1E",
+        "editorOverviewRuler.border": "#1C1C1C",
         "editorOverviewRuler.errorForeground": "#E51400",
         "editorOverviewRuler.warningForeground": "#BF8803",
         "editorOverviewRuler.infoForeground": "#007ACC",
@@ -43,61 +45,64 @@
         // ── Editor Groups / Tabs ────────────────────────────────
         "editorGroup.border": "#404040",
         "editorGroup.dropBackground": "#53595D80",
-        "editorGroupHeader.tabsBackground": "#252526",
-        "editorGroupHeader.tabsBorder": "#252526",
-        "editorGroupHeader.noTabsBackground": "#252526",
-        "tab.activeBackground": "#1E1E1E",
+        "editorGroupHeader.tabsBackground": "#282828",
+        "editorGroupHeader.tabsBorder": "#282828",
+        "editorGroupHeader.noTabsBackground": "#282828",
+        "tab.activeBackground": "#1C1C1C",
         "tab.activeForeground": "#FFFFFF",
-        "tab.activeBorderTop": "#0078D4",
-        "tab.inactiveBackground": "#2B2B2B",
+        "tab.activeBorderTop": "#9184EE",
+        "tab.inactiveBackground": "#282828",
         "tab.inactiveForeground": "#FFFFFF80",
-        "tab.border": "#252526",
-        "tab.hoverBackground": "#2B2B2B",
-        "tab.unfocusedActiveBackground": "#1E1E1E",
+        "tab.border": "#282828",
+        "tab.hoverBackground": "#282828",
+        "tab.unfocusedActiveBackground": "#1C1C1C",
         "tab.unfocusedActiveForeground": "#FFFFFF80",
-        "tab.unfocusedInactiveBackground": "#2B2B2B",
+        "tab.unfocusedInactiveBackground": "#282828",
         "tab.unfocusedInactiveForeground": "#FFFFFF40",
         "tab.lastPinnedBorder": "#CCC3",
-        "tab.selectedBackground": "#222222",
+        "tab.selectedBackground": "#1C1C1C",
         "tab.selectedForeground": "#FFFFFFA0",
         // ── Sidebar / Activity Bar ──────────────────────────────
-        "sideBar.background": "#252526",
+        // VS 2026: Sidebar uses SurfaceBackgroundFillDefault (#2C2C2C)
+        "sideBar.background": "#2C2C2C",
         "sideBar.foreground": "#CCCCCC",
-        "sideBar.border": "#252526",
+        "sideBar.border": "#2C2C2C",
         "sideBarTitle.foreground": "#BBBBBB",
         "sideBarSectionHeader.background": "#0000",
         "sideBarSectionHeader.foreground": "#CCCCCC",
         "sideBarSectionHeader.border": "#CCC3",
-        "activityBar.background": "#313131",
+        "activityBar.background": "#1C1C1C",
         "activityBar.foreground": "#FFFFFF",
-        "activityBar.border": "#313131",
-        "activityBar.activeBorder": "#0078D4",
+        "activityBar.border": "#1C1C1C",
+        "activityBar.activeBorder": "#9184EE",
         "activityBar.inactiveForeground": "#FFFFFF66",
         "activityBarBadge.background": "#007ACC",
         "activityBarBadge.foreground": "#FFFFFF",
         // ── Title Bar ───────────────────────────────────────────
-        "titleBar.activeBackground": "#383838",
+        // VS 2026: EnvironmentBackground (#1C1C1C) — darker Fluent chrome
+        "titleBar.activeBackground": "#1C1C1C",
         "titleBar.activeForeground": "#CCCCCC",
-        "titleBar.inactiveBackground": "#383838",
+        "titleBar.inactiveBackground": "#1C1C1C",
         "titleBar.inactiveForeground": "#CCCCCC99",
-        "titleBar.border": "#383838",
+        "titleBar.border": "#1C1C1C",
         // ── Status Bar ──────────────────────────────────────────
-        "statusBar.background": "#007ACC",
+        // VS 2026: Gray status bar (unchanged from VS 2022)
+        "statusBar.background": "#424242",
         "statusBar.foreground": "#FFFFFF",
-        "statusBar.border": "#007ACC",
+        "statusBar.border": "#424242",
         "statusBar.debuggingBackground": "#CC6633",
         "statusBar.debuggingForeground": "#FFFFFF",
         "statusBar.noFolderBackground": "#68217A",
         "statusBar.noFolderForeground": "#FFFFFF",
-        "statusBarItem.prominentBackground": "#007ACC",
+        "statusBarItem.prominentBackground": "#424242",
         "statusBarItem.prominentForeground": "#FFFFFF",
         "statusBarItem.remoteBackground": "#16825D",
         "statusBarItem.remoteForeground": "#FFFFFF",
         "statusBarItem.hoverBackground": "#FFFFFF1F",
         // ── Panel (Terminal, Output, Problems) ──────────────────
-        "panel.background": "#1E1E1E",
+        "panel.background": "#1C1C1C",
         "panel.border": "#80808059",
-        "panelTitle.activeBorder": "#0078D4",
+        "panelTitle.activeBorder": "#9184EE",
         "panelTitle.activeForeground": "#E7E7E7",
         "panelTitle.inactiveForeground": "#E7E7E799",
         // ── Lists / Trees ───────────────────────────────────────
@@ -117,9 +122,10 @@
         "list.dropBackground": "#383B3D",
         "tree.indentGuidesStroke": "#585858",
         // ── Inputs ──────────────────────────────────────────────
-        "input.background": "#383838",
+        // VS 2026: Input fields align with SolidBackgroundFillTertiary
+        "input.background": "#282828",
         "input.foreground": "#CCCCCC",
-        "input.border": "#383838",
+        "input.border": "#434346",
         "input.placeholderForeground": "#A6A6A6",
         "inputOption.activeBorder": "#007ACC",
         "inputOption.activeBackground": "#007ACC44",
@@ -130,10 +136,10 @@
         "inputValidation.infoBackground": "#063B49",
         "inputValidation.infoBorder": "#007ACC",
         // ── Dropdown ────────────────────────────────────────────
-        "dropdown.background": "#383838",
+        "dropdown.background": "#282828",
         "dropdown.foreground": "#CCCCCC",
-        "dropdown.border": "#383838",
-        "dropdown.listBackground": "#252526",
+        "dropdown.border": "#434346",
+        "dropdown.listBackground": "#2C2C2C",
         // ── Buttons ─────────────────────────────────────────────
         "button.background": "#0E639C",
         "button.foreground": "#FFFFFF",
@@ -165,13 +171,13 @@
         "peekViewEditor.background": "#001F33",
         "peekViewEditor.matchHighlightBackground": "#FF8F0099",
         "peekViewEditorGutter.background": "#001F33",
-        "peekViewResult.background": "#252526",
+        "peekViewResult.background": "#2C2C2C",
         "peekViewResult.fileForeground": "#FFFFFF",
         "peekViewResult.lineForeground": "#BBBBBB",
         "peekViewResult.matchHighlightBackground": "#EA5C004D",
         "peekViewResult.selectionBackground": "#3399FF33",
         "peekViewResult.selectionForeground": "#FFFFFF",
-        "peekViewTitle.background": "#1E1E1E",
+        "peekViewTitle.background": "#1C1C1C",
         "peekViewTitleDescription.foreground": "#CCCCCC",
         "peekViewTitleLabel.foreground": "#FFFFFF",
         // ── Merge Conflicts ─────────────────────────────────────
@@ -179,7 +185,7 @@
         "merge.currentContentBackground": "#27403B66",
         "merge.incomingHeaderBackground": "#395F8FAA",
         "merge.incomingContentBackground": "#28384B66",
-        "merge.border": "#1E1E1E",
+        "merge.border": "#1C1C1C",
         "editorOverviewRuler.currentContentForeground": "#40C8AE80",
         "editorOverviewRuler.incomingContentForeground": "#40A6FF80",
         // ── Diff Editor ─────────────────────────────────────────
@@ -190,47 +196,48 @@
         "breadcrumb.foreground": "#CCCCCC80",
         "breadcrumb.focusForeground": "#E0E0E0",
         "breadcrumb.activeSelectionForeground": "#E0E0E0",
-        "breadcrumbPicker.background": "#252526",
+        "breadcrumbPicker.background": "#2C2C2C",
         // ── Notifications ───────────────────────────────────────
-        "notificationCenter.border": "#2D2D2E",
-        "notificationCenterHeader.background": "#2D2D2E",
+        "notificationCenter.border": "#2C2C2C",
+        "notificationCenterHeader.background": "#2C2C2C",
         "notificationCenterHeader.foreground": "#CCCCCC",
-        "notifications.background": "#252526",
-        "notifications.border": "#2D2D2E",
+        "notifications.background": "#2C2C2C",
+        "notifications.border": "#2C2C2C",
         "notifications.foreground": "#CCCCCC",
         "notificationLink.foreground": "#3794FF",
         "notificationsErrorIcon.foreground": "#F14C4C",
         "notificationsWarningIcon.foreground": "#CCA700",
         "notificationsInfoIcon.foreground": "#3794FF",
         // ── Command Palette / Quick Input ───────────────────────
-        "quickInput.background": "#252526",
+        "quickInput.background": "#2C2C2C",
         "quickInput.foreground": "#CCCCCC",
         "quickInputList.focusBackground": "#04395E",
         "quickInputList.focusForeground": "#FFFFFF",
-        "quickInputTitle.background": "#252526",
+        "quickInputTitle.background": "#2C2C2C",
         // ── Widgets (Find, Suggestions, Hover) ──────────────────
-        "editorWidget.background": "#252526",
-        "editorWidget.border": "#2D2D2E",
+        "editorWidget.background": "#2C2C2C",
+        "editorWidget.border": "#2C2C2C",
         "editorWidget.foreground": "#CCCCCC",
-        "editorSuggestWidget.background": "#252526",
+        "editorSuggestWidget.background": "#2C2C2C",
         "editorSuggestWidget.border": "#414141",
         "editorSuggestWidget.foreground": "#D4D4D4",
         "editorSuggestWidget.highlightForeground": "#0097FB",
         "editorSuggestWidget.selectedBackground": "#04395E",
         "editorSuggestWidget.selectedForeground": "#FFFFFF",
-        "editorHoverWidget.background": "#252526",
+        "editorHoverWidget.background": "#2C2C2C",
         "editorHoverWidget.border": "#414141",
         "editorHoverWidget.foreground": "#CCCCCC",
         // ── Debug ───────────────────────────────────────────────
-        "debugToolBar.background": "#313131",
-        "debugExceptionWidget.background": "#313131",
+        // VS 2026: Matches EnvironmentBackground
+        "debugToolBar.background": "#1C1C1C",
+        "debugExceptionWidget.background": "#1C1C1C",
         "debugExceptionWidget.border": "#BE1100",
         "debugConsole.infoForeground": "#3794FF",
         "debugConsole.warningForeground": "#CCA700",
         "debugConsole.errorForeground": "#F14C4C",
         // ── Welcome Page ────────────────────────────────────────
-        "welcomePage.background": "#1E1E1E",
-        "walkThrough.embeddedEditorBackground": "#1E1E1E",
+        "welcomePage.background": "#1C1C1C",
+        "walkThrough.embeddedEditorBackground": "#1C1C1C",
         // ── Git Decoration ──────────────────────────────────────
         "gitDecoration.addedResourceForeground": "#81B88B",
         "gitDecoration.modifiedResourceForeground": "#E2C08D",
@@ -241,7 +248,7 @@
         "gitDecoration.stageModifiedResourceForeground": "#E2C08D",
         "gitDecoration.stageDeletedResourceForeground": "#C74E39",
         // ── Terminal ANSI Colors ────────────────────────────────
-        "terminal.background": "#1E1E1E",
+        "terminal.background": "#1C1C1C",
         "terminal.foreground": "#CCCCCC",
         "terminal.ansiBlack": "#000000",
         "terminal.ansiRed": "#CD3131",
@@ -272,7 +279,7 @@
         "descriptionForeground": "#9DA0A8",
         "errorForeground": "#F14C4C",
         "widget.shadow": "#000000",
-        "widget.border": "#2D2D2E",
+        "widget.border": "#2C2C2C",
         "selection.background": "#264F78",
         "icon.foreground": "#C5C5C5",
         "textLink.foreground": "#3794FF",
@@ -291,8 +298,8 @@
         // ── Additional UI ───────────────────────────────────────
         "sash.hoverBorder": "#007FD4",
         "editorGhostText.foreground": "#FFFFFF56",
-        "editorStickyScroll.background": "#1E1E1E",
-        "editorStickyScrollHover.background": "#2A2D2E",
+        "editorStickyScroll.background": "#1C1C1C",
+        "editorStickyScrollHover.background": "#282828",
         "editor.foldBackground": "#26415880",
         "editorGutter.foldingControlForeground": "#C5C5C5",
         "editorOverviewRuler.findMatchForeground": "#D18616CC",
@@ -300,10 +307,11 @@
         "editorLightBulb.foreground": "#FFCC00",
         "editorLightBulbAutoFix.foreground": "#007ACC",
         // ── Menu ────────────────────────────────────────────────
-        "menu.background": "#252526",
+        // VS 2026: Fluent surface tokens
+        "menu.background": "#2C2C2C",
         "menu.foreground": "#CCCCCC",
-        "menu.separatorBackground": "#414141",
-        "menu.border": "#414141",
+        "menu.separatorBackground": "#282828",
+        "menu.border": "#3F3F46",
         "menu.selectionBackground": "#04395E",
         // ── Action Bar ──────────────────────────────────────────
         "actionBar.toggledBackground": "#383A49",
@@ -325,25 +333,25 @@
                 "foreground": "#D4D4D4"
             }
         },
-        // ── Comments (using Rider New UI muted style) ───────────
+        // ── Comments (standard VS IDE green #57A64A) ──────────
         {
             "scope": [
                 "comment",
                 "punctuation.definition.comment"
             ],
             "settings": {
-                "foreground": "#7A7E85"
+                "foreground": "#57A64A"
             }
         },
         // ── XML Doc Comments ────────────────────────────────────
-        // Grayscale — muted to fade into background, not compete with code
+        // Green — sourced from Roslyn VisualStudio2019.xml (xml doc comment - text: #608B4E)
         {
             "scope": [
                 "comment.block.documentation",
                 "comment.block.javadoc"
             ],
             "settings": {
-                "foreground": "#656A6E",
+                "foreground": "#608B4E",
                 "fontStyle": "italic"
             }
         },
@@ -356,7 +364,7 @@
                 "entity.name.type.instance.jsdoc"
             ],
             "settings": {
-                "foreground": "#A89888"
+                "foreground": "#C8C8C8"
             }
         },
         // ── Keywords / Control ──────────────────────────────────
@@ -378,7 +386,7 @@
                 "foreground": "#569CD6"
             }
         },
-        // ── Control Flow Keywords (return, if, else, for, etc.) ─
+        // ── Control Flow Keywords (return, if, else, for, await, etc.) ─
         {
             "scope": [
                 "keyword.control",
@@ -1077,11 +1085,10 @@
         // ── Keywords ──
         "keyword": "#569CD6",
         "keyword.controlFlow": "#D8A0DF",
-        // ── C# custom: Roslyn emits controlKeyword as a separate token type ──
         "controlKeyword": "#D8A0DF",
         // ── Operators ──
         "operator": "#B4B4B4",
-        "newOperator": "#D8A0DF",
+        "newOperator": "#569CD6",
         // ── C# custom: overloaded operators use method color (Roslyn) ──
         "operatorOverloaded": "#DCDCAA",
         // ── Strings / Numbers ──
@@ -1112,23 +1119,23 @@
         "recordClass": "#4EC9B0",
         "recordStruct": "#86C691",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
-        // Grayscale — muted to fade into background, not compete with code
+        // Green — sourced from Roslyn VisualStudio2019.xml
         "xmlDocCommentText": {
-            "foreground": "#656A6E",
+            "foreground": "#608B4E",
             "fontStyle": "italic"
         },
-        "xmlDocCommentDelimiter": "#656A6E",
-        "xmlDocCommentName": "#A89888",
-        "xmlDocCommentAttributeName": "#A89888",
-        "xmlDocCommentAttributeQuotes": "#656A6E",
-        "xmlDocCommentAttributeValue": "#A89888",
+        "xmlDocCommentDelimiter": "#608B4E",
+        "xmlDocCommentName": "#608B4E",
+        "xmlDocCommentAttributeName": "#C8C8C8",
+        "xmlDocCommentAttributeQuotes": "#C8C8C8",
+        "xmlDocCommentAttributeValue": "#C8C8C8",
         "xmlDocCommentCDataSection": {
-            "foreground": "#656A6E",
+            "foreground": "#E9D585",
             "fontStyle": "italic"
         },
-        "xmlDocCommentEntityReference": "#A89888",
-        "xmlDocCommentProcessingInstruction": "#A89888",
-        "xmlDocCommentComment": "#7A7E85",
+        "xmlDocCommentEntityReference": "#608B4E",
+        "xmlDocCommentProcessingInstruction": "#608B4E",
+        "xmlDocCommentComment": "#57A64A",
         // ── Static modifiers ──
         "function.static": {
             "foreground": "#DCDCAA",

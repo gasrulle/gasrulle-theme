@@ -891,13 +891,33 @@
         },
         "parameter": "#A9B7C6",
         "keyword": "#CC7832",
+        // ── C# custom: Roslyn emits controlKeyword as a separate token type ──
+        "controlKeyword": "#CC7832",
         "string": "#7EA86D",
+        // ── C# custom: verbatim strings (same as regular strings in Darcula) ──
+        "stringVerbatim": "#7EA86D",
+        // ── C# custom: escape characters — keyword color (JetBrains DEFAULT_VALID_STRING_ESCAPE) ──
+        "stringEscapeCharacter": "#CC7832",
         "number": "#6897BB",
         "regexp": "#7EA86D",
         "operator": "#A9B7C6",
+        // ── C# custom: overloaded operators (same as operator in Darcula) ──
+        "operatorOverloaded": "#A9B7C6",
         "decorator": "#BBB529",
         "macro": "#BBB529",
         "label": "#A9B7C6",
+        // ── C# custom: preprocessor ──
+        "preprocessorKeyword": "#CC7832",
+        "preprocessorText": "#A9B7C6",
+        // ── C# custom: excluded/disabled code ──
+        "excludedCode": "#808080",
+        // ── C# custom: punctuation ──
+        "punctuation": "#A9B7C6",
+        // ── C# custom: delegate, extension method, record types ──
+        "delegate": "#A9B7C6",
+        "extensionMethod": "#FFC66D",
+        "recordClass": "#A9B7C6",
+        "recordStruct": "#A9B7C6",
         "function.declaration": "#FFC66D",
         "method.declaration": "#FFC66D",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──

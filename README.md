@@ -33,6 +33,15 @@ The updated VS 2022 shell appearance with identical syntax highlighting to VS 20
 
 Shell colors sourced from the [Microsoft Color Value Reference](https://learn.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/color-value-reference-for-visual-studio?view=vs-2022) and community references (best effort — no official machine-readable color file exists for VS 2022).
 
+### Visual Studio Dark 2026
+The VS 2026 shell appearance built on the Fluent Design System, with identical syntax highlighting to VS 2022/2019. Key visual differences from VS 2022:
+- **Darker environment**: `#1C1C1C` environment background (vs `#1F1F1E` in 2022)
+- **Editor background**: `#1C1C1C` (vs `#1E1E1E`)
+- **Brighter lavender accent**: `#9184EE` for active indicators and focus borders (vs `#715FE7`)
+- **Fluent surface hierarchy**: Sidebar/widgets use `#2C2C2C`, tab strip/inputs use `#282828`
+
+Shell colors sourced from VS 2026 Fluent Design System tokens documented in the [Modernize Theme Colors](https://learn.microsoft.com/en-us/visualstudio/extensibility/migration/modernize-theme-colors?view=visualstudio) migration guide. Syntax highlighting identical to VS 2022/2019.
+
 ---
 
 ### Apex Ember++

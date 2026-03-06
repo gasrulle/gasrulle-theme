@@ -1058,12 +1058,23 @@
             "foreground": "#89b4fa",
             "fontStyle": "italic"
         },
+        // ── C# custom: Roslyn emits controlKeyword as a separate token type ──
+        "controlKeyword": {
+            "foreground": "#89b4fa",
+            "fontStyle": "italic"
+        },
         // ── Operators ──
         "operator": "#7982a9",
         "newOperator": "#7aa2f7",
+        // ── C# custom: overloaded operators use function color ──
+        "operatorOverloaded": "#7dcfff",
         // ── Strings / Numbers ──
         "string": "#9ece6a",
         "stringLiteral": "#9ece6a",
+        // ── C# custom: verbatim strings ──
+        "stringVerbatim": "#9ece6a",
+        // ── C# custom: escape characters — keyword color ──
+        "stringEscapeCharacter": "#7aa2f7",
         "number": "#ff9e64",
         "numberLiteral": "#ff9e64",
         // ── Other ──
@@ -1072,6 +1083,18 @@
         "customLiteral": "#ff9e64",
         "macro": "#e0af68",
         "label": "#7982a9",
+        // ── C# custom: preprocessor ──
+        "preprocessorKeyword": "#7aa2f7",
+        "preprocessorText": "#C0CAF5",
+        // ── C# custom: excluded/disabled code ──
+        "excludedCode": "#808080",
+        // ── C# custom: punctuation ──
+        "punctuation": "#7982a9",
+        // ── C# custom: delegate, extension method, record types ──
+        "delegate": "#2ac3de",
+        "extensionMethod": "#7dcfff",
+        "recordClass": "#2ac3de",
+        "recordStruct": "#89ddff",
         // ── C# XML Doc Comments (custom semantic tokens from Roslyn) ──
         "xmlDocCommentText": {
             "foreground": "#4d577a",

@@ -8,7 +8,9 @@
       "WebFetch(domain:draculatheme.com)",
       "Bash(curl:*)",
       "Bash(node calc-new-bgs.js)",
-      "Bash(node validate-themes.js)"
+      "Bash(node validate-themes.js)",
+      "WebSearch",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }

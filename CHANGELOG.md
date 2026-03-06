@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.0] - 2026-03-06
+
+### Added
+- **Visual Studio Dark 2026**: Ported theme — VS 2026 shell appearance with Fluent Design System tokens. Darker environment (#1C1C1C), brighter lavender accent (#9184EE), unified surface hierarchy. Syntax highlighting identical to VS 2022/2019.
+
 ## [0.5.0] - 2026-02-22
 
 ### Added

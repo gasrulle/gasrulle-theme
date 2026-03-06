@@ -13,6 +13,7 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 - **Rider Dark (Darcula)** — The classic JetBrains Darcula theme (`themes/rider-dark-darcula-color-theme.json`)
 - **Visual Studio Dark 2019** — Faithful VS IDE Dark port (`themes/vs-dark-color-theme.json`)
 - **Visual Studio Dark 2022** — Faithful VS IDE 2022 Dark port (`themes/vs-dark-2022-color-theme.json`)
+- **Visual Studio Dark 2026** — Faithful VS IDE 2026 Dark port, Fluent Design tokens (`themes/vs-dark-2026-color-theme.json`)
 - **Apex Ember++** — Original warm pastel dark theme, max C# depth (`themes/apex-ember-pp-color-theme.json`)
 - **Apex Frost++** — Original cool blue-tinted dark theme, Tokyo Night inspired, max C# depth (`themes/apex-frost-pp-color-theme.json`)
 - **Apex Steel++** — Original neutral balanced dark theme, One Dark Pro inspired, max C# depth (`themes/apex-steel-pp-color-theme.json`)
@@ -33,6 +34,7 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
   - `rider-dark-darcula-color-theme.json` — Classic Darcula workbench colors, tokenColors, and semanticTokenColors
   - `vs-dark-color-theme.json` — Visual Studio IDE 2019 Dark port
   - `vs-dark-2022-color-theme.json` — Visual Studio IDE 2022 Dark port
+  - `vs-dark-2026-color-theme.json` — Visual Studio IDE 2026 Dark port
   - `apex-ember-pp-color-theme.json` — Original Apex Ember++ (warm pastels, max C# depth)
   - `apex-frost-pp-color-theme.json` — Original Apex Frost++ (cool blue-tinted, Tokyo Night inspired)
   - `apex-steel-pp-color-theme.json` — Original Apex Steel++ (neutral balanced, One Dark Pro inspired)
@@ -80,6 +82,11 @@ When modifying or adding colors, always cross-reference the official JetBrains s
   - **Purple accent indicators**: Tab top border, activity bar indicator, panel title use `#715FE7`
   - **Gray status bar**: `#424242` (vs blue `#007ACC`)
   - **Updated input fields**: `#333337` background, `#434346` border (from MS Color Value Reference)
+- **Visual Studio Dark 2026**: Shell/UI colors sourced from VS 2026 Fluent Design System tokens documented in the [Modernize Theme Colors](https://learn.microsoft.com/en-us/visualstudio/extensibility/migration/modernize-theme-colors?view=visualstudio) migration guide. Key tokens: `EnvironmentBackground` (#1C1C1C), `AccentFillDefault` (#9184EE), `SurfaceBackgroundFillDefault` (#2C2C2C), `SolidBackgroundFillTertiary` (#282828). Syntax highlighting identical to VS 2022/2019 (sourced from Roslyn VisualStudio2019.xml). Key differences from VS 2022:
+  - **Darker environment**: EnvironmentBackground `#1C1C1C` (vs `#1F1F1E`)
+  - **Editor background**: `#1C1C1C` (vs `#1E1E1E`)
+  - **Brighter lavender accent**: `#9184EE` (vs `#715FE7`)
+  - **Fluent surface hierarchy**: Sidebar/widgets `#2C2C2C`, tab strip/inputs `#282828`
 
 ## Key Color Palettes
 
@@ -650,12 +657,66 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Rider Darcula | `#626468` | `#908070` | Dimmed gray + warm sand |
 | Visual Studio Dark 2019 | `#656A6E` | `#A89888` | Dimmed gray + warm sand |
 | Visual Studio Dark 2022 | `#656A6E` | `#A89888` | Dimmed gray + warm sand (same as VS 2019) |
+| Visual Studio Dark 2026 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
 | Apex Ember++ | `#545866` | `#927A68` | Dimmed purple-gray + warm amber-sand |
 | Apex Frost++ | `#4D577A` | `#6E8098` | Dimmed blue-gray + cool steel-blue |
 | Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |
 | Apex Neon++ | `#4E5688` | `#8C7C94` | Dimmed blue-purple + muted lilac |
 | Apex Carbon++ | `#5A5A5A` | `#888078` | Pure gray + near-achromatic sand |
 | Apex Pastel++ | `#62565A` | `#746458` | Dimmed rose-gray + warm muted sand |
+
+### C# Roslyn Custom Semantic Token Types
+The C# extension (powered by Roslyn LSP) emits custom semantic token types beyond the standard VS Code set. These are registered dynamically via the Language Server Protocol, not in the extension's `package.json`. If a theme doesn't explicitly handle them, they fall back through the `superType` chain — but this fallback is often wrong (e.g., `operatorOverloaded` falls back to `operator` instead of showing as method-yellow).
+
+**All ported VS themes must include explicit entries** for these custom types in `semanticTokenColors`. Source: [Roslyn ClassificationTypeNames.cs](https://github.com/dotnet/roslyn/blob/main/src/Workspaces/Core/Portable/Classification/ClassificationTypeNames.cs).
+
+```jsonc
+"semanticTokenColors": {
+    // ... standard tokens ...
+    // ── C# custom: Roslyn emits controlKeyword as a separate token type ──
+    "controlKeyword": "{CONTROL_FLOW_COLOR}",
+    // ── C# custom: overloaded operators use method color ──
+    "operatorOverloaded": "{FUNCTION_COLOR}",
+    // ── C# custom: verbatim strings ──
+    "stringVerbatim": "{STRING_COLOR}",
+    // ── C# custom: escape characters in strings ──
+    "stringEscapeCharacter": "{ESCAPE_CHAR_COLOR}",
+    // ── C# custom: preprocessor ──
+    "preprocessorKeyword": "{KEYWORD_COLOR}",
+    "preprocessorText": "{FOREGROUND}",
+    // ── C# custom: excluded/disabled code (#if false blocks) ──
+    "excludedCode": "#808080",
+    // ── C# custom: punctuation ──
+    "punctuation": "{FOREGROUND}",
+    // ── C# custom: delegate, extension method, record types ──
+    "delegate": "{CLASS_COLOR}",
+    "extensionMethod": "{FUNCTION_COLOR}",
+    "recordClass": "{CLASS_COLOR}",
+    "recordStruct": "{STRUCT_COLOR}"
+}
+```
+
+**Key pitfall — `controlKeyword`**: The C# extension uses `controlKeyword` as a custom semantic token *type* (not `keyword` with a `controlFlow` modifier). The standard `keyword.controlFlow` entry in themes only works as a TextMate fallback mapping. You **must** add `"controlKeyword"` explicitly or control flow keywords (`if`, `else`, `for`, `foreach`, `while`, `return`, `await`, `yield`, `throw`, `try`, `catch`, `finally`, `switch`, `break`, `continue`) will inherit from `keyword` instead.
+
+**Key pitfall — `operatorOverloaded`**: Falls back to `operator` (gray) but VS IDE shows overloaded operators in method color (yellow `#DCDCAA`). Without an explicit entry, `+`, `-`, `==` etc. on custom types appear gray instead of yellow.
+
+**TextMate scope for `await`/`yield`**: The actual TextMate scope is `keyword.operator.expression.await.cs` (not `keyword.other.await.cs`). Both must be included in the control flow TextMate rule.
+
+**Current custom token colors per VS theme (Dark):**
+| Token | VS 2019/2022/2026 |
+|-------|-------------------|
+| `controlKeyword` | `#D8A0DF` |
+| `operatorOverloaded` | `#DCDCAA` |
+| `stringVerbatim` | `#D69D85` |
+| `stringEscapeCharacter` | `#FFD700` |
+| `preprocessorKeyword` | `#569CD6` |
+| `preprocessorText` | `#DCDCDC` |
+| `excludedCode` | `#808080` |
+| `punctuation` | `#DCDCDC` |
+| `delegate` | `#4EC9B0` |
+| `extensionMethod` | `#DCDCAA` |
+| `recordClass` | `#4EC9B0` |
+| `recordStruct` | `#86C691` |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
