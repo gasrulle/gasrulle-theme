@@ -302,7 +302,7 @@ All backgrounds should share the same color temperature. Build from darkest to l
 
 **Achromatic rule**: If the variant has no color cast, all background channels must satisfy R=G=B (pure gray).
 
-**Color-tinted rule**: Add a subtle hue shift to all backgrounds matching the temperature (e.g., Ember adds warm purple `#1B1C2E`, Frost adds cool blue `#1A1C37`).
+**Color-tinted rule**: Add a subtle hue shift to all backgrounds matching the temperature (e.g., Ember adds warm purple `#1B1C2E`, Frost adds cool blue `#1A1C2A`).
 
 ### Step 3: Derive the Core Syntax Palette
 Assign colors to these roles, ensuring they are visually distinct from each other and readable against the editor BG:
