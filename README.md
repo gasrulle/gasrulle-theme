@@ -70,12 +70,12 @@ An original "golden standard" dark theme synthesized from the best elements of t
 | **Steel++** | Balanced neutral | One Dark Pro balance | `#61AFEF` clear blue |
 | **Neon++** | Vibrant & bold | Dracula high energy | `#BD93F9` vivid purple |
 | **Carbon++** | Achromatic dark | Pure gray, measured saturation | `#78C8F0` steel blue |
-| **Pastel++** | Soft pastel | Rose-tinted dusk, chalky pastels | `#8CBDC6` teal |
+| **Pastel++** | Soft pastel | Achromatic BG, chalky pastels | `#8CBDC6` teal |
 
 All five use **maximum C# semantic depth (++)** — every type category gets a unique color, properties are distinct from variables, parameters are distinct from locals, static members get italic styling.
 
 ### Apex Pastel++ *(Soft & Chalky)*
-A rose-tinted dark theme with soft, chalky pastel syntax. Warm dusk backgrounds (H≈340°) paired with teal keywords, lilac functions, and amber classes — entirely different hue families from Ember. Uses a 3-band WCAG luminance strategy to maintain readability across all pastels (S≤36%).
+An achromatic dark theme with soft, chalky pastel syntax. Pure gray backgrounds (R=G=B) paired with teal keywords, lilac functions, and amber classes — entirely different hue families from Ember. Uses a 3-band WCAG luminance strategy to maintain readability across all pastels (S≤36%).
 - Keywords in pastel teal (`#8CBDC6`), functions in lilac (`#AA8BC1`)
 - Properties in pastel rose (`#E2C8CF`), parameters in chartreuse (`#C7D3B3`)
 - Five distinct type colors: classes in amber (`#D5CFB5`), structs in jade (`#8EBFAB`), interfaces in orchid (`#BB87B2`), enums in periwinkle (`#9393C5`)
@@ -236,8 +236,8 @@ The only theme in the family with truly achromatic backgrounds (R=G=B). Pure gra
 
 | Role            | Hex       | Design Source |
 |-----------------|-----------|---------------|
-| Editor BG       | `#170E11` | Rose-tinted dark (Dusk) |
-| Sidebar BG      | `#201418` | Rose, raised surface |
+| Editor BG       | `#1F1F1F` | Pure gray (R=G=B=31) |
+| Sidebar BG      | `#272727` | Pure gray, raised surface |
 | Foreground      | `#C3B9BD` | Rose-tinted near-white |
 | Keywords        | `#8CBDC6` | Pastel teal (signature) |
 | Control Flow    | `#ABCBD2` | Brighter teal, italic |

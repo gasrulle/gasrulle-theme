@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.1] - 2026-03-06
+
+### Changed
+- **Apex Pastel++**: Replaced rose-tinted dusk backgrounds with achromatic pure gray (R=G=B). Editor BG `#1F1F1F`, sidebar `#272727`, inputs `#303030`. All foreground/syntax colors unchanged. All contrast ratios verified passing.
+
 ## [0.6.0] - 2026-03-06
 
 ### Added

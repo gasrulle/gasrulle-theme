@@ -19,7 +19,7 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 - **Apex Steel++** — Original neutral balanced dark theme, One Dark Pro inspired, max C# depth (`themes/apex-steel-pp-color-theme.json`)
 - **Apex Neon++** — Original vibrant high-energy dark theme, Dracula inspired, max C# depth (`themes/apex-neon-pp-color-theme.json`)
 - **Apex Carbon++** — Original achromatic dark theme, pure gray backgrounds, measured syntax, max C# depth (`themes/apex-carbon-pp-color-theme.json`)
-- **Apex Pastel++** — Original soft pastel dark theme, rose-tinted dusk BG, teal keywords, max C# depth (`themes/apex-pastel-pp-color-theme.json`)
+- **Apex Pastel++** — Original soft pastel dark theme, achromatic BG, teal keywords, max C# depth (`themes/apex-pastel-pp-color-theme.json`)
 
 ### Planned
 - Visual Studio Light
@@ -40,7 +40,7 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
   - `apex-steel-pp-color-theme.json` — Original Apex Steel++ (neutral balanced, One Dark Pro inspired)
   - `apex-neon-pp-color-theme.json` — Original Apex Neon++ (vibrant high-energy, Dracula inspired)
   - `apex-carbon-pp-color-theme.json` — Original Apex Carbon++ (achromatic dark, measured syntax)
-  - `apex-pastel-pp-color-theme.json` — Original Apex Pastel++ (soft pastel, rose-tinted dusk)
+  - `apex-pastel-pp-color-theme.json` — Original Apex Pastel++ (soft pastel, achromatic background)
 - `README.md` — User-facing documentation
 - `CHANGELOG.md` — Version history
 - `LICENSE` — Apache 2.0
@@ -249,13 +249,13 @@ Pure graphite. Zero color cast in backgrounds (R=G=B). Measured saturation synta
 | Doc Comments    | `#5A5A5A` | Pure gray (R=G=B), italic              |
 | Doc Keywords    | `#888078` | Near-achromatic sand (S≈5%)            |
 
-### Apex Pastel++ (Original — Dusk Pastels)
-Rose-tinted dusk background with 3-band WCAG luminance strategy exploiting green-channel weighting to create natural luminance diversity among pastels. All syntax colors strictly pastel (S≤36%, L 60–85%).
+### Apex Pastel++ (Original — Achromatic Pastels)
+Achromatic dark background (pure gray, R=G=B) with soft pastel syntax colors. 3-band WCAG luminance strategy exploiting green-channel weighting to create natural luminance diversity among pastels. All syntax colors strictly pastel (S≤36%, L 60–85%).
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#2A1A1F` | Rose-tinted dark (Dusk, H≈340°)      |
-| Sidebar BG      | `#332026` | Rose, raised surface                 |
+| Editor BG       | `#1F1F1F` | Pure gray (R=G=B=31)                 |
+| Sidebar BG      | `#272727` | Pure gray, raised surface            |
 | Foreground      | `#C3B9BD` | Rose-tinted near-white               |
 | Keywords        | `#8CBDC6` | Pastel teal (signature)              |
 | Control Flow    | `#ABCBD2` | Brighter teal, italic                |
@@ -271,11 +271,11 @@ Rose-tinted dusk background with 3-band WCAG luminance strategy exploiting green
 | Enums           | `#9393C5` | Pastel periwinkle (LOW band)         |
 | Comments        | `#716066` | Rose-tinted muted gray               |
 | Accent          | `#8CBDC6` | Teal                                 |
-| Doc Comments    | `#5C5155` | Dimmed rose-gray, italic             |
+| Doc Comments    | `#62565A` | Dimmed rose-gray, italic             |
 | Doc Keywords    | `#746458` | Warm muted sand                      |
 
 ### Apex Theme Family Naming
-- **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic), Pastel (soft, rose-tinted dusk)
+- **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic), Pastel (soft, achromatic background)
 - **C# depth**: Only ++ (maximum) tier is currently implemented
 - **Labels**: `Gasrulle - Apex {Variant}++`
 - **File names**: `apex-{variant}-pp-color-theme.json`
