@@ -256,23 +256,23 @@ Achromatic dark background (pure gray, R=G=B) with soft pastel syntax colors. 3-
 |-----------------|-----------|--------------------------------------|
 | Editor BG       | `#1F1F1F` | Pure gray (R=G=B=31)                 |
 | Sidebar BG      | `#272727` | Pure gray, raised surface            |
-| Foreground      | `#C3B9BD` | Rose-tinted near-white               |
+| Foreground      | `#BEBBBD` | Near-achromatic warm gray              |
 | Keywords        | `#8CBDC6` | Pastel teal (signature)              |
 | Control Flow    | `#ABCBD2` | Brighter teal, italic                |
 | Strings         | `#97BF93` | Pastel sage                          |
 | Functions       | `#AA8BC1` | Pastel lilac (LOW band)              |
 | Numbers         | `#DECBC4` | Pastel salmon                        |
 | Properties      | `#E2C8CF` | Pastel rose (HIGH band)              |
-| Variables       | `#C3B9BD` | Foreground (rose near-white)         |
+| Variables       | `#BEBBBD` | Foreground (near-achromatic)         |
 | Parameters      | `#C7D3B3` | Pastel chartreuse                    |
 | Classes         | `#D5CFB5` | Pastel amber (HIGH band)             |
 | Structs         | `#8EBFAB` | Pastel jade (MID band)               |
 | Interfaces      | `#BB87B2` | Pastel orchid (LOW band)             |
 | Enums           | `#9393C5` | Pastel periwinkle (LOW band)         |
-| Comments        | `#716066` | Rose-tinted muted gray               |
+| Comments        | `#6E6A6C` | Near-achromatic warm gray              |
 | Accent          | `#8CBDC6` | Teal                                 |
-| Doc Comments    | `#62565A` | Dimmed rose-gray, italic             |
-| Doc Keywords    | `#746458` | Warm muted sand                      |
+| Doc Comments    | `#5D5B5C` | Dimmed near-achromatic gray, italic  |
+| Doc Keywords    | `#6E6862` | Near-achromatic warm sand              |
 
 ### Apex Theme Family Naming
 - **Variants**: Ember (warm), Frost (cool), Steel (neutral), Neon (vibrant), Carbon (achromatic), Pastel (soft, achromatic background)
@@ -663,7 +663,7 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 | Apex Steel++ | `#515662` | `#8E7E6E` | Dimmed neutral gray + warm sand |
 | Apex Neon++ | `#4E5688` | `#8C7C94` | Dimmed blue-purple + muted lilac |
 | Apex Carbon++ | `#5A5A5A` | `#888078` | Pure gray + near-achromatic sand |
-| Apex Pastel++ | `#62565A` | `#746458` | Dimmed rose-gray + warm muted sand |
+| Apex Pastel++ | `#5D5B5C` | `#6E6862` | Near-achromatic gray + warm sand |
 
 ### C# Roslyn Custom Semantic Token Types
 The C# extension (powered by Roslyn LSP) emits custom semantic token types beyond the standard VS Code set. These are registered dynamically via the Language Server Protocol, not in the extension's `package.json`. If a theme doesn't explicitly handle them, they fall back through the `superType` chain — but this fallback is often wrong (e.g., `operatorOverloaded` falls back to `operator` instead of showing as method-yellow).
@@ -973,7 +973,7 @@ The following keys must all share the same opaque selection color (or its alpha 
 | Steel++ | `#D0D6E0` | `#ABB2BF` | 3.58:1 | Uses brightened neutral |
 | Neon++ | `#D1D1D9` | `#C2C2CA` | 3.47:1 | Brightened neutral (FG dimmed below 3:1) |
 | Carbon++ | `#D0D0D0` | `#C2C2C2` | 3.40:1 | Brightened achromatic (FG dimmed below 3:1) |
-| Pastel++ | `#D4CCD0` | `#C3B9BD` | 8.97:1 | Brightened rose |
+| Pastel++ | `#D0CED0` | `#BEBBBD` | 6.42:1 | Near-achromatic neutral |
 
 ### Bracket Pair Colorization Rules
 

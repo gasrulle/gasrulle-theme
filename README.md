@@ -238,20 +238,20 @@ The only theme in the family with truly achromatic backgrounds (R=G=B). Pure gra
 |-----------------|-----------|---------------|
 | Editor BG       | `#1F1F1F` | Pure gray (R=G=B=31) |
 | Sidebar BG      | `#272727` | Pure gray, raised surface |
-| Foreground      | `#C3B9BD` | Rose-tinted near-white |
+| Foreground      | `#BEBBBD` | Near-achromatic warm gray |
 | Keywords        | `#8CBDC6` | Pastel teal (signature) |
 | Control Flow    | `#ABCBD2` | Brighter teal, italic |
 | Strings         | `#97BF93` | Pastel sage |
 | Functions       | `#AA8BC1` | Pastel lilac (LOW band) |
 | Numbers         | `#DECBC4` | Pastel salmon |
 | Properties      | `#E2C8CF` | Pastel rose (HIGH band) |
-| Variables       | `#C3B9BD` | Foreground |
+| Variables       | `#BEBBBD` | Foreground |
 | Parameters      | `#C7D3B3` | Pastel chartreuse |
 | Classes         | `#D5CFB5` | Pastel amber (HIGH band) |
 | Structs         | `#8EBFAB` | Pastel jade (MID band) |
 | Interfaces      | `#BB87B2` | Pastel orchid (LOW band) |
 | Enums           | `#9393C5` | Pastel periwinkle (LOW band) |
-| Comments        | `#716066` | Rose-tinted muted gray |
+| Comments        | `#6E6A6C` | Near-achromatic warm gray |
 | Accent          | `#8CBDC6` | Teal |
 
 ## Credits

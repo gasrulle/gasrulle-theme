@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.2] - 2026-03-06
+
+### Changed
+- **Apex Pastel++**: Shifted foreground colors toward achromatic to match pure gray backgrounds. Rose saturation reduced from 7–14% to 1–6% across foreground (`#BEBBBD`), comments (`#6E6A6C`), doc comments (`#5D5B5C`), doc keywords (`#6E6862`), inactive UI (`#535153`). All contrast ratios verified passing.
+
 ## [0.6.1] - 2026-03-06
 
 ### Changed
