@@ -149,27 +149,27 @@ Synthesized from Night Owl (accessibility), Catppuccin (warmth), Tokyo Night (se
 | Doc Comments    | `#545866` | Dimmed purple-gray, italic             |
 | Doc Keywords    | `#927A68` | Warm amber-sand                        |
 
-### Apex Frost++ (Original — Cool & Modern)
-Inspired by Tokyo Night Storm. Cool blue tones, desaturated, sleek.
+### Apex Frost++ (Original — Midnight Frost)
+Inspired by Tokyo Night Storm. Cool blue tones throughout, pronounced frost tint on backgrounds, muted warmth on accents — like candlelight through frosted glass.
 
 | Role            | Hex       | Design Source                        |
 |-----------------|-----------|--------------------------------------|
-| Editor BG       | `#1A1C2A` | Cool blue-tinted dark (desaturated)  |
-| Sidebar BG      | `#222332` | Cool, lower contrast (desaturated)   |
+| Editor BG       | `#1A1D30` | Cool blue-tinted dark (pronounced frost) |
+| Sidebar BG      | `#22243A` | Cool, lower contrast (frost-tinted)  |
 | Foreground      | `#B0B4C4` | Neutral silver (desaturated cool)    |
 | Keywords        | `#7AA2F7` | Azure blue                           |
 | Control Flow    | `#89B4FA` | Brighter blue, italic                |
 | Strings         | `#9ECE6A` | Cool green                           |
 | Functions       | `#7DCFFF` | Tokyo Night cyan                     |
-| Numbers         | `#FF9E64` | Warm orange contrast pop             |
+| Numbers         | `#E8B48A` | Muted peach-sand (frosted warmth)    |
 | Properties      | `#73DACA` | Teal-green                           |
 | Variables       | `#C4C8D6` | Neutral near-white (desaturated)     |
-| Parameters      | `#E0AF68` | Warm amber                           |
+| Parameters      | `#BAA478` | Dim frosted sand (distant candlelight) |
 | Classes         | `#2AC3DE` | Aqua                                 |
 | Structs         | `#8BD4A0` | Frosted mint (++ only)               |
 | Interfaces      | `#BB9AF7` | Lavender-purple (++ only)            |
 | Enums           | `#F7768E` | Rose-pink (++ only)                  |
-| Comments        | `#535D87` | Cool blue-gray                       |
+| Comments        | `#586390` | Cool blue-gray                       |
 | Accent          | `#7AA2F7` | Azure blue                           |
 | Doc Comments    | `#4D577A` | Dimmed blue-gray, italic               |
 | Doc Keywords    | `#6E8098` | Cool steel-blue                        |

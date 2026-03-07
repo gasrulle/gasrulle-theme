@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.4] - 2026-03-07
+
+### Changed
+- **Apex Frost++**: "Midnight Frost" redesign — shifted theme from "fire and ice" to cohesive frost identity. Pronounced frost tint on all backgrounds (+6-8 blue channel: editor `#1A1D30`, sidebar `#22243A`, inputs `#323548`). Muted warm syntax colors: numbers from hot orange (`#FF9E64`) to peach-sand (`#E8B48A`), parameters from amber (`#E0AF68`) to dim frosted sand (`#BAA478`). Cooled bracket pair colors: level 1 from golden (`#ECCC78`) to frosted sage (`#B8D4C0`), level 3 from copper (`#B07858`) to frosted lavender (`#9890B8`). Brightened comments (`#586390`) to maintain 2.85:1 contrast vs darker BG. Warning UI colors kept amber by convention. All contrast ratios verified passing.
+
 ## [0.6.3] - 2026-03-07
 
 ### Changed
