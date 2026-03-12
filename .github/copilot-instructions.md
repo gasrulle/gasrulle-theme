@@ -1024,6 +1024,16 @@ Every foreground/background combination in the theme must meet minimum contrast 
 | Selection FG vs Selection BG | ≥3:1 | Primary text on selected items |
 | Foreground vs Selection BG | ≥2.5:1 | General text readability on selection |
 
+#### Syntax on Selection Background
+
+| Combination | Minimum ratio | Notes |
+|-------------|--------------|-------|
+| Comments vs Selection BG | ≥1.6:1 | Comments must remain readable when selected — achromatic themes are especially vulnerable because both comment and selection colors occupy the same gray channel |
+| Doc Comments vs Selection BG | ≥1.4:1 | Doc comments are dimmer than comments but must not vanish on selection |
+| Doc Keywords vs Selection BG | ≥1.8:1 | Tags within doc comments when line is selected |
+
+> **Achromatic selection trap**: In achromatic themes (R=G=B backgrounds), selection backgrounds and comment colors both live on the pure gray axis. A selection like `#6C6C6C` with a comment at `#6E6E6E` produces 1.03:1 contrast — completely invisible. Always verify comment visibility on selection backgrounds, especially when both are achromatic grays.
+
 #### Selection / Highlight Visibility
 
 | Combination | Minimum ratio | Notes |
@@ -1106,7 +1116,7 @@ After **every** theme edit session, execute these steps in order:
 4. **Inter-token contrast audit**: For any changed syntax color, compute the WCAG contrast ratio between it and all commonly-adjacent syntax roles (especially property↔keyword, parameter↔variable, class↔function). Verify ≥1.2:1 minimum for all adjacent pairs.
 5. **Bracket collision audit**: Verify that no `editorBracketHighlight.foreground1`–`foreground6` value is an exact hex match for any `semanticTokenColors` entry, especially the keyword color. Check all 6 levels against all semantic token colors.
 6. **Overlay audit**: For any changed accent, keyword, or string color, verify that all overlay/highlight colors derived from it are updated and still use a bright base + correct alpha from the alpha guidelines table.
-7. **Selection audit**: If any selection-related color changed, verify all 10 background keys and 5 foreground keys in the selection consistency table are in sync.
+7. **Selection audit**: If any selection-related color changed, verify all 10 background keys and 5 foreground keys in the selection consistency table are in sync. Also verify comment/doc-comment contrast against selection BG meets the Syntax on Selection Background minimums (≥1.6:1 for comments, ≥1.4:1 for doc comments, ≥1.8:1 for doc keywords).
 8. **Cross-reference**: If a color role was changed (e.g., keyword color), search the entire theme file for both the old and new hex values to ensure no orphaned references remain.
 9. **Surface hierarchy**: Verify that Editor BG < Sidebar BG < Input BG in lightness, maintaining clear visual separation.
 10. **Temperature check**: For color-tinted themes, verify all background surfaces share the same hue family. For achromatic themes (Carbon), verify R=G=B on all background surfaces.
