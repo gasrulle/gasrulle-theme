@@ -51,7 +51,8 @@ public class UserRepo : IRepository<UserProfile>
     }
 
     /// <param name="role">The role to filter by.</param>
-    /// <returns>Active users matching <paramref name="role"/>.</returns>
+    /// <param name="role">The role to filter by.</param>
+    
     public async Task<List<UserProfile>> FindActiveAsync(UserRole role)
     {
         var all = _store.Values.ToList();

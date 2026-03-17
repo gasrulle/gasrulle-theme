@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.7] - 2026-03-17
+
+### Fixed
+- **Apex Carbon++**: Brightened selection background from `#363636` to `#444444` across all 10 selection keys — old selection was nearly invisible (1.36:1 vs editor BG), now 1.69:1. All contrast requirements verified passing.
+- **Apex Carbon++**: Increased diff/merge overlay alpha from `30`/`44` to `50`/`66` — inserted/removed text backgrounds were barely distinguishable from editor BG on achromatic surfaces. Effective inserted contrast improved from 1.54:1 to 2.14:1, removed from 1.31:1 to 1.63:1.
+- **Apex Pastel++**: Fixed inactive selection consistency bug — `editor.inactiveSelectionBackground` and `list.inactiveSelectionBackground` were using wrong base (`#2C2C2C66`, effective contrast 1.06:1 — invisible) instead of matching active selection base (`#42424266`, effective contrast 1.20:1).
+- **Apex Pastel++**: Increased diff/merge overlay alpha from `30`/`44` to `50`/`66` — same achromatic background visibility issue as Carbon++.
+
 ## [0.6.4] - 2026-03-07
 
 ### Changed
