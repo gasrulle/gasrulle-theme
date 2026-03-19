@@ -1,0 +1,79 @@
+name: "\U0001F504 Theme Port Request"
+description: "Request porting a theme from another IDE"
+title: "[Port]: "
+labels: ["port-request", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!-- AGENT INSTRUCTIONS (not visible to users):
+        - Read .github/copilot-instructions.md for all project rules and conventions
+        - CRITICAL: Follow the "Ported Theme Primacy Rule" — the original creator's design wins over all project rules
+        - Source colors ONLY from official repositories — never invent values
+        - Clone the closest existing ported theme file as a starting point
+        - Map source IDE attribute names to VS Code TextMate scopes and semantic tokens
+        - Include all 15 custom Roslyn token entries + 10 xmlDocComment entries in semanticTokenColors
+        - Register in package.json, update README.md, CHANGELOG.md, copilot-instructions.md, CLAUDE.md (dual-file sync)
+        - Update issue template theme dropdowns in .github/ISSUE_TEMPLATE/ when adding the new theme
+        -->
+        Want to see a theme from another IDE ported to VS Code? Please provide the official source files so we can ensure color fidelity.
+  - type: input
+    id: source-ide-theme
+    attributes:
+      label: Source IDE and Theme Name
+      description: The IDE and exact theme name you want ported.
+      placeholder: "e.g., JetBrains Rider Light (New UI)"
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Official Source URL
+      description: A link to the official color/theme file in the IDE's repository (e.g., a GitHub URL to the theme JSON/XML).
+      placeholder: "e.g., https://github.com/JetBrains/intellij-community/blob/master/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: theme-type
+    attributes:
+      label: Theme Type
+      description: Is this a dark or light theme?
+      options:
+        - Dark
+        - Light
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Why should this theme be ported? What makes it distinct or desirable?
+      placeholder: "e.g., The Rider Light (New UI) theme is popular among C# devs who prefer light backgrounds..."
+    validations:
+      required: true
+  - type: textarea
+    id: key-colors
+    attributes:
+      label: Key Colors
+      description: If you've already identified key palette colors from the source, list them here.
+      placeholder: |
+        Editor BG: #FFFFFF
+        Keywords: #0033B3
+        Strings: #067D17
+        Functions: #00627A
+    validations:
+      required: false
+  - type: upload
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: A screenshot from the source IDE showing the theme in action.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information (alternative source files, related themes, etc.).
+    validations:
+      required: false

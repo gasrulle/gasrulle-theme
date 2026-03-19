@@ -1,0 +1,52 @@
+name: "\U0001F4DD Documentation Issue"
+description: "Report errors or gaps in documentation"
+title: "[Docs]: "
+labels: ["docs"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!-- AGENT INSTRUCTIONS (not visible to users):
+        - Read .github/copilot-instructions.md for all project rules and conventions
+        - CRITICAL: Dual-file sync rule — changes to copilot-instructions.md MUST be mirrored to CLAUDE.md and vice versa
+        - If palette tables need updating, change them in BOTH instruction files
+        - If theme listings need updating, change them in BOTH instruction files AND README.md
+        - Verify the "Currently Implemented" list, file structure, and palette tables stay in sync
+        -->
+        Found an error or gap in the docs? Let us know what needs fixing.
+  - type: dropdown
+    id: document
+    attributes:
+      label: Document
+      description: Which document has the issue?
+      options:
+        - README.md
+        - CHANGELOG.md
+        - copilot-instructions.md / CLAUDE.md
+        - package.json (extension metadata)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's wrong or missing?
+      placeholder: "e.g., The Apex Frost++ palette table is missing the Doc Comments row"
+    validations:
+      required: true
+  - type: input
+    id: section-line
+    attributes:
+      label: Section or Line
+      description: Where in the document is the issue?
+      placeholder: "e.g., 'Key Color Palettes > Apex Frost++' or line 245"
+    validations:
+      required: false
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested Fix
+      description: If you know what the correct content should be, describe it here.
+    validations:
+      required: false

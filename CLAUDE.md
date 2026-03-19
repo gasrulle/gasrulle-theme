@@ -59,7 +59,8 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
 5. **Choose a depth tier** (base/+/++) — see **C# Semantic Depth Tiers** section for the full specification. Adjust `semanticTokenColors` and `tokenColors` to match.
 6. **Validate**: Validate the JSON file for syntax errors and check the VS Code Problems panel for invalid/deprecated theme properties and transparency issues.
 7. **Document**: Update `README.md`, `CHANGELOG.md`, this file (`CLAUDE.md`), and `.github/copilot-instructions.md` with the new theme's palette table and file listing.
-8. **Bump version** in `package.json`.
+8. **Update issue templates**: Add the new theme to the dropdown lists in `.github/ISSUE_TEMPLATE/01-bug-report.yml` and `.github/ISSUE_TEMPLATE/02-color-change.yml`.
+9. **Bump version** in `package.json`.
 
 ## Color Sources & Accuracy
 For ported themes, colors must be sourced from official repositories to maintain fidelity.

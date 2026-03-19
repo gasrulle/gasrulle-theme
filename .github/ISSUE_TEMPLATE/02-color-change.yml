@@ -1,0 +1,108 @@
+name: "\U0001F3A8 Color Change Request"
+description: "Request a color adjustment in a theme"
+title: "[Color]: "
+labels: ["color-change"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!-- AGENT INSTRUCTIONS (not visible to users):
+        - Read .github/copilot-instructions.md for all project rules, palette tables, and conventions
+        - The "Color Role" dropdown maps directly to the palette table roles in the instructions file
+        - Follow the "Holistic Change Protocol" — every color change has a ripple chain
+        - After changing any color: verify contrast minimums (see "Minimum Contrast Requirements")
+        - Check inter-token luminance contrast (≥1.2:1 for adjacent pairs, especially property↔keyword)
+        - If accent/keyword/string changes: update ALL derived overlay/highlight colors
+        - If selection color changes: update ALL 10 background keys + 5 foreground keys per "Selection color consistency"
+        - Update the palette table in BOTH copilot-instructions.md AND CLAUDE.md (dual-file sync rule)
+        - Update CHANGELOG.md after changes
+        -->
+        Describe what feels wrong about the color — the maintainer or coding agent will determine the best fix.
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      description: Which theme needs the color adjustment?
+      options:
+        - Gasrulle - Rider Dark (New UI)
+        - Gasrulle - Rider Dark (Darcula)
+        - Gasrulle - Visual Studio Dark 2019
+        - Gasrulle - Visual Studio Dark 2022
+        - Gasrulle - Visual Studio Dark 2026
+        - Gasrulle - Apex Ember++
+        - Gasrulle - Apex Frost++
+        - Gasrulle - Apex Steel++
+        - Gasrulle - Apex Neon++
+        - Gasrulle - Apex Carbon++
+        - Gasrulle - Apex Pastel++
+        - Multiple themes
+    validations:
+      required: true
+  - type: dropdown
+    id: color-role
+    attributes:
+      label: Color Role
+      description: Which color role is affected? See the palette tables in the README for reference.
+      options:
+        - Keywords
+        - Control Flow
+        - Strings
+        - Functions
+        - Numbers
+        - Properties
+        - Variables
+        - Parameters
+        - Classes
+        - Structs
+        - Interfaces
+        - Enums
+        - Comments
+        - Doc Comments
+        - Doc Keywords
+        - Foreground
+        - Editor Background
+        - Sidebar Background
+        - Accent
+        - Bracket Colors
+        - Selection/Highlight
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What's Wrong
+      description: Describe the visual problem. The agent will determine the correct fix.
+      placeholder: "e.g., Keywords are too dim against the editor background — hard to distinguish from comments"
+    validations:
+      required: true
+  - type: input
+    id: current-hex
+    attributes:
+      label: Current Hex Value
+      description: The current color value, if known.
+      placeholder: "e.g., #C678DD"
+    validations:
+      required: false
+  - type: input
+    id: suggested-hex
+    attributes:
+      label: Suggested Hex Value
+      description: Your preferred replacement color, if you have one. The agent may choose a different value based on contrast and palette rules.
+      placeholder: "e.g., #D183E8"
+    validations:
+      required: false
+  - type: upload
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: A screenshot showing the color issue. Drag and drop or click to upload.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information (comparison screenshots, related issues, etc.).
+    validations:
+      required: false

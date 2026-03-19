@@ -1,0 +1,53 @@
+name: "\u2728 Feature Request"
+description: "Suggest a new theme, language support, or UI improvement"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!-- AGENT INSTRUCTIONS (not visible to users):
+        - Read .github/copilot-instructions.md for all project rules and conventions
+        - For new theme variants: follow "Adding a New Theme" steps and "Creating a New Apex Palette" methodology
+        - For language token coverage: check existing tokenColors scopes in the closest theme file
+        - For workbench UI changes: follow "When Adding Workbench Colors" rules and update ALL themes in the family
+        - Register new themes in package.json under contributes.themes
+        - Update README.md, CHANGELOG.md, copilot-instructions.md, and CLAUDE.md (dual-file sync)
+        - Update issue template theme dropdowns in .github/ISSUE_TEMPLATE/ if adding a new theme
+        -->
+        We'd love to hear your ideas! Describe what you'd like to see added or improved.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What kind of feature is this?
+      options:
+        - New theme variant
+        - New language token coverage
+        - Workbench UI improvement
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What would you like added or changed, and why?
+      placeholder: "e.g., A new Apex Ocean++ variant with cool aquatic tones, inspired by GitHub's Ocean theme"
+    validations:
+      required: true
+  - type: textarea
+    id: inspiration
+    attributes:
+      label: Inspiration / References
+      description: Links to existing themes, color palettes, screenshots, or other references.
+      placeholder: "e.g., Inspired by GitHub Ocean Dark — see https://github.com/..."
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help.
+    validations:
+      required: false

@@ -1,0 +1,104 @@
+name: "\U0001F41B Bug Report"
+description: "Report a color, token, or visual issue in a theme"
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <!-- AGENT INSTRUCTIONS (not visible to users):
+        - Read .github/copilot-instructions.md for all project rules, palette tables, and conventions
+        - Theme files are in themes/ — match the "Affected Theme" dropdown to the correct file
+        - For PORTED themes (Rider, Visual Studio): verify fix against official source files listed in "Color Sources & Accuracy"
+        - For ORIGINAL themes (Apex): follow the "Holistic Change Protocol" — evaluate the full ripple chain
+        - Check palette tables to verify the correct expected color for each token role
+        - After any fix: run get_errors on modified theme files, verify contrast minimums, update CHANGELOG.md
+        - Dual-file sync: if copilot-instructions.md or CLAUDE.md need updates, change BOTH files
+        -->
+        Thanks for reporting this issue! Please fill out the fields below so we can fix it quickly.
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Affected Theme
+      description: Which theme has the issue?
+      options:
+        - Gasrulle - Rider Dark (New UI)
+        - Gasrulle - Rider Dark (Darcula)
+        - Gasrulle - Visual Studio Dark 2019
+        - Gasrulle - Visual Studio Dark 2022
+        - Gasrulle - Visual Studio Dark 2026
+        - Gasrulle - Apex Ember++
+        - Gasrulle - Apex Frost++
+        - Gasrulle - Apex Steel++
+        - Gasrulle - Apex Neon++
+        - Gasrulle - Apex Carbon++
+        - Gasrulle - Apex Pastel++
+        - Multiple themes
+        - All themes
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Issue Category
+      description: What kind of issue is this?
+      options:
+        - Wrong syntax color
+        - Missing token/scope coverage
+        - Workbench UI color issue
+        - Bracket colorization issue
+        - Selection/highlight visibility
+        - Contrast/readability issue
+        - Deprecated property warning
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What's wrong? What does it look like, and what should it look like?
+      placeholder: "e.g., C# interface names show as the same color as classes — they should be distinct in ++ themes"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: What file type / language / code pattern triggers this issue?
+      placeholder: |
+        1. Open a .cs file
+        2. Write an interface declaration
+        3. Notice the interface name color matches the class color
+    validations:
+      required: false
+  - type: input
+    id: token-scope
+    attributes:
+      label: Affected Token or Scope
+      description: If known, the semantic token type or TextMate scope involved.
+      placeholder: "e.g., keyword.controlFlow, entity.name.type.interface, xmlDocCommentText"
+    validations:
+      required: false
+  - type: input
+    id: expected-color
+    attributes:
+      label: Expected Color
+      description: The hex color value it should be, if known. Or reference the source IDE.
+      placeholder: "e.g., #BB9AF7 or 'see JetBrains Rider default'"
+    validations:
+      required: false
+  - type: upload
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: A screenshot showing the issue. Drag and drop or click to upload.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help (links, related issues, etc.).
+    validations:
+      required: false
