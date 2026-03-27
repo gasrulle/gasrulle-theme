@@ -188,8 +188,8 @@
         "editorOverviewRuler.currentContentForeground": "#9AD68A",
         "editorOverviewRuler.incomingContentForeground": "#78C8F0",
         // ── Diff Editor ─────────────────────────────────────────
-        "diffEditor.insertedTextBackground": "#9AD68A50",
-        "diffEditor.removedTextBackground": "#E0707050",
+        "diffEditor.insertedTextBackground": "#9AD68A28",
+        "diffEditor.removedTextBackground": "#E0707028",
         "diffEditor.diagonalFill": "#393939",
         // ── Breadcrumbs ─────────────────────────────────────────
         "breadcrumb.foreground": "#6E6E6E",

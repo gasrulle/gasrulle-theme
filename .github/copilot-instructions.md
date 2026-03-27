@@ -926,8 +926,8 @@ A dark base at any alpha is nearly invisible against a dark editor background. A
 | `peekViewResult.matchHighlightBackground` | String | `50` | Peek result match |
 | `minimap.findMatchHighlight` | String | `80` | Minimap markers (smaller = needs more opacity) |
 | `minimap.selectionHighlight` | Accent | `BB` | Minimap selection |
-| `diffEditor.insertedTextBackground` | Green/added | `30` | Diff added |
-| `diffEditor.removedTextBackground` | Red/error | `30` | Diff removed |
+| `diffEditor.insertedTextBackground` | Green/added | `28` | Diff added |
+| `diffEditor.removedTextBackground` | Red/error | `28` | Diff removed |
 | `merge.currentContentBackground` | Green | `30` | Merge current |
 | `merge.incomingContentBackground` | Blue/accent | `30` | Merge incoming |
 | `merge.currentHeaderBackground` | Green | `44` | Merge current header |
