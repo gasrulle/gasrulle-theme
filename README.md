@@ -12,6 +12,16 @@ The modern JetBrains New UI dark theme (2023+), featuring the refined gray palet
 ### Rider Dark (Darcula)
 The classic JetBrains Darcula theme, featuring the iconic warm color palette with golden functions (`#FFC66D`), orange keywords (`#CC7832`), green strings (`#7EA86D`), and purple properties (`#A885B8`).
 
+### Rider Light (New UI)
+The modern JetBrains New UI light theme, featuring a white editor canvas, cool gray sidebar (`#F7F8FA`), dark title bar (`#27282E`), and refined syntax highlighting with teal functions (`#00627A`), blue keywords (`#0033B3`), green strings (`#067D17`), and purple fields (`#871094`).
+
+Colors sourced from `expUI_light.theme.json` (workbench) and `expUI_lightScheme.xml` (syntax) from the [JetBrains IntelliJ Community Edition](https://github.com/JetBrains/intellij-community) repository (Apache 2.0).
+
+### Rider Light (Classic)
+The classic JetBrains IntelliJ light theme, featuring a warm gray panel (`#F2F2F2`), light title bar, bold blue keywords (`#000080`), bold green strings (`#008000`), blue numbers (`#0000FF`), and bold purple fields (`#660E7A`). Uses the "Default" editor scheme with its distinctively bold styling on keywords and strings.
+
+Colors sourced from `intellijlaf.theme.json` (workbench) and `DefaultColorSchemesManager.xml` Default scheme (syntax) from the [JetBrains IntelliJ Community Edition](https://github.com/JetBrains/intellij-community) repository (Apache 2.0).
+
 ### Visual Studio Dark 2019
 A faithful port of the Visual Studio IDE Dark theme, with key differences from VS Code's built-in Dark+:
 - **Type differentiation**: Structs (`#86C691`), interfaces/enums (`#B8D7A3`), and classes (`#4EC9B0`) each have distinct colors

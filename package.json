@@ -2,7 +2,7 @@
     "name": "gasrulle-theme",
     "displayName": "Gasrulle Theme",
     "description": "A curated theme pack for VS Code — ported IDE themes (JetBrains Rider, Visual Studio, and more) plus original creations by Gasrulle.",
-    "version": "0.6.8",
+    "version": "0.8.0",
     "publisher": "Gasrulle",
     "license": "Apache-2.0",
     "engines": {
@@ -47,6 +47,16 @@
                 "label": "Gasrulle - Rider Dark (Darcula)",
                 "uiTheme": "vs-dark",
                 "path": "./themes/rider-dark-darcula-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Rider Light (New UI)",
+                "uiTheme": "vs",
+                "path": "./themes/rider-light-new-ui-color-theme.json"
+            },
+            {
+                "label": "Gasrulle - Rider Light (Classic)",
+                "uiTheme": "vs",
+                "path": "./themes/rider-light-classic-color-theme.json"
             },
             {
                 "label": "Gasrulle - Visual Studio Dark 2019",

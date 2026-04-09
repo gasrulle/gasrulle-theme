@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.0] - 2025-07-16
+
+### Added
+- **Rider Light (New UI)**: New ported theme — the modern JetBrains 2023+ New UI light theme. White editor canvas, cool gray sidebar (`#F7F8FA`), dark title bar (`#27282E`), blue accent (`#3574F0`). Syntax: teal functions (`#00627A`), blue keywords (`#0033B3`), green strings (`#067D17`), purple fields (`#871094`), blue numbers (`#1750EB`). Type parameters in teal (`#007E8A`), metadata in olive (`#9E880D`). All 15 Roslyn custom semantic tokens + 10 XML doc comment tokens included.
+- **Rider Light (Classic)**: New ported theme — the classic JetBrains IntelliJ light theme. Warm gray panels (`#F2F2F2`), light title bar, blue accent (`#4083C9`). Syntax from the Default scheme: bold blue keywords (`#000080`), bold green strings (`#008000`), blue numbers (`#0000FF`), bold purple fields (`#660E7A`), italic comments (`#808080`). Type parameters in teal (`#20999D`), metadata in olive (`#808000`). All 15 Roslyn custom semantic tokens + 10 XML doc comment tokens included.
+
 ## [0.6.7] - 2026-03-17
 
 ### Fixed

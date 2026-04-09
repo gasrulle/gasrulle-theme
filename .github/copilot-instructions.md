@@ -11,6 +11,8 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 ### Currently Implemented
 - **Rider Dark (New UI)** — The modern JetBrains 2023+ New UI dark theme (`themes/rider-dark-new-ui-color-theme.json`)
 - **Rider Dark (Darcula)** — The classic JetBrains Darcula theme (`themes/rider-dark-darcula-color-theme.json`)
+- **Rider Light (New UI)** — The modern JetBrains 2023+ New UI light theme (`themes/rider-light-new-ui-color-theme.json`)
+- **Rider Light (Classic)** — The classic JetBrains IntelliJ light theme (`themes/rider-light-classic-color-theme.json`)
 - **Visual Studio Dark 2019** — Faithful VS IDE Dark port (`themes/vs-dark-color-theme.json`)
 - **Visual Studio Dark 2022** — Faithful VS IDE 2022 Dark port (`themes/vs-dark-2022-color-theme.json`)
 - **Visual Studio Dark 2026** — Faithful VS IDE 2026 Dark port, Fluent Design tokens (`themes/vs-dark-2026-color-theme.json`)
@@ -23,7 +25,6 @@ This is a **VS Code theme pack extension** containing a growing collection of co
 
 ### Planned
 - Visual Studio Light
-- JetBrains Rider Light (New UI / IntelliJ)
 
 This is a **pure JSON declarative extension** — no TypeScript, no compilation, no runtime code.
 
@@ -32,6 +33,8 @@ This is a **pure JSON declarative extension** — no TypeScript, no compilation,
 - `themes/` — Theme JSON files, one per theme variant
   - `rider-dark-new-ui-color-theme.json` — New UI Dark workbench colors, tokenColors, and semanticTokenColors
   - `rider-dark-darcula-color-theme.json` — Classic Darcula workbench colors, tokenColors, and semanticTokenColors
+  - `rider-light-new-ui-color-theme.json` — New UI Light workbench colors, tokenColors, and semanticTokenColors
+  - `rider-light-classic-color-theme.json` — Classic IntelliJ Light workbench colors, tokenColors, and semanticTokenColors
   - `vs-dark-color-theme.json` — Visual Studio IDE 2019 Dark port
   - `vs-dark-2022-color-theme.json` — Visual Studio IDE 2022 Dark port
   - `vs-dark-2026-color-theme.json` — Visual Studio IDE 2026 Dark port
@@ -72,6 +75,12 @@ Sourced from the official [JetBrains IntelliJ Community Edition](https://github.
 
 - **New UI Dark**: `expUI_dark.theme.json` (workbench) + `expUI_darkScheme.xml` (syntax)
 - **Classic Darcula**: `darcula.theme.json` (workbench) + classic Darcula syntax defaults
+
+### JetBrains Rider Light Themes
+Sourced from the same repository:
+
+- **New UI Light**: `expUI_light.theme.json` (workbench) + `expUI_lightScheme.xml` (syntax)
+- **Classic IntelliJ Light**: `intellijlaf.theme.json` (workbench) + `DefaultColorSchemesManager.xml` Default scheme (syntax)
 
 When modifying or adding colors, always cross-reference the official JetBrains sources above to maintain fidelity.
 
@@ -124,6 +133,40 @@ When modifying or adding colors, always cross-reference the official JetBrains s
 | Doc Keywords| `#629755` | Green (DEFAULT_DOC_COMMENT_TAG)     |
 | Annotations | `#BBB529` |
 | Accent      | `#4A88C7` |
+
+### New UI Light
+| Role        | Hex       | Source Key               |
+|-------------|-----------|--------------------------||
+| Editor BG   | `#FFFFFF` | Gray14                   |
+| Sidebar BG  | `#F7F8FA` | Gray13                   |
+| Foreground  | `#080808` | TEXT foreground           |
+| Keywords    | `#0033B3` | DEFAULT_KEYWORD          |
+| Strings     | `#067D17` | DEFAULT_STRING           |
+| Functions   | `#00627A` | DEFAULT_FUNCTION_DECLARATION |
+| Numbers     | `#1750EB` | DEFAULT_NUMBER           |
+| Properties  | `#871094` | DEFAULT_INSTANCE_FIELD   |
+| Comments    | `#8C8C8C` | DEFAULT_BLOCK_COMMENT (italic)    |
+| Annotations | `#9E880D` | DEFAULT_METADATA         |
+| Accent      | `#3574F0` | Blue4                    |
+| Doc Comments| `#8C8C8C` | Same as comments, italic |
+| Doc Keywords| `#999999` | DEFAULT_DOC_COMMENT_TAG  |
+
+### Classic IntelliJ Light
+| Role        | Hex       | Source Key               |
+|-------------|-----------|--------------------------||
+| Editor BG   | `#FFFFFF` | contentBackground        |
+| Sidebar BG  | `#F2F2F2` | grey15 (panel)           |
+| Foreground  | `#000000` | black                    |
+| Keywords    | `#000080` | DEFAULT_KEYWORD (bold)   |
+| Strings     | `#008000` | DEFAULT_STRING (bold)    |
+| Functions   | `#000000` | Foreground (no special color) |
+| Numbers     | `#0000FF` | DEFAULT_NUMBER           |
+| Properties  | `#660E7A` | DEFAULT_INSTANCE_FIELD (bold) |
+| Comments    | `#808080` | DEFAULT_BLOCK_COMMENT (italic) |
+| Annotations | `#808000` | DEFAULT_METADATA         |
+| Accent      | `#4083C9` | underlineColor           |
+| Doc Comments| `#808080` | DEFAULT_DOC_COMMENT (italic) |
+| Doc Keywords| `#808080` | DEFAULT_DOC_COMMENT_TAG (bold) |
 
 ### Apex Ember++ (Original)
 Synthesized from Night Owl (accessibility), Catppuccin (warmth), Tokyo Night (semantics), One Dark Pro (C# scoping), Dracula (distinctiveness).
@@ -656,6 +699,8 @@ C# Roslyn emits custom semantic token types for XML doc comments that are **not*
 |-------|---------|-------------|-------|
 | Rider New UI | `#5F826B` | `#67A37C` | Green-tinted (official JetBrains DEFAULT_DOC_COMMENT) |
 | Rider Darcula | `#629755` | `#629755` | Green, italic (DEFAULT_DOC_COMMENT) |
+| Rider New UI Light | `#8C8C8C` | `#999999` | Gray, italic |
+| Rider Classic Light | `#808080` | `#808080` | Gray, italic + bold tags |
 | Visual Studio Dark 2019 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
 | Visual Studio Dark 2022 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
 | Visual Studio Dark 2026 | `#608B4E` | `#608B4E` | Green (Roslyn VisualStudio2019.xml xml doc comment) |
@@ -893,6 +938,44 @@ All themes must include these 15 custom token entries in `semanticTokenColors` (
 | `plainKeyword` | `#CC7832` | Same as keyword |
 | `field` | `#9876AA` | Instance field color |
 | `local` | `#A9B7C6` | Foreground |
+
+**Rider New UI Light:**
+| Token | Color | Source |
+|-------|-------|--------|
+| `controlKeyword` | `#0033B3` | Same as keyword |
+| `operatorOverloaded` | `#080808` | Foreground |
+| `stringVerbatim` | `#067D17` | Same as string |
+| `stringEscapeCharacter` | `#0037A6` | DEFAULT_VALID_STRING_ESCAPE |
+| `preprocessorKeyword` | `#0033B3` | Same as keyword |
+| `preprocessorText` | `#080808` | Foreground |
+| `excludedCode` | `#808080` | Gray |
+| `punctuation` | `#080808` | Foreground |
+| `delegate` | `#080808` | Type color (foreground) |
+| `extensionMethod` | `#00627A` | Function color |
+| `recordClass` | `#080808` | Type color |
+| `recordStruct` | `#080808` | Type color |
+| `plainKeyword` | `#0033B3` | Same as keyword |
+| `field` | `#871094` | DEFAULT_INSTANCE_FIELD |
+| `local` | `#080808` | Foreground |
+
+**Rider Classic Light:**
+| Token | Color | Source |
+|-------|-------|--------|
+| `controlKeyword` | `#000080` | Same as keyword (bold) |
+| `operatorOverloaded` | `#000000` | Foreground |
+| `stringVerbatim` | `#008000` | Same as string (bold) |
+| `stringEscapeCharacter` | `#000080` | DEFAULT_VALID_STRING_ESCAPE (bold) |
+| `preprocessorKeyword` | `#000080` | Same as keyword (bold) |
+| `preprocessorText` | `#000000` | Foreground |
+| `excludedCode` | `#808080` | Gray |
+| `punctuation` | `#000000` | Foreground |
+| `delegate` | `#000000` | Type color (foreground) |
+| `extensionMethod` | `#000000` | Foreground (no function color) |
+| `recordClass` | `#000000` | Type color |
+| `recordStruct` | `#000000` | Type color |
+| `plainKeyword` | `#000080` | Same as keyword (bold) |
+| `field` | `#660E7A` | DEFAULT_INSTANCE_FIELD (bold) |
+| `local` | `#000000` | Foreground |
 
 ### When Adding Workbench Colors
 1. Look up the VS Code color key in the [Theme Color Reference](https://code.visualstudio.com/api/references/theme-color)
