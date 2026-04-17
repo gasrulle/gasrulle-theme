@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.0] - 2026-04-17
+
+### Added
+- **Apex themes (all 6)**: Terminal UI chrome tokens — 18 new `terminal.*` / `terminalCursor.*` / `terminalCommandDecoration.*` / `terminalStickyScroll.*` / `terminalOverviewRuler.*` / `terminalCommandGuide.*` keys per theme. Covers: inactive selection, cursor background, find match highlights + border, command gutter decorations (success/error/default), hover highlight, terminal border, tab active border, initial hint text, drop target, sticky scroll, overview ruler markers, and command guide lines. All colors derived from each theme's existing palette (accent, string, comment, ANSI green/red).
+
+### Fixed
+- **Apex Steel++**: Brightened `terminal.ansiBrightBlack` from `#5B6270` (2.72:1) to `#5E6575` (2.85:1) to meet ≥2.75:1 minimum contrast requirement.
+
 ## [0.7.0] - 2025-07-16
 
 ### Added

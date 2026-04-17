@@ -268,7 +268,31 @@
         "terminal.ansiBrightCyan": "#68C8C8",
         "terminal.ansiBrightWhite": "#E8E8E8",
         "terminal.selectionBackground": "#444444",
+        "terminal.inactiveSelectionBackground": "#44444466",
         "terminalCursor.foreground": "#C2C2C2",
+        "terminalCursor.background": "#1f1f1f",
+        // Terminal find match
+        "terminal.findMatchBackground": "#9AD68A60",
+        "terminal.findMatchHighlightBackground": "#9AD68A40",
+        "terminal.findMatchBorder": "#9AD68ACC",
+        // Terminal command decorations (gutter marks)
+        "terminalCommandDecoration.defaultBackground": "#6E6E6E",
+        "terminalCommandDecoration.successBackground": "#9AD68A",
+        "terminalCommandDecoration.errorBackground": "#E07070",
+        // Terminal UI chrome
+        "terminal.hoverHighlightBackground": "#78C8F020",
+        "terminal.border": "#272727",
+        "terminal.tab.activeBorder": "#78C8F0",
+        "terminal.initialHintForeground": "#6E6E6E",
+        "terminal.dropBackground": "#78C8F020",
+        // Terminal sticky scroll
+        "terminalStickyScroll.background": "#272727",
+        "terminalStickyScrollHover.background": "#2E2E2E",
+        // Terminal overview ruler
+        "terminalOverviewRuler.cursorForeground": "#78C8F0BB",
+        "terminalOverviewRuler.findMatchForeground": "#9AD68A80",
+        // Terminal command guide
+        "terminalCommandGuide.foreground": "#6E6E6E40",
         // ── Settings ────────────────────────────────────────────
         "settings.headerForeground": "#C2C2C2",
         "settings.modifiedItemIndicator": "#78C8F0",
