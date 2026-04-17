@@ -1,5 +1,7 @@
 # Changelog
 
+## [Unreleased]
+
 ## [0.9.0] - 2026-04-17
 
 ### Added
@@ -8,11 +10,16 @@
 ### Fixed
 - **Apex Steel++**: Brightened `terminal.ansiBrightBlack` from `#5B6270` (2.72:1) to `#5E6575` (2.85:1) to meet ≥2.75:1 minimum contrast requirement.
 
-## [0.7.0] - 2025-07-16
+## [0.8.0] - 2026-04-09
 
 ### Added
 - **Rider Light (New UI)**: New ported theme — the modern JetBrains 2023+ New UI light theme. White editor canvas, cool gray sidebar (`#F7F8FA`), dark title bar (`#27282E`), blue accent (`#3574F0`). Syntax: teal functions (`#00627A`), blue keywords (`#0033B3`), green strings (`#067D17`), purple fields (`#871094`), blue numbers (`#1750EB`). Type parameters in teal (`#007E8A`), metadata in olive (`#9E880D`). All 15 Roslyn custom semantic tokens + 10 XML doc comment tokens included.
 - **Rider Light (Classic)**: New ported theme — the classic JetBrains IntelliJ light theme. Warm gray panels (`#F2F2F2`), light title bar, blue accent (`#4083C9`). Syntax from the Default scheme: bold blue keywords (`#000080`), bold green strings (`#008000`), blue numbers (`#0000FF`), bold purple fields (`#660E7A`), italic comments (`#808080`). Type parameters in teal (`#20999D`), metadata in olive (`#808000`). All 15 Roslyn custom semantic tokens + 10 XML doc comment tokens included.
+
+## [0.6.8] - 2026-03-27
+
+### Fixed
+- **Apex themes (all 6)**: Standardized diff editor overlay alpha to `28` across all themes for consistent diff visibility.
 
 ## [0.6.7] - 2026-03-17
 
@@ -21,6 +28,16 @@
 - **Apex Carbon++**: Increased diff/merge overlay alpha from `30`/`44` to `50`/`66` — inserted/removed text backgrounds were barely distinguishable from editor BG on achromatic surfaces. Effective inserted contrast improved from 1.54:1 to 2.14:1, removed from 1.31:1 to 1.63:1.
 - **Apex Pastel++**: Fixed inactive selection consistency bug — `editor.inactiveSelectionBackground` and `list.inactiveSelectionBackground` were using wrong base (`#2C2C2C66`, effective contrast 1.06:1 — invisible) instead of matching active selection base (`#42424266`, effective contrast 1.20:1).
 - **Apex Pastel++**: Increased diff/merge overlay alpha from `30`/`44` to `50`/`66` — same achromatic background visibility issue as Carbon++.
+
+## [0.6.6] - 2026-03-12
+
+### Fixed
+- **Apex Carbon++**: Adjusted selection background colors for better contrast compliance on achromatic surfaces.
+
+## [0.6.5] - 2026-03-12
+
+### Changed
+- Version bump for release.
 
 ## [0.6.4] - 2026-03-07
 
@@ -46,6 +63,11 @@
 
 ### Added
 - **Visual Studio Dark 2026**: Ported theme — VS 2026 shell appearance with Fluent Design System tokens. Darker environment (#1C1C1C), brighter lavender accent (#9184EE), unified surface hierarchy. Syntax highlighting identical to VS 2022/2019.
+
+## [0.5.1] - 2026-03-04
+
+### Changed
+- **Apex Pastel++**, **Apex Steel++**: Refined background, border, and highlight color values for improved visual consistency and readability.
 
 ## [0.5.0] - 2026-02-22
 
